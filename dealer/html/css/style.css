@@ -1,0 +1,2761 @@
+
+                          /*Login Page Css For Property*/
+
+/*Pareant div*/
+.bgimg {
+    /*background: url("../image/BG.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*height: -webkit-fill-available;*/
+    /*max-height: -webkit-fill-available;*/
+}
+
+.bgimg  img{     position: absolute;}
+
+
+/*Logo diiv and Image*/
+
+.logo {
+    margin-top: 23px;
+    margin-left: 17px;
+}
+
+.imglogo {
+    height: 46px;
+}
+
+
+/*Prargreap 1800*/
+.sigbtn {
+    display: inline-flex;
+    position: relative;
+    left: 80px;
+}
+
+
+.tollfree {
+    margin-top: 22px;
+}
+
+.para {
+    color: white;
+    font-size: 10px;
+    margin-left: 28px;
+
+}
+.para1 {
+    color: #44893b;
+    font-size: 21px;
+}
+.tollfree p {
+    margin-bottom: 0px;
+}
+
+.btn.btn-success {
+    margin-top: 21px;
+    margin-left: 18px;
+    border-radius: 15px;
+    width: 139px;
+    height: 39px;
+}
+
+.sigbtn:before{
+    content: '';
+    border: 2px solid #fff;
+    height: 350px;
+    width: 300px;
+    position: absolute;
+    top: 13em;
+    border-radius: 5px;
+    right: 1em;
+
+}
+    
+.frmdiv h2{
+    margin-left: 22px   ;
+    color: #41cc56;
+}
+.frmdiv {
+    padding-top: 20px;
+    position: relative;
+    top: 150px;
+    background: #090911;
+    width: 370px;
+    height: 380px;
+}
+
+
+.glyphicon.glyphicon-user {
+    margin-left: 24px;
+        background: white;
+    padding: 10px;
+}
+
+.glyphicon.glyphicon-lock {
+    margin-left: 24px;
+        background: white;
+    padding: 10px;
+        margin-top: 6px;
+}
+
+
+.input-field {
+    height: 35px;
+        width: 214px;
+}
+
+.rembr{
+    margin-left: 19px;
+}
+
+.rembr {
+    margin-left: 23px!important;
+    margin-top: 10px!important;
+      position: relative;
+    top: 3px;
+}
+.rembr1{
+    color: white;
+    font-size: 11px;
+}
+
+.form-group a{
+    color: white;
+    margin-left: 10px;
+    font-size: 11px;
+    margin-left: 11em;
+}
+
+.form-group a:hover{
+    color: white;
+}
+
+.btn.btn-success1 {
+    margin-top: 25px;
+    background: #5cb85c;
+    border-radius: 22px;
+    width: 16em;
+    height: 41px;
+        margin: 0 auto;
+    display: block;
+}
+   
+
+.input-field {
+    height: 35px;
+    width: 80%;
+    border: 0px;
+}
+.sigbtn:before {
+    content: '';
+    border: 2px solid #fff;
+    height: 382px;
+    width: 331px;
+    position: absolute;
+    top: 13em;
+    border-radius: 5px;
+    left: -1em;
+}
+
+
+.input-container {
+    background: white;
+    border: 1px solid black;
+    width: 320px;
+    position: relative;
+    left: 24px;
+    margin-bottom: 10px;
+    height: 47px;
+    line-height: 47px;
+}  
+
+
+
+
+
+
+
+
+     /*Responsivness for index page*/
+
+
+/*Ipad*/
+
+
+
+
+
+
+
+/*Samsung S5 Phone:*/
+
+@media only screen and (max-width: 480px) 
+{
+
+.input-field:focus {
+    outline: none;
+}
+    
+.bgimg {
+    background: url("../image/BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: webkit-fill-available;
+    max-height: -webkit-fill-available;
+}    
+ 
+.imglogo {
+    height: 46px;
+    width: 82%;
+}
+ .sigbtn {
+    display: inline-flex;
+    position: relative;
+    left: 29px;
+    margin-top:6em;
+}
+
+
+.frmdiv {
+    padding-top: 20px;
+    position: relative;
+    top:2em;
+    left: 2em;
+    background: #090911;
+    width: 280px;
+    height: 350px;
+}
+
+.input-container {
+    background: white;
+    border: 1px solid black;
+   width: 242px;
+    position: relative;
+    left: 24px;
+    margin-bottom: 10px;
+    height: 47px;
+    line-height: 47px;
+}    
+
+.input-field {
+    height: 35px;
+    width: 56%;
+    border: 0px;
+}
+
+.form-group a {
+    color: white;
+    margin-left: 10px;
+    font-size: 11px;
+    margin-left: 4em;
+}
+.btn.btn-success1 {
+    background: #5cb85c;
+    border-radius: 22px;
+    width: 16em;
+    height: 41px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: 1em;
+}
+
+.sigbtn:before {
+    content: '';
+    border: 2px solid #fff;
+    height: 358px;
+    width: 277px;
+    position: absolute;
+    top: 5.2em;
+    border-radius: 5px;
+    left: 2em;
+}
+
+.input-container .glyphicon.glyphicon-user {
+    margin-left: 0px;
+    background: white;
+    padding: 10px;
+}
+
+.input-container .glyphicon.glyphicon-lock {
+    margin-left: 0px;
+    background: white;
+    padding: 10px;
+    margin-top: 6px;
+}
+
+.frmdiv h2 {
+    margin-left: 22px;
+    color: #41cc56;
+    font-size: 22px;
+}
+
+} 
+
+
+
+
+                          /*Dashboard Page Css For Property*/
+
+
+
+
+/*Maiin div of 3 cols*/
+
+
+body{overflow-x: hidden;}
+
+
+.main{
+    background: #090911;
+    height: 100vh;
+    width: 100%;
+    margin-left: 2px;
+    font-size: 20px;
+}
+
+
+.dlogoimg {
+    height: 25px;
+}
+
+.dashlogodiv {
+    top: 0.8em;
+    position: relative;
+     margin-left: 10px;
+}
+
+
+.userlogodiv p{
+    color: white;
+    font-size: 16px;
+    margin-top: 1em;
+    margin-left: 22px;
+}
+.ulogoimg {
+    height:4.6em;
+
+}
+    
+
+#dd span {
+    position: relative;
+    top: 2px;
+    left: 8px;
+}
+
+
+
+.smbtn {
+    background: #090910;
+    color: white;
+     left: 1em;
+    position: relative;
+
+}
+
+.homeimg {
+    height: 21px;
+}
+
+.sipmlebtn span {
+    position: relative;
+    top: 3px;
+    left: 0.5em;
+}
+
+.logoutbtn {
+    float: right;
+    position: relative;
+    right: 7em;
+    top: 1em;
+}
+.btn.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    border-radius: 6em;
+    height: 37px;
+    width: 8em;
+}
+
+
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  padding-top: 20px;
+  position: relative;
+  top: 3em; 
+  left: 0.5em;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+    width: 92%;
+
+}
+
+
+.sidenav a:hover {
+    color: #f1f1f1;
+    background: white;
+    width: 90%;
+      text-decoration: none;
+    background: #252541;
+}
+.dropdown-btn:hover{
+   background: #252541;
+   width: 90%;
+}
+
+
+.userlogodiv {
+    position: relative;
+    left: 2.5em;
+    top: 2.5em;
+}
+
+
+.sidenav a {
+    font-size: 18px;
+    margin-bottom: 5px;
+
+}
+
+.usrimage {
+    height: 22px;
+}
+
+.dropdown-btn span {
+    font-size: 17px;
+}
+
+.usrimage {
+    height: 22px;
+    position: relative;
+    right: 8px;
+}
+
+.dropdown1 span {
+    font-size: 1.5em;
+   
+}
+
+
+.lst {
+    position: relative;
+    top: 1.5em;
+    left: 3em;
+}
+
+.divlogout {
+    background: white;
+}
+.btnlogout {
+    float: right;
+    position: relative;
+    top: 2em;
+    right: 4em;
+}
+.maindiv1 {
+    background: lightgrey;
+    position: relative;
+   
+    width: 100%;
+}
+
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    position: relative;
+    left: 16em;
+}
+
+.col-sm-10.padd {
+    padding-left: 0px;
+}
+
+.col-sm-2.padding {
+    padding-right: 0px;
+}
+
+
+.top-btn {
+    background: white;
+    padding: 31px;
+}
+
+.min-drop {
+    display: inline-flex;
+}
+
+.dropdown {
+    margin-left: 20px;
+}
+
+
+.main1 {
+    background: lightgrey;
+}
+      
+
+
+.btn.btn-primary span{
+    color: black;
+}
+
+.btn.btn-primary:hover {
+    background: white;
+}
+
+.menu-drop p {
+    font-size: 18px;
+}
+
+ .btn.btn-primary {
+    color: #fff;
+    background-color: white;
+    border-color: white;
+    border-radius: 15px;
+    width: 6em;
+    position: relative;
+    left: -1em;
+}
+
+.top-btn a {
+    float: right;
+    border: 1px solid green;
+    border-radius: 17px;
+    width: 79px;
+    height: 31px;
+    font-size: 16px;
+    background: #00b300;
+    text-align: center;
+    position: relative;
+    padding: 2px;
+    right: 5em;
+    bottom: 1em;
+    color: white;
+}
+
+.top-btn a:hover {
+    text-decoration: none;
+}
+
+
+.btn.btn-primary:hover {
+    border-color: white;
+}
+
+.proptype p {
+    font-size: 18px;
+    padding-top: 1em;
+    padding:1em;
+}
+
+.residnt a:hover{
+    background: #b3b3b3;
+    color: black;
+    text-decoration: none;
+}
+
+.residnt a {
+    font-size: 20px;
+    margin: 18px;
+    color: black;
+}
+.residnt{
+    display: inline-flex;
+}
+.res1 {
+    height: 3em;
+}
+
+.nav.nav-tabs a {
+    color: black;
+    font-size: 18px;
+}
+
+.nav.nav-tabs a:hover{
+    background: #999999;
+}
+
+.apprtmnt {
+    display: inline-flex;
+}
+
+
+.typeheading p {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.glocationdiv p {
+    font-size: 18px;
+}
+
+
+.inptfield label {
+    font-size: 18px;
+    padding-top: 1em;
+    width: 310px;
+}
+
+.typeheading p {
+    font-size: 18px;
+    width: 310px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.inptfield input {
+    margin-left: 13px;
+    height: 2em;
+    border: 0.5px solid white;
+    border-radius: 12px;
+}
+
+
+.btn.btn-danger {
+    border-radius: 17px;
+    background: #00001a;
+    width: 11em;
+    position: relative;
+    left: 11em;
+    border: none;
+    height: 40px;
+}
+
+.btn.btn-danger:hover{
+    background: #00001a;
+}
+
+.btn.btn-danger:focus{
+    background: #00001a;
+}
+
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #ffffff !important;
+    background-image: none;
+    border-color: #ffffff !important;
+}
+
+.active {
+    background: none;  
+}
+
+
+.well {
+    min-height: 20px;
+    position: relative;
+    padding: 19px;
+    left: 1em;
+    width: 75%;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    right: 3em;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+
+
+
+
+.apprtmnt {
+    display: inline-flex;
+    width: 100%;
+    padding:1em;
+}
+
+h3 {
+    margin-bottom: -14px;
+}
+
+.inptfield label{
+   
+   margin-left: 1em;
+   padding-top: 0px;
+}
+
+.drop-html1 select{
+    width: 167px;
+    margin-top: -1px;
+    height:2em;
+}
+
+.menu-drop p {
+    width: 310px;
+    margin-top:22px;
+}
+
+.drop-html select{
+   width: 166px;
+   margin-left: 10px;
+   height:2em;
+}
+div.drop-html {
+    margin-top: 1.5em;
+}
+input.ginputfield {
+    margin-left: 1.5em;
+    border-radius: 4px;
+    height: 2em;
+    width: 167px;
+}
+
+.tab-content {
+    width: 90%;
+}
+
+
+/*Image Slider*/
+
+.product-slider { padding: 45px; }
+
+.product-slider #carousel { border: 4px solid #1089c0; margin: 0; }
+
+.product-slider #thumbcarousel { margin: 12px 0 0; padding: 0 45px; }
+
+.product-slider #thumbcarousel .item { text-align: center; }
+
+.product-slider #thumbcarousel .item .thumb { border: 4px solid #cecece; width: 20%; margin: 0 2%; display: inline-block; vertical-align: middle; cursor: pointer; max-width: 98px; }
+
+.product-slider #thumbcarousel .item .thumb:hover { border-color: #1089c0; }
+
+.product-slider .item img { width: 100%; height: auto; }
+
+.carousel-control { color: #0284b8; text-align: center; text-shadow: none; font-size: 30px; width: 30px; height: 30px; line-height: 20px; top: 23%; }
+
+.carousel-control:hover, .carousel-control:focus, .carousel-control:active { color: #333; }
+
+.carousel-caption, .carousel-control .fa { font: normal normal normal 30px/26px FontAwesome; }
+.carousel-control { background-color: rgba(0, 0, 0, 0); bottom: auto; font-size: 20px; left: 0; position: absolute; top: 30%; width: auto; }
+
+.carousel-control.right, .carousel-control.left { background-color: rgba(0, 0, 0, 0); background-image: none; }
+
+
+.product-slider #carousel {
+    border: 0px; 
+    margin: 0; 
+}
+
+a.left.carousel-control {
+    background: #222;
+    display: table;
+    width: 3%;
+    border-radius: 100%;
+    height: 33px;
+    position: relative;
+    top: -57px;
+    padding-top: 1px;
+    padding-right: 2px;
+    left: 1em;
+}
+
+a.right.carousel-control {
+    background: #222;
+    display: table;
+    width: 3%;
+    margin-right: 11.5em;
+    border-radius: 100%;
+    height: 33px;
+    margin-top: 1em;
+}
+.product-slider {
+    padding: 0px; 
+}
+.product-slider #thumbcarousel {
+    margin: 0px; 
+     padding: 0px; 
+}
+
+.product-slider #thumbcarousel .item {
+    text-align: center;
+    width: 80%;
+
+}
+
+
+
+
+/*Responsive For Dashboard*/
+
+
+/*Apple:*/
+
+ @media only screen and (max-width: 375px){
+
+body{
+    overflow-x:hidden;
+}
+.dlogoimg {
+    height: 34px;
+    margin-left: -17px;
+}
+.userlogodiv {
+    position: relative;
+    left: 7em;
+    top: 2.5em;
+}
+.sidenav {
+    height: 100%;
+    padding-top: 20px;
+    position: relative;
+    top: 3em;
+    left: 2.5em;
+}
+.dashlogodiv {
+    top: 0.8em;
+    position: relative;
+    margin-left: 3.5em;
+}
+
+.top-btn a {
+    border: 1px solid green;
+    border-radius: 10px;
+    width: 80px;
+    height: 31px;
+    background: blue;
+    background: #00b300;
+    text-align: center;
+    position: relative;
+    right: -1em;
+    bottom: 1em;
+    color: white;
+}
+
+.top-btn a:hover {
+    color: white;
+}
+
+.main1 {
+    background: lightgrey;
+}
+.menu-drop p {
+    font-size: 18px;
+    margin-top: 1em;
+}
+.btn.btn-primary {
+    color: #fff;
+    background-color: white;
+    border-color: white;
+    border-radius: 15px;
+    width: 6em;
+    position: relative;
+    margin-top: 1em;
+    left: -1em;
+}
+
+.btn.btn-danger {
+    border-radius: 13px;
+    background: #00001a;
+    width: 11em;
+    margin-left: -5em;
+    border: none;
+    height: 3em;
+}   
+.drop-html {
+    margin-left: 10px;
+}
+.dropdown-btn span {
+    font-size: 21px;
+}
+.sidenav a {
+    font-size: 21px;
+}
+.typeheading p {
+    font-size: 18px;
+    width: 200px;
+    margin-left:5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu-drop p {
+    font-size: 18px;
+    margin-top: 1em;
+    width: 200px;
+    padding:1em;
+}
+.drop-html1 select {
+    width: 105px;
+}
+
+.drop-html1 {
+    margin-top: -17px;
+}
+
+.drop-html select {
+    width: 105px;
+}
+.dropdown {
+    margin-left: 20px;
+    top: 1.3em;
+}
+
+input.ginputfield {
+    margin-left: 1.5em;
+    border-radius: 4px;
+    height: 2em;
+    width: 105px;
+    position: relative;
+    top: 16px;
+}
+
+a.right.carousel-control {
+    background: #222;
+    display: table;
+    width: 6%;
+    left: 17.5em;
+    margin-right: 12.5em;
+    border-radius: 100%;
+    height: 33px;
+    margin-top: 0.3em;
+}
+
+a.left.carousel-control {
+    background: #222;
+    display: table;
+    width: 6%;
+    border-radius: 100%;
+    height: 33px;
+    position: relative;
+    top: -38px;
+    left: 5px;
+}
+
+.product-slider #thumbcarousel .item .thumb {
+    border: 4px solid #cecece;
+    width: 14%;
+    margin: 0 1%;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    max-width: 98px;
+}
+
+.product-slider #thumbcarousel .item {
+    text-align: center;
+    width: 105%;
+}
+}
+
+
+
+/*Samsung*/
+
+ @media only screen and (max-width: 360px){
+     
+     a.right.carousel-control {
+    background: #222;
+    display: table;
+    width: 7%;
+    left: 16.5em;
+    margin-right: 12.5em;
+    border-radius: 100%;
+    margin-top: 5px;
+}
+
+a.left.carousel-control {
+    background: #222;
+    display: table;
+    width: 7%;
+    border-radius: 100%;
+    height: 33px;
+    position: relative;
+    top: -38px;
+    left: 5px;
+}
+input.ginputfield {
+    margin-left: 1.5em;
+    border-radius: 4px;
+    height: 2em;
+    width: 105px;
+    position: relative;
+    top: 16px;
+}
+ }
+
+
+
+
+           /*Css for Search Page:*/
+
+
+/*Sidebar of Search Page*/
+.sidebar{
+  
+  background: #090911;
+}
+
+.srchimg{
+    width: 100%;
+}
+
+.admnimg {
+    height: 6em;
+}
+
+.searchadmnlogo {
+    margin-top: 2em;
+    margin-left: 4em;
+}
+
+.searchlogo {
+    margin-top: 1em;
+    margin-left: 11px;
+}
+
+.searchadmnlogo p {
+    color: white;
+    margin-top: 13px;
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    /*border: 1px solid rgba(0,0,0,.15);*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+
+.collapse.navbar-collapse.navbar-ex1-collapse {
+    position: relative;
+    right: 3em;
+}
+
+
+.fa.pull-right {
+    position: relative;
+    left: 1em;
+    margin-left: -0.7em;
+    top: 3px;
+}
+
+.fa.fa-fw.fa-angle-down.pull-right {
+    position: relative;
+    top: 7px;
+}
+
+
+
+.nav.navbar-nav.side-nav li a{
+    color: white;
+    font-size: 14px;
+
+}
+
+
+.nav.navbar-nav.side-nav li a:hover {
+    background: none;
+}
+
+.nav.navbar-nav.side-nav {
+    position: relative;
+    
+    right: 2em;
+}
+
+.collapse.navbar-collapse.navbar-ex1-collapse {
+    width: 205px;
+}
+
+.fa.fa-user {
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.fa.fa-home {
+    font-size: 22px;
+    padding-right: 10px;
+}
+.fa.fa-building {
+    font-size: 22px;
+    padding-right: 10px;
+}
+.fa.fa-home {
+    font-size: 22px;
+    padding-right: 10px;
+}
+.fa.fa-pencil-square-o{
+   
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none!important;
+    background-color: unset !important;
+}
+
+
+.srchlogoutbtn{
+    background: white;
+}
+
+.srchlgoutbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    margin-left: 984px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+    color: white;
+     width: 8%;
+    height: 30px;
+}
+
+.buyrentdiv{
+    background: lightgrey;
+        padding: 72px;
+}    
+
+
+.allresidntl select {
+    color: black;
+    height: 40px;
+    width: 132px;
+    margin-top: 1px;
+      border: none;
+    border-right: 1px solid black;
+}
+
+
+.srchbtn{
+    background: #3cb54a;
+    border: none;
+    border-radius: 1px;
+    height: 50px;
+    width: 152px;
+}
+
+.slctmiulbtns select {
+    height: 35px;
+    border-radius: 22px;
+        margin-top: 6px;
+    margin-left: 29px
+}
+
+.slctmiulbtns {
+    background: white;
+    height: 49px;
+    margin-top: 2px;
+
+}
+.slctmiulbtns select:focus {
+    outline: none;
+}
+
+.clrbtn {
+    margin-left: 31%;
+    height: 35px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #d9d9d9;
+    width: 87px;
+}
+.clrbtn:hover {
+    background: #f2f2f2;
+}
+
+.sortbydiv {
+    display: inline-flex;
+    margin-top: 19px;
+
+}
+.sortbydiv select:focus {
+    outline: none;
+}
+
+.sortbydiv select {
+    margin-left: 14px;
+    border-radius: 22px;
+        height: 35px;
+            width: 104px;
+}
+
+.sortbydiv h5 {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.godrejdiv h4{
+    color: #3cb54a;
+    margin-left: 18px;
+    padding-top: 12px;
+    font-size: 20px;
+}
+
+.godrejdiv {
+    background: white;
+}
+
+.sqrft h4 {
+    color: black;
+}
+
+
+
+.proprtydiv {
+    margin-left: 19px;
+    margin-top: 22px;
+}
+
+.proprtydiv h5 {
+    color: #3cb54a;
+    font-size: 18px;
+}
+.proprtydiv h5 span {
+    color: black;
+}
+
+.godrejdiv span {
+    color: black;
+}
+
+.sqrftdiv {
+    display: inline-flex;
+}
+.sqrftdiv h4 {
+    font-size: 18px;
+    color: black;
+}
+.bhkdiv h4 {
+    font-size: 17px;
+    color: black;
+}
+
+
+.bhkdiv {
+    display: inline-flex;
+        float: right;
+    margin-right: 14px;
+}
+
+.mailbtn {
+    background: #0f1926;
+    border: none;
+    border-radius: 21px;
+    width: 114px;
+    height: 32px;
+    margin-top: 11px;
+    margin-left: 18px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.bhkdiv i.fa.fa-envelope-o {
+    margin-right: 6px;
+}
+
+.mailbtn span {
+    color: white;
+    margin-right: 30px;
+}
+
+.residntlapartdiv h5{
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.residntlapartdiv h5 {
+    margin-left: 19px;
+    font-size: 18px;
+}
+
+
+.whtsapbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 21px;
+    width: 114px;
+    height: 32px;
+    margin-top: 11px;
+    margin-left: 18px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.bhkdiv      i.fa.fa-whatsapp {
+    padding: 6px;
+}
+
+.whtsapbtn span {
+    color: white;
+}
+
+.postdondiv {
+    margin-left: 18px;
+}
+.postdondiv h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.postdondiv h6 span {
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+}
+
+.callbtn {
+    background: #0f1926;
+    border: none;
+    border-radius: 21px;
+    width: 114px;
+    height: 32px;
+    margin-top: 11px;
+    margin-left: 18px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+        margin-bottom: 14px;
+}
+
+.callbtn span {
+    color: white;  
+    margin-right: 32px;
+}
+
+
+.callbtndiv i.fa.fa-phone  {
+    padding: 6px;
+}
+
+.callbtndiv {
+    float: right;
+    margin-right: 14px;
+}
+
+.dropdown.res {
+    margin-left: 0px;
+}
+
+.srchfield {
+    width: 100%;
+    height: 50px;
+}
+
+.dropdown.res ul li {
+    color: black;
+}
+
+.dropdown.res button {
+    color: black;
+    height: 50px;
+    background: white;
+}
+.dropdown.res button {
+    width: 100%;
+    border-right: 1px solid black;
+}
+
+
+.tab-content {
+    width: unset !important;
+}
+
+.col-sm-3.padding-first {
+    padding-right: 0px;
+}
+
+.col-sm-7.padding-minus {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-sm-2.padding-search {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.dropdown-menu li {
+    margin-left: 8px;
+}
+
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown.pricerange {
+    display: inline-flex;
+    position: relative;
+    right: 16em;
+}
+
+
+ .pricebtn {
+    border-radius: 22px!important;
+    
+    height: 35px;
+     color: #333;
+    background-color: #fff;
+    border: 1px solid #a6a6a6 !important;
+    background: white!important;
+
+}
+
+.pricecntnt{
+    display: inline-flex;
+}
+
+.pricecntnt ul li{
+    list-style: none;
+}
+
+
+.dropdown.pricerange .dropdown-menu {
+    left: 16em;
+}
+
+.pricecntnt ul li input {
+    margin-left: -44px;
+}
+
+
+
+
+
+
+
+/*Responsivness:*/
+
+
+/*Samsung Mobile*/
+
+@media only screen and (max-width: 360px) {
+
+.searchlogo {
+    margin-top: 1em;
+    margin-left: 19px;
+}
+.srchimg {
+    width: 96%;
+    height: 43px;
+}
+.searchadmnlogo {
+    margin-top: 2em;
+    margin-left: 130px;
+}
+
+.srchlgoutbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    margin-left: 268px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+    color: white;
+    width: 23%;
+    height: 30px;
+}
+
+.srchfield {
+    width: 93%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+
+.srchbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 1px;
+    height: 50px;
+    width: 93%;
+    margin-top: 2px;
+    margin-left: 16px;
+}
+
+
+
+.dropdown.res button {
+    width: 97%;
+    border-right: 1px solid black;
+}
+
+.buyrentdiv {
+    background: lightgrey;
+    padding: 6px;
+}
+.pricebtn.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    position: relative;
+    left: 284px;
+    bottom: 15px;
+    width: 174px;
+}
+
+.slctmiulbtns select {
+    height: 35px;
+    border-radius: 22px;
+    margin-top: 6px;
+    margin-left: 81px;
+    width: 50%;
+}
+.slctmiulbtns {
+    background: white;
+    height: 213px;
+    margin-top: 2px;
+    display: grid;
+
+}
+.clrbtn {
+    margin-left: 83px;
+    height: 35px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #a6a6a6;
+    width: 174px;
+}
+
+.sortbydiv {
+    display: inline-flex;
+    margin-top: 19px;
+    margin-left: 2px;
+}
+
+}
+
+
+
+/*Apple Mobile*/
+
+@media only screen and (max-width: 375px) {
+  
+ .searchlogo {
+    margin-top: 1em;
+    padding-left: 16px;
+} 
+    .srchimg {
+    width: 92%;
+}
+
+.searchadmnlogo {
+    margin-top: 2em;
+    margin-left: 10em;
+}
+.srchlgoutbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    margin-left: 279px;
+    margin-top: 13px;
+    margin-bottom: 14px;
+    color: white;
+    width: 23%;
+    height: 30px;
+}
+.buyrentdiv {
+    background: lightgrey;
+    padding: 3px;
+}
+.dropdown.res button {
+    width: 96%;
+    border-right: 1px solid black;
+}
+.srchfield {
+    width: 93%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.srchbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 1px;
+    height: 50px;
+    width: 367px;
+    margin-top: 4px;
+    margin-left: 16px;
+}
+.slctmiulbtns {
+    background: white;
+    height: 224px;
+    margin-top: 2px;
+    display: grid;
+}
+.slctmiulbtns select {
+    height: 35px;
+    border-radius: 22px;
+    margin-top: 6px;
+    margin-left: 95px;
+    width: 42%;
+}
+.dropdown.pricerange {
+    position: relative;
+    bottom: 0em;
+    top: 4px;
+    right: 11em;
+}
+
+.pricebtn.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    width: 154px;
+    margin-left: 6px;
+}
+.sortbydiv {
+    display: inline-flex;
+    margin-top: 19px;
+    margin-left: 2px;
+}
+
+}
+
+
+
+           /*Css for Search Page:*/
+
+
+/*Sidebar of Search Page*/
+.sidebar{
+  
+  background: #090911;
+}
+
+.srchimg{
+    width: 100%;
+}
+
+.admnimg {
+    height: 6em;
+}
+
+.searchadmnlogo {
+    margin-top: 2em;
+    margin-left: 4em;
+}
+
+.searchlogo {
+    margin-top: 1em;
+    margin-left: 11px;
+}
+
+.searchadmnlogo p {
+    color: white;
+    margin-top: 13px;
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    /*border: 1px solid rgba(0,0,0,.15);*/
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+
+.collapse.navbar-collapse.navbar-ex1-collapse {
+    position: relative;
+    right: 3em;
+}
+
+
+.fa.pull-right {
+    position: relative;
+    left: 1em;
+    margin-left: -0.7em;
+    top: 3px;
+}
+
+.fa.fa-fw.fa-angle-down.pull-right {
+    position: relative;
+    top: 6px;
+}
+
+.nav.navbar-nav.side-nav li a{
+    color: white;
+    font-size: 14px;
+
+}
+
+.nav.navbar-nav.side-nav li a:hover {
+    background: none;
+}
+
+.nav.navbar-nav.side-nav {
+    position: relative;
+    
+    right: 2em;
+}
+
+.collapse.navbar-collapse.navbar-ex1-collapse {
+    width: 205px;
+}
+
+.fa.fa-user {
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.fa.fa-home {
+    font-size: 22px;
+    padding-right: 10px;
+}
+.fa.fa-building {
+    font-size: 22px;
+    padding-right: 10px;
+}
+.fa.fa-home {
+    font-size: 22px;
+    padding-right: 10px;
+}
+.fa.fa-pencil-square-o{
+   
+    font-size: 22px;
+    padding-right: 10px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none!important;
+    background-color: unset !important;
+}
+
+
+.srchlogoutbtn{
+    background: white;
+}
+
+.srchlgoutbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    margin-left: 984px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+    color: white;
+    width: 8%;
+    height: 30px;
+}
+
+.buyrentdiv{
+    background: lightgrey;
+        padding: 72px;
+}    
+
+
+.allresidntl select {
+    color: black;
+    height: 40px;
+    width: 132px;
+    margin-top: 1px;
+      border: none;
+    border-right: 1px solid black;
+}
+
+
+.srchbtn{
+    background: #3cb54a;
+    border: none;
+    border-radius: 1px;
+    height: 50px;
+    width: 152px;
+}
+
+.slctmiulbtns select {
+    height: 35px;
+    border-radius: 22px;
+        margin-top: 6px;
+    margin-left: 29px
+}
+
+.slctmiulbtns {
+    background: white;
+    height: 49px;
+    margin-top: 2px;
+
+}
+.slctmiulbtns select:focus {
+    outline: none;
+}
+
+.clrbtn {
+    margin-left: 31%;
+    height: 35px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #d9d9d9;
+    width: 87px;
+}
+.clrbtn:hover {
+    background: #f2f2f2;
+}
+
+.sortbydiv {
+    display: inline-flex;
+    margin-top: 19px;
+
+}
+.sortbydiv select:focus {
+    outline: none;
+}
+
+.sortbydiv select {
+    margin-left: 14px;
+    border-radius: 22px;
+        height: 35px;
+            width: 104px;
+}
+
+.sortbydiv h5 {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.godrejdiv h4{
+    color: #3cb54a;
+    margin-left: 18px;
+    padding-top: 12px;
+    font-size: 20px;
+}
+
+.godrejdiv {
+    background: white;
+}
+
+.sqrft h4 {
+    color: black;
+}
+
+
+
+.proprtydiv {
+    margin-left: 19px;
+    margin-top: 22px;
+}
+
+.proprtydiv h5 {
+    color: #3cb54a;
+    font-size: 18px;
+}
+.proprtydiv h5 span {
+    color: black;
+}
+
+.godrejdiv span {
+    color: black;
+}
+
+.sqrftdiv {
+    display: inline-flex;
+}
+.sqrftdiv h4 {
+    font-size: 18px;
+    color: black;
+}
+.bhkdiv h4 {
+    font-size: 17px;
+    color: black;
+}
+
+
+.bhkdiv {
+    display: inline-flex;
+        float: right;
+    margin-right: 14px;
+}
+
+.mailbtn {
+    background: #0f1926;
+    border: none;
+    border-radius: 21px;
+    width: 114px;
+    height: 32px;
+    margin-top: 11px;
+    margin-left: 18px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.bhkdiv i.fa.fa-envelope-o {
+    margin-right: 6px;
+}
+
+.mailbtn span {
+    color: white;
+    margin-right: 30px;
+}
+
+.residntlapartdiv h5{
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.residntlapartdiv h5 {
+    margin-left: 19px;
+    font-size: 18px;
+}
+
+
+.whtsapbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 21px;
+    width: 114px;
+    height: 32px;
+    margin-top: 11px;
+    margin-left: 18px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+.bhkdiv      i.fa.fa-whatsapp {
+    padding: 6px;
+}
+
+.whtsapbtn span {
+    color: white;
+}
+
+.postdondiv {
+    margin-left: 18px;
+}
+.postdondiv h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+.postdondiv h6 span {
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: italic;
+}
+
+.callbtn {
+    background: #0f1926;
+    border: none;
+    border-radius: 21px;
+    width: 114px;
+    height: 32px;
+    margin-top: 11px;
+    margin-left: 18px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+        margin-bottom: 14px;
+}
+
+.callbtn span {
+    color: white;  
+    margin-right: 32px;
+}
+
+
+.callbtndiv i.fa.fa-phone  {
+    padding: 6px;
+}
+
+.callbtndiv {
+    float: right;
+    margin-right: 14px;
+}
+
+.dropdown.res {
+    margin-left: 0px;
+}
+
+.srchfield {
+    width: 100%;
+    height: 50px;
+}
+
+.dropdown.res ul li {
+    color: black;
+}
+
+.dropdown.res button {
+    color: black;
+    height: 50px;
+    background: white;
+}
+.dropdown.res button {
+    width: 100%;
+    border-right: 1px solid black;
+}
+
+
+.tab-content {
+    width: unset !important;
+}
+
+.col-sm-3.padding-first {
+    padding-right: 0px;
+}
+
+.col-sm-7.padding-minus {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-sm-2.padding-search {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.dropdown-menu li {
+    margin-left: 8px;
+}
+
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown.pricerange {
+    display: inline-flex;
+    position: relative;
+    right: 16em;
+}
+
+
+ .pricebtn {
+    border-radius: 22px!important;
+    
+    height: 35px;
+     color: #333;
+    background-color: #fff;
+    border: 1px solid #a6a6a6 !important;
+    background: white!important;
+
+}
+
+.pricecntnt{
+    display: inline-flex;
+}
+
+.pricecntnt ul li{
+    list-style: none;
+}
+
+
+.dropdown.pricerange .dropdown-menu {
+    left: 16em;
+}
+
+.pricecntnt ul li input {
+    margin-left: -44px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Responsivness:*/
+
+
+/*Apple Mobile*/
+
+@media only screen and (max-width: 375px) {
+  
+ .searchlogo {
+    margin-top: 1em;
+    padding-left: 16px;
+} 
+    .srchimg {
+    width: 92%;
+}
+
+.searchadmnlogo {
+    margin-top: 2em;
+    margin-left: 10em;
+}
+.srchlgoutbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    margin-left: 279px;
+    margin-top: 13px;
+    margin-bottom: 14px;
+    color: white;
+    width: 23%;
+    height: 30px;
+}
+.buyrentdiv {
+    background: lightgrey;
+    padding: 3px;
+}
+.dropdown.res button {
+    width: 96%;
+    border-right: 1px solid black;
+}
+.srchfield {
+    width: 93%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.srchbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 1px;
+    height: 50px;
+    width: 367px;
+    margin-top: 4px;
+    margin-left: 16px;
+}
+.slctmiulbtns {
+    background: white;
+    height: 224px;
+    margin-top: 2px;
+    display: grid;
+}
+.slctmiulbtns select {
+    height: 35px;
+    border-radius: 22px;
+    margin-top: 6px;
+    margin-left: 95px;
+    width: 174px;
+    background: white !important;
+}
+
+.dropdown.pricerange {
+    position: relative;
+    bottom: 0em;
+    top: 4px;
+    right: 155px;
+}
+
+.pricebtn.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    width: 174px;
+    margin-left: 6px;
+}
+
+.sortbydiv {
+    display: inline-flex;
+    margin-top: 19px;
+    margin-left: 2px;
+}
+.clrbtn {
+    margin-left: 26%;
+    height: 35px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #d9d9d9;
+    width: 174px;
+}
+
+}
+
+
+
+/*Samsung Mobile*/
+
+@media only screen and (max-width: 360px) {
+
+.searchlogo {
+    margin-top: 1em;
+    margin-left: 19px;
+}
+.srchimg {
+    width: 96%;
+    height: 43px;
+}
+.searchadmnlogo {
+    margin-top: 2em;
+    margin-left: 130px;
+}
+
+.srchlgoutbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 24px;
+    position: relative;
+    margin-left: 268px;
+    margin-top: 13px;
+    margin-bottom: 19px;
+    color: white;
+    width: 23%;
+    height: 30px;
+}
+
+.srchfield {
+    width: 93%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+
+.srchbtn {
+    background: #3cb54a;
+    border: none;
+    border-radius: 1px;
+    height: 50px;
+    width: 93%;
+    margin-top: 2px;
+    margin-left: 16px;
+}
+
+.dropdown.res button {
+    width: 97%;
+    border-right: 1px solid black;
+}
+
+.buyrentdiv {
+    background: lightgrey;
+    padding: 6px;
+}
+.pricebtn.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    position: relative;
+    left: 284px;
+    bottom: 15px;
+    width: 174px;
+}
+
+.slctmiulbtns select {
+    height: 35px;
+    border-radius: 22px;
+    margin-top: 6px;
+    margin-left: 95px;
+    width: 174px;
+}
+.slctmiulbtns {
+    background: white;
+    height: 213px;
+    margin-top: 2px;
+    display: grid;
+
+}
+.clrbtn {
+    margin-left: 97px;
+    height: 35px;
+    background: white;
+    border-radius: 14px;
+    border: 1px solid #a6a6a6;
+    width: 174px;
+    margin-top: 3px;
+}
+
+.sortbydiv {
+    display: inline-flex;
+    margin-top: 19px;
+    margin-left: 2px;
+}
+.dropdown.pricerange {
+    position: relative;
+    bottom: 0em;
+    top: 16px;
+    right: 15.3em;
+}
+
+}
+
+
+
+
+
+
+
+
+
+                              /*Css For Result Page:*/
+
+
+.landforsale {
+    background: white;
+    margin-top: 37px;
+}
+
+.resulttopbtn {
+    background: white;
+    display: inline-flex;
+    width: 100%;
+}
+
+.resulttopbtn .btn.btn-primary {
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.resulttopbtn .btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    color: black !important;
+    background-color: white !important; 
+    outline: none !important;
+}
+
+
+.resulttopbtn button {
+    background: white;
+    border: none;
+    padding: 11px;
+    width: 9%;
+}
+
+.resultactiveprdcts {
+    display: inline-flex;
+    background: white;
+    margin-top: 37px;
+    width: 100%;
+}
+.resultactiveprdcts p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding-top: 6px;
+    padding-left: 27px;
+}
+.resultactiveprdcts ul {
+    margin-top: 6px;
+}
+
+.resultactiveprdcts ul li {
+    list-style: none;
+    display: inline-flex;
+    padding-right: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    position: relative;
+}
+.resultactiveprdcts ul li a {
+    color: black !important;
+}
+
+.resultactiveprdcts ul li a:hover{
+   text-decoration: none;
+}
+
+.resultactiveprdcts ul li:after {
+    content: '';
+    position: absolute;
+    height: 19px;
+    width: 1px;
+    background: black;
+    right: 5px;
+    top: 4px;
+}
+.bordrnone1:after {
+    display: none !important;
+}
+
+.contentoflandfor h4 {
+    color: #3cb54a;
+    padding-left: 27px;
+    padding-top: 13px;
+    font-size: 28px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contentoflandfor p{
+    color: #3cb54a;
+    padding-left: 30px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: inline-flex;
+}
+
+.contentoflandfor p span{
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 7px;
+}
+
+.editbutton {
+    padding-top: 23px;
+}
+
+.edtbtn {
+    width: 36%;
+    border: none;
+    background: #0f1926;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    height: 32px;
+    border-radius: 12px;
+}
+
+.edtbtn .fa.fa-check-square-o {
+    margin-right: 12px;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.edtbtn span {
+    margin-right: 16px;
+}
+
+.expireon {
+    margin-left: 32px;
+        display: inline-flex;
+}
+.expireon p {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.postedon {
+    margin-left: 7px;
+}
+.expireon p span {
+    color: #3cb54a;
+    margin-left: 10px;
+    border-right: 2px solid #3cb54a;
+    padding-right: 7px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.dtebtn {
+    position: relative;
+    top: 13px;
+    border: none;
+    background: #3cb54a;
+    width: 36%;
+    height: 32px;
+    border-radius: 12px;
+    color: white;
+}
+
+.dtebtn .fa.fa-trash-o {
+    margin-right: 12px;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.extnddurtion {
+    margin-left: 30px;
+}
+
+.extnddurtion p {
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.extnddurtion span{
+    position: relative;
+}
+.extnddurtion p span:after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #7f7f7f;
+    bottom: -5px;
+    right: 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+.summryviews {
+    margin-left: 30px;
+    margin-bottom: 14px;
+}
+
+.summryviews p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    margin-top: 21px;
+}
+.summryviews span {
+    color: #3cb54a;
+    border-bottom: 2px solid #3cb54a;
+    padding-bottom: 3px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+.blckbtn {
+    width: 36%;
+    border: none;
+    background: #0f1926;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    height: 32px;
+    border-radius: 12px;
+    margin-top: 57px;
+}
+
+.blckbtn .fa.fa-ban {
+    margin-right: 12px;
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+}
+
+.frstcopyddiv {
+    background: white;
+    margin-top: 37px;
+}
+
+.secndcopieddiv {
+    background: white;
+    margin-top: 37px;
+}
+
+
+
+
+
+
+
+
+                                     /*Responsivness For Result Page:*/
+
+
+/*For Samsung & Apple*/
+
+
+
+@media only screen and (max-width: 480px) {
+
+
+.searchlogo {
+    margin-top: 1em;
+    margin-left: 0px !important; 
+}
+
+
+
+.resulttopbtn .btn.btn-primary {
+    color: black;
+    background-color: white;
+     left: 0px; 
+     margin-top: 0px;
+}
+
+
+.resulttopbtn .dropdown {
+    margin-left: 20px;
+    top: 0px; 
+}
+
+.resulttopbtn button {
+    background: white;
+    border: none;
+    padding: 11px;
+    width: 17%;
+}
+
+.resultactiveprdcts ul {
+    margin-top: 6px;
+    padding-left: 25px;
+}
+
+.resultactiveprdcts p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding-top: 6px;
+    padding-left: 18px;
+}
+
+
+.contentoflandfor h4 {
+    color: #3cb54a;
+    padding-left: 6px;
+    padding-top: 0px; 
+    font-size: 23px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.contentoflandfor p {
+    color: #3cb54a;
+    padding-left: 6px;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    display: inline-flex;
+    padding-right: 17px;
+}
+
+.expireon {
+    margin-left: 6px;
+    display: inline-flex;
+}
+
+.extnddurtion {
+    margin-left: 6px;
+}
+
+.summryviews {
+    margin-left: 7px;
+    margin-bottom: 14px;
+}
+
+.edtbtn {
+    width: 100%;
+    border: none;
+    background: #0f1926;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    height: 35px;
+    border-radius: 12px;
+}    
+
+.dtebtn {
+    position: relative;
+    top: 13px;
+    border: none;
+    background: #3cb54a;
+    width: 100%;
+    height: 35px;
+    border-radius: 12px;
+    color: white;
+}
+
+.blckbtn {
+    width: 100%;
+    border: none;
+    background: #0f1926;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    height: 32px;
+    border-radius: 12px;
+    margin-top: 28px;
+}
+
+.btnsdledblckdiv {
+    padding-bottom: 16px;
+}
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

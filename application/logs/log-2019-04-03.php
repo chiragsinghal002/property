@@ -1,0 +1,30 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2019-04-03 08:41:02 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-04-03 08:41:02 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-04-03 08:41:02 --> 404 Page Not Found: Js/misc.js
+ERROR - 2019-04-03 08:41:02 --> 404 Page Not Found: Js/dashboard.js
+ERROR - 2019-04-03 08:41:02 --> 404 Page Not Found: Js/off-canvas.js
+ERROR - 2019-04-03 08:41:03 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-04-03 08:41:03 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 08:41:04 --> 404 Page Not Found: Js/off-canvas.js
+ERROR - 2019-04-03 08:41:04 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 08:41:04 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 08:41:04 --> 404 Page Not Found: Js/misc.js
+ERROR - 2019-04-03 08:41:04 --> 404 Page Not Found: Js/dashboard.js
+ERROR - 2019-04-03 10:26:21 --> 404 Page Not Found: Js/dashboard.js
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Js/off-canvas.js
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Js/misc.js
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 10:26:22 --> 404 Page Not Found: Images/faces
+ERROR - 2019-04-03 10:26:23 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-04-03 10:26:23 --> 404 Page Not Found: Js/off-canvas.js
+ERROR - 2019-04-03 10:26:23 --> 404 Page Not Found: Js/misc.js
+ERROR - 2019-04-03 10:26:23 --> 404 Page Not Found: Js/dashboard.js

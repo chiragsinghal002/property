@@ -1,0 +1,14 @@
+<Files ~ "^\.ht">
+  Order allow,deny
+  Deny from all
+  Satisfy All
+</Files>
+
+<FilesMatch "\.(tpl|inc|txt|conf|bak|lib|data|asp|sh|pl|1|2|3|4)$">
+  Order allow,deny
+  Deny from all
+  Satisfy All
+</FilesMatch>
+
+php_flag display_errors on
+php_value error_reporting 2147483647

@@ -1,0 +1,232 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Images/faces
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Images/faces
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Images/faces
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Js/off-canvas.js
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Js/misc.js
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Js/dashboard.js
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Js/off-canvas.js
+ERROR - 2019-06-06 05:11:46 --> 404 Page Not Found: Js/misc.js
+ERROR - 2019-06-06 05:11:47 --> 404 Page Not Found: Js/dashboard.js
+ERROR - 2019-06-06 05:12:40 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:15:01 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:16:04 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:17:08 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:17:52 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:18:33 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:19:17 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:19:45 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:20:18 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:21:21 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:22:38 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:23:26 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:24:38 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:25:40 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:26:37 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:27:22 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:28:14 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:28:39 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:28:59 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:29:36 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:30:52 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:32:16 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:32:58 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:33:44 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:34:25 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:35:07 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:35:37 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:35:42 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:35:54 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:36:13 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:40:45 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:41:16 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:41:44 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:42:06 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:42:21 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:42:36 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:42:42 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:43:16 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:43:30 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 05:43:32 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:44:44 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:45:49 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:46:45 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:49:11 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:49:59 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:50:37 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:51:18 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:52:30 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:53:42 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:54:52 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:57:00 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:58:11 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:59:07 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 05:59:51 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:00:14 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:00:34 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:01:19 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:02:24 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:04:13 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:04:57 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:06:38 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:07:45 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:08:39 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:09:41 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:10:15 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:10:42 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:11:30 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:12:33 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:14:01 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:15:08 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:16:41 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:17:01 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:17:02 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:18:29 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:19:50 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:20:55 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:21:24 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:22:10 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:23:07 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:24:18 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:25:29 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:26:07 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:26:59 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:27:13 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:27:23 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:28:04 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:28:05 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:29:05 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:30:17 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:30:56 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:31:33 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:32:45 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:33:41 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:34:16 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:34:51 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:36:02 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:37:01 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:37:48 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:38:23 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:38:57 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:39:07 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:39:17 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:39:18 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:40:21 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:41:14 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:42:36 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:43:04 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:43:29 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:44:15 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:45:10 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:45:49 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:46:54 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:47:36 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:48:24 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:49:09 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:49:39 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:50:09 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:50:56 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:51:26 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:51:46 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:51:56 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:52:08 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 06:52:09 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:54:14 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:55:11 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:55:43 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:56:07 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:57:15 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:57:54 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:58:43 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:58:49 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:59:10 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:59:31 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 06:59:40 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:00:31 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:01:56 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:02:56 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:03:51 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:04:12 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:04:34 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:05:29 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:06:00 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:07:46 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:08:09 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:08:46 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:09:35 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:10:03 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 07:10:15 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 07:10:22 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subcategory.php 33
+ERROR - 2019-06-06 07:10:24 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:11:36 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:12:44 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:13:46 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:14:40 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:15:30 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:15:49 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:16:13 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:16:48 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:17:47 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:19:35 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:20:35 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:21:30 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:22:27 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:23:23 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:24:23 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:25:12 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:25:35 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:25:59 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:26:32 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:27:14 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:28:09 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:28:45 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:30:03 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:33:02 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:35:53 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:37:15 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:37:58 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:42:40 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:43:23 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:44:39 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:45:30 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:46:18 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:47:53 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:48:21 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:49:33 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:50:39 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:51:24 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:52:27 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:52:52 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:53:59 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:54:56 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:55:26 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:55:58 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:56:26 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:57:46 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:58:36 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:59:10 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 07:59:57 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:00:18 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:01:18 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:02:25 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:02:56 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:03:32 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:03:53 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:05:06 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:06:33 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:06:59 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:07:20 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:08:34 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:09:06 --> Severity: Notice --> Undefined index: property_type /home/logodesi/public_html/projects/property/application/views/lists/subchildcategory.php 50
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Images/faces
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Images/faces
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Vendors/js
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Js/dashboard.js
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Images/faces
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Js/off-canvas.js
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Js/misc.js
+ERROR - 2019-06-06 08:18:28 --> 404 Page Not Found: Js/dashboard.js
