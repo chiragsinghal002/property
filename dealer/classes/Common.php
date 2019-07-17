@@ -155,8 +155,8 @@ return $data;
 
 
 public  function searchresultbuy($data,$dealer_id) {  
-         // var_dump($data);die;
-    $property_type=2;
+          // var_dump($data);die;
+    $property_type=1;
     if($data['cat_id']==26){
 
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'])){
@@ -164,21 +164,22 @@ public  function searchresultbuy($data,$dealer_id) {
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
 
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+            // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'";die;
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else if($data['cat_id']==27){
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else{
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
        }else{
-        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ") or die(mysqli_query($this->db)); 
     }
 
 }
@@ -201,28 +202,28 @@ return $data1;
 
 
 public  function searchresultrent($data,$dealer_id) {  
-    $property_type=2;//for rent only
+    $property_type=0;//for rent only
     if($data['cat_id']==26){
 
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'])){
         // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND property_option=0 AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."'";die;
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else if($data['cat_id']==27){
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else{
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
        }else{
-        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
     }
 
 
@@ -1449,9 +1450,12 @@ public  function updateprofile($data,$realname)
     $email = $data['dealer_email'];
     $fname = $data['dealer_fname'];
     $lname = $data['dealer_lname'];
+    $dealer_phone_second=$data['dealer_phone_second'];
+    $dealer_telephone_no=$data['dealer_telephone_no'];
+    $dealer_company_profile=$data['dealer_company_profile'];
     $img = $realname;
     if($realname==0){
-     $register = $this->db->query("update dealer SET dealer_type='Dealer',dealer_phone='".$data['dealer_phone']."',dealer_first_name='".$fname."',dealer_last_name='".$lname."',dealer_address='".$data['dealer_address']."',sector='".$data['sector']."',dealer_modifiedat= '$created' where dealer_email='$email'") or die(mysqli_error($this->db));
+     $register = $this->db->query("update dealer SET dealer_type='Dealer',dealer_phone='".$data['dealer_phone']."',dealer_first_name='".$fname."',dealer_last_name='".$lname."',dealer_address='".$data['dealer_address']."',sector='".$data['sector']."',dealer_phone_second='".$dealer_phone_second."',dealer_telephone_no='".$dealer_telephone_no."',dealer_company_profile='".$dealer_company_profile."',dealer_modifiedat= '$created' where dealer_email='$email'") or die(mysqli_error($this->db));
  }else{
      $register = $this->db->query("update dealer SET dealer_type='Dealer',dealer_phone='".$data['dealer_phone']."',dealer_first_name='".$fname."',dealer_last_name='".$lname."',dealer_photo='".$img."',dealer_address='".$data['dealer_address']."',dealer_modifiedat= '$created' where dealer_email='$email'") or die(mysqli_error($this->db));
  }

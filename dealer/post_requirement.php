@@ -141,7 +141,7 @@ $residential=$common->propertyCategory(0);
 		<?php $i=1; 
 		foreach($residential as $data):?>
 			<?php if($i<5):?>
-				<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
+				<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
 				</a>
 				<p><?php echo $data['cat_name'];?></p>
 
@@ -158,7 +158,7 @@ $residential=$common->propertyCategory(0);
 			foreach($residential as $data):?>
 				<?php if($j>4):?>
 
-					<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
+					<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
 					</a>
 					<p><?php echo $data['cat_name'];?></p>
 
@@ -206,7 +206,7 @@ $commercial=$common->propertyCategory(1);?>
 		foreach($commercial as $data):
 			?>
 			<?php if($k<5):?>
-				<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
+				<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
 				</a>
 				<p><?php echo $data['cat_name'];?></p>
 			</div>
@@ -221,7 +221,7 @@ $commercial=$common->propertyCategory(1);?>
 			foreach($commercial as $data):?>
 				<?php if($l>4):?>
 
-					<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
+					<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
 					</a>
 					<p><?php echo $data['cat_name'];?></p>
 

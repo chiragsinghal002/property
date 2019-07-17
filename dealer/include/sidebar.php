@@ -86,7 +86,7 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
   ?>
   <li>
 
-    <a href="post_property.php"><i class="fa fa-building"></i>Post Property</a>
+    <a href="post_property.php"><i class="fa fa-building"></i>Sell Property</a>
 
   </li>
 <?php endif;?>
@@ -98,7 +98,7 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
 
 </li>
 <?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
-  <li><a href="post_requirement.php"><i class="fa fa-pencil-square-o"></i>Post Requirement</a></li>
+  <li><a href="post_requirement.php"><i class="fa fa-pencil-square-o"></i>Buy Property</a></li>
 <?php endif;?>
 <?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
   <li><a href="list_requriment.php"><i class="fa fa-pencil-square-o"></i>List Requirement</a></li>

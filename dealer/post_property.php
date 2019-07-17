@@ -196,7 +196,7 @@ if(isset($_GET['msg'])){
 											<?php $i=1; 
 											foreach($residential as $data):?>
 												<?php if($i<5):?>
-													<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
+													<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
 													</a>
 													<p><?php echo $data['cat_name'];?></p>
 
@@ -212,7 +212,7 @@ if(isset($_GET['msg'])){
 												<?php $j=1; 
 												foreach($residential as $data):?>
 													<?php if($j>4):?>
-														<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
+														<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="residential_cat(this.id)">
 														</a>
 														<p><?php echo $data['cat_name'];?></p>
 													</div>
@@ -259,7 +259,7 @@ if(isset($_GET['msg'])){
 											foreach($commercial as $data):
 												?>
 												<?php if($k<5):?>
-													<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
+													<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
 													</a>
 													<p><?php echo $data['cat_name'];?></p>
 												</div>
@@ -274,7 +274,7 @@ if(isset($_GET['msg'])){
 												foreach($commercial as $data):?>
 													<?php if($l>4):?>
 
-														<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/500x500" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
+														<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
 														</a>
 														<p><?php echo $data['cat_name'];?></p>
 
@@ -421,6 +421,8 @@ if(isset($_GET['msg'])){
 </div>
 </div>
 </div>
+
+<script type="text/javascript" src="js/jquery.placeholder.label.js"></script>
 <?php include_once'include/footer.php';?>
 
 
@@ -794,6 +796,41 @@ function show_address(value){
 });
 
 </script>
+ <script type="text/javascript">
+    $(document).ready(function (){
+      $('input[placeholder]').placeholderLabel();
+    })
+    </script>
+<script type="text/javascript">
+    $(document).ready(function (){
+  $('input[placeholder]').placeholderLabel({
+
+    // placeholder color
+    placeholderColor: "#ffffff!important", 
+
+    // label color
+    labelColor: "#4AA2CC",
+
+    // size of label
+    labelSize: "14px"
+    // size of color
+     color: "#000000!important";
+
+    // font style
+    fontStyle: "normal", 
+
+    // uses border color
+    useBorderColor: true, 
+
+    // displayed in the input
+    inInput: true, 
+
+    // time to move
+    timeMove: 200 
+    
+  });
+})
+  </script>
 <style type="text/css">
 	img{margin:10px;}
 .selected{

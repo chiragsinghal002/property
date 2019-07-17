@@ -3743,6 +3743,7 @@ img.admnimg {
      outline: none;
 }
 
+
 /*Responsivness*/
  @media only screen and (max-width: 375px){
      .chanepass_button .btn-default {
@@ -4015,7 +4016,19 @@ p.succmsg {
 .src_prc label {
     color: #000000!importanty;
 }
-
+.main1 label {
+    color: #ffffff!important;
+}
+.src-btn label {
+    color: #000000!important;
+    opacity: 0.6;
+}
+i.fa.fa-lock {
+    color: red;
+}
+.autocomplete label {
+     display: none!important; 
+}
 
 /*Responsivness  media query by mukesh*/
 @media(max-width:767px){

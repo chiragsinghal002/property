@@ -8,7 +8,7 @@ if(isset($_GET['property_id'])){
 	$getproperty_for=base64_decode($_GET['property_for']);
 	$getproperty_option='0';
 	$data1=$common->getpropertybyid($getproperty_id,$getproperty_for);
-			// var_dump($data);
+			 var_dump($data);
 }
 ?>
 
@@ -545,135 +545,9 @@ if(isset($_GET['property_id'])){
 </div>
 <!-- Close Expired Properties Listing Div -->
 <!-- Open Favorite Properties Div -->
+
 <div id="favorite_properties">
-	<?php 
-  // include_once'Object.php';
-// session_start();
-	$type='All';
-	$getrequirementresi=$common->getFavResiPropertyByDealerId($_SESSION['dealer_id']);
-  // var_dump($getrequirementresi);die;
-	$getrequirementcomm=$common->getCommRequirementByDealerId($_SESSION['dealer_id']);
-    // var_dump($comm_properties);
-	if(!empty($getrequirementresi)){
-		$prop=count($getrequirementresi);
-	}else{
-		$prop=0;
-	}
-
-	if(!empty($getrequirementcomm)){
-		$comm_prop=count($getrequirementcomm);
-	}else{
-		$comm_prop=0;
-	}
-	$total_pro=$prop+$comm_prop;
-	?>
-	<div class="resultactiveprdcts">
-		<p><?php echo $total_pro;?> Active Properties</p>
-
-	</div>
-
-	<!--  Land For Sale: -->
-	<?php if(!empty($getrequirementresi)){?>
-		<?php foreach($getrequirementresi as $data){?>
-			<?php $cat=$common->getCategoryName($data['cat_id']); 
-    //var_dump($cat);
-			$today=date('Y-m-d H:i:s');
-			$data['cat_name']=$cat['cat_name'];
-			$data['subcat_name']=$cat['subcat_name']; ?>
-			<div class="landforsale">
-				<div class="row">
-					<div class="col-sm-8">
-						<!-- Land for Sale: -->   
-						<div class="contentoflandfor">
-							<h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
-							<p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
-							<p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></span></p>
-							<?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
-
-						</div>
-						<!-- Active and Posted On -->         
-						<div class="expireon">
-							<p><?php echo $data['property_code'];?><span><?php echo $today<$data['expired_by']?'Active':'Expired';?></span></p>
-							<p class="postedon">Posted On: <span style="border: none;"><?php echo date('d M Y',strtotime($data['posted_by']));?></span></p>
-						</div>
-
-						<!-- Expire On -->  
-						<div class="extnddurtion">
-							<p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <span></span></p> 
-							<p>Category:<span><?php echo $data['cat_name'];?></span></p>        
-						</div>
-
-						<!-- Summary Views: -->
-       <!--  <div class="summryviews">
-         <p>Summary views:132 / Detail views: 13</p>
-         <span>view 1 Responses</span>
-     </div> -->
- </div>
-
- <div class="col-sm-4">
- 	
- </div>
-</div>  
-</div>
-<?php } ?>
-<?php } ?>
-<!-- For Commercial Properties -->
-<?php if(!empty($getrequirementcomm)){?>
-	<?php foreach($getrequirementcomm[0] as $data){?>
-		<?php $cat=$common->getCategoryName($data['cat_id']); 
-    //var_dump($cat);
-		$data['cat_name']=$cat['cat_name'];
-		$data['subcat_name']=$cat['subcat_name']; ?>
-		<div class="landforsale">
-			<div class="row">
-				<div class="col-sm-8">
-					<!-- Land for Sale: -->   
-					<div class="contentoflandfor">
-						<h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
-						<p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['Expected_Price']).'/-';?></span></p>    
-						<p>Plot area:<span><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}?></span></p>
-						<?php if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}?>   
-
-					</div>
-					<!-- Active and Posted On -->         
-					<div class="expireon">
-						<p><?php echo $data['property_code'];?><span>Active</span></p>
-						<p class="postedon">Posted On: <span style="border: none;"><?php echo date('d M Y',strtotime($data['posted_by']));?></span></p>
-					</div>
-					<div class="extnddurtion">
-						<p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <span></span></p> 
-						<p>Category:<span><?php echo $data['cat_name'];?></span></p>
-
-					</div>
-
-					<!-- Summary Views: -->
-
-       <!--  <div class="summryviews">
-
-         <p>Summary views:132 / Detail views: 13</p>
-         <span>view 1 Responses</span>
-
-     </div> -->
- </div>
- <div class="col-sm-4">
- 	<div class="btnsdledblckdiv">  
- 		<!-- Assist to User -->
- 		<div class="editbutton">
- 			<!-- <p>Assist to subuser</p> -->
- 			<a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a>
- 		</div>
- 		<!-- Delete Button -->
-
- 		<div class="deletebutton">
-
- 			<button class="dtebtn" onclick="del_comm(this.value)" value="<?php echo $data['property_id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i>DELETE</button>                                    
- 		</div>
- 	</div>  
- </div>
-</div>  
-</div>
-<?php } ?>
-<?php } ?>
+	
 </div>
 
 
@@ -834,6 +708,16 @@ function change_div(id){
 		$("#expired").removeClass('color');
 		$("#favorite_properties").show();
 		$("#favorite").addClass('color');
+		var property_id=$("#property_id").val();
+		var property_for=$("#property_for").val();
+		$.ajax({
+			url:'ajax_new.php',
+			type:'post',
+			data:{'favourite':1},
+			success:function(data){
+				$("#favorite_properties").html(data);
+			}
+		})
 	}else{
 		$("#active_properties").hide();
 		$("#expired_properties").hide();

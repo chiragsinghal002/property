@@ -351,21 +351,21 @@ div#plot_area {
 </script>
   <script type="text/javascript">
     $(document).ready(function (){
-      $('.src_prc input[placeholder]').placeholderLabel();
+      $('.src-btn input[placeholder]').placeholderLabel();
     })
     </script>
 <script type="text/javascript">
     $(document).ready(function (){
-  $('.src_prc input[placeholder]').placeholderLabel({
+  $('.src-btn input[placeholder]').placeholderLabel({
 
     // placeholder color
-    placeholderColor: "#898989!important", 
+    placeholderColor: "#000000!important", 
 
     // label color
-    labelColor: "#4AA2CC",
+    labelColor: "#000000!important",
 
     // size of label
-    labelSize: "14px"
+    labelSize: "14px",
     // size of color
      color: "#000000!important";
 

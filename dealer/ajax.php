@@ -78,13 +78,13 @@ if(isset($_POST['resi_cat_id'])){
 				}else if($data1['selection_type']==4){
 					//echo '<p class="price-heading">'.'PLOT AREA'.'</p>';
 
-					echo '<div class="row">';
+					echo '<div class="row ">';
 					echo '<div class="col-sm-2">';
 					echo '<div class="typeheading">';
 					echo '<p>'.$data1['subchild_name'].'</p>';
 					echo '</div>';
 					echo '</div>';
-					echo '<div class="col-sm-4 ">';
+					echo '<div class="col-sm-3 ">';
 					echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
 					echo '</div>';
 					echo '<div class="col-sm-4 ">';
@@ -268,7 +268,7 @@ if(isset($_POST['subcat_id'])){
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
 				echo '</div>';
-				echo '<div class="col-sm-4">';
+				echo '<div class="col-sm-3">';
 				echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
 				echo '</div>';
 				echo '<div class="col-sm-4">';
@@ -433,7 +433,7 @@ if(isset($_POST['search_buy'])){
 			echo '<h4>';
 			echo 'Plot area';
 			echo '&nbsp';
-			if(!empty($data2['Plot_Area'] && $data2['Plot_Area_Unit'])){echo $data2['Plot_Area'].' '.$data2['Plot_Area_Unit'];}else if(!empty($data2['Super_Built_Up_Area'] && $data2['Super_Built_Up_Area_Unit'])){echo $data2['Super_Built_Up_Area'].' '.$data2['Super_Built_Up_Area_Unit'];}else{}
+			if(!empty($data2['Plot_Area'] && $data2['Plot_Area_Unit'])){echo $data2['Plot_Area'].' '.$data2['Plot_Area_Unit'];}else if(!empty($data2['Super_Built_Up_Area'] && $data2['Super_Built_Up_Area_Unit'])){echo $data2['Super_Built_Up_Area'].' '.$data2['Super_Built_Up_Area_Unit'];}else if(!empty($data2['Carpet_Area'] && $data2['Carpet_Area_Unit'])){echo $data2['Carpet_Area'].' '.$data2['Carpet_Area_Unit'];}else{}
 			echo '</h4>';
 			echo '<h4>';
 			if($data2['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data2['Bedroom'].'BHK'.'</span>'.'</p>';}
@@ -692,3 +692,39 @@ if(isset($_POST['automated_mail'])){
 
 }
 ?>
+
+ <script type="text/javascript">
+    $(document).ready(function (){
+      $('input[placeholder]').placeholderLabel();
+    })
+    </script>
+<script type="text/javascript">
+    $(document).ready(function (){
+  $('input[placeholder]').placeholderLabel({
+
+    // placeholder color
+    placeholderColor: "#ffffff!important", 
+
+    // label color
+    labelColor: "#4AA2CC",
+
+    // size of label
+    labelSize: "14px"
+    // size of color
+     color: "#000000!important";
+
+    // font style
+    fontStyle: "normal", 
+
+    // uses border color
+    useBorderColor: true, 
+
+    // displayed in the input
+    inInput: true, 
+
+    // time to move
+    timeMove: 200 
+    
+  });
+})
+  </script>

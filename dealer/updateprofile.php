@@ -31,10 +31,6 @@ include_once'include/sidebar.php';
 			<?php include("include/verified.php"); ?>
 			<?php } ?>
 
-			
-
-
-
 			<form class="form-horizontal" method="post" action="action/submission.php" enctype="multipart/form-data" data-toggle="validator" role="form">
 
 				<!-- <input type="hidden" name="action" value="updateprofile" /> -->
@@ -91,7 +87,7 @@ include_once'include/sidebar.php';
 					<div class="uppro-container">
 
 						<i class="glyphicon glyphicon-phone-alt"></i>
-						<input type="text" class="uppro_input" name="dealer_firm_name" placeholder="Telephone Number">
+						<input type="text" class="uppro_input" name="dealer_telephone_no" placeholder="Telephone Number" value="<?php if(!empty($showdetailDealer['dealer_telephone_no'])){ echo $showdetailDealer['dealer_telephone_no']; } ?>">
 		
 					</div>
 
@@ -116,7 +112,7 @@ include_once'include/sidebar.php';
 						<a href="mailto: info@yards360.com" style="color: red;" class="uplock"><i class="fa fa-lock" aria-hidden="true"></i></a>
 						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 						<div class="help-block with-errors"></div>
-						 <input type="text" class="uppro_mob" name="dealer_firm_name" placeholder="Mobile Number">
+						 <input type="text" class="uppro_mob" name="dealer_phone_second" placeholder="Mobile Number" value="<?php if(!empty($showdetailDealer['dealer_phone_second'])){ echo $showdetailDealer['dealer_phone_second']; } ?>">
 			
 				</div>
 
@@ -190,7 +186,7 @@ include_once'include/sidebar.php';
 				<div class="uppro-container">
 						 <i class="glyphicon glyphicon-lock" aria-hidden="true"></i>
 
-			<input type="Password" class="uppro_input"  placeholder="Password">
+			<input type="Password" class="uppro_input"  placeholder="Password" value="11111111">
 			</div>
 			</div>
 		</div>
@@ -198,7 +194,7 @@ include_once'include/sidebar.php';
 		<div class="row">
 			<div class="col-sm-12">
 				
-				<textarea rows="2" class="uptxtarea"  placeholder="Company Profile"></textarea>
+				<textarea rows="2" class="uptxtarea"  name="dealer_company_profile" placeholder="Company Profile"><?php if(!empty($showdetailDealer['dealer_company_profile'])){ echo $showdetailDealer['dealer_company_profile']; } ?></textarea>
 
 			</div>
 		</div>
