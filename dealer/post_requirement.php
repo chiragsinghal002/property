@@ -177,9 +177,7 @@ $residential=$common->propertyCategory(0);
 <!--/item-->
 </div>
 <!--/carousel-inner--> 
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
 
-<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
 </div>
 <!--/myCarousel-->
 </div>
@@ -235,9 +233,7 @@ $commercial=$common->propertyCategory(1);?>
 
 
 </div>
-<a class="left carousel-control" href="#myCarousel1" data-slide="prev">‹</a>
 
-<a class="right carousel-control" href="#myCarousel1" data-slide="next">›</a>
 </div>
 <!--/myCarousel-->
 </div>
@@ -259,12 +255,13 @@ $commercial=$common->propertyCategory(1);?>
 
 <input type="hidden" id="category_id" name="category_id" value="">
 
-<div class="apprtmnt">
-
+<div class="row prct">
+<div class="col-sm-2">
 <div class="typeheading">
 <p>Budget Price:</p>
 </div>
-
+</div>
+<div class="col-sm-4">
 <div class="drop-html1">
 <input type="number" name="price" placeholder="Budget Price" class="ginputfield" id="price" value="" onkeyup="price_check(this.value)" name="exp_price">
 <span id="price_error" style="color:red;display: none;">Select Price*</span>
@@ -273,6 +270,7 @@ $commercial=$common->propertyCategory(1);?>
 <option value="lakhs">Lakhs</option>
 <option value="crores">Crores</option>
 </select> -->
+</div>
 </div>
 <span id="word_result"></span>
 
@@ -341,7 +339,7 @@ $commercial=$common->propertyCategory(1);?>
 
 </div>
 <!-- Dashboard Submit Button -->
-<div class="apprtmnt">
+<div class="row">
 <input class="postprorp_submitbtn" type="button" name="submit" onclick="return form_submit()" value="Submit">
 </div>
 </div>  

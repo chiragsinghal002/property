@@ -70,7 +70,7 @@ if(isset($_POST['resi_cat_id'])){
 					foreach($value as $v){
 						echo '<input type="checkbox" name="'.$data1['subchild_name'].'[]'.'" value="'.$v.'">'.$v.'';
 					}
-						echo '</div>';
+					echo '</div>';
 					echo '</div>';
 					echo '</div>';
 					echo '</div>'; 
@@ -517,12 +517,14 @@ if(isset($_POST['search_buy'])){
 }
 
 if(isset($_POST['search_rent'])){
-	 // var_dump($_POST);die;
+	     // var_dump($_POST);die;
+	//var_dump($_SESSION);die;
 	$result2=$common->searchresultrent($_POST,$_SESSION['dealer_id']);
-	$dealerinfo=$common->getDealerInfobyId($_SESSION['dealer_id']);
+	     // var_dump($result2);
 
-	$count=count($result2);
+	$dealerinfo=$common->getDealerInfobyId($_SESSION['dealer_id']);
 	if(!empty($result2)){
+		$count=count($result2);
 		echo '<div class="alert alert-success">';
 		echo '<strong>'.'Success!'.'</strong>'.$count.'Results Founds'.'</a>';
 		echo '</div>';
@@ -530,7 +532,10 @@ if(isset($_POST['search_rent'])){
 			$a=$common->addViews($_SESSION['dealer_id'],$data2['property_id']);
 			$cat_name=$common->getCategoryName($data2['cat_id']);
 			$getResponse=$common->getResponseTrackDetail($_SESSION['dealer_id'],$data2['property_id']);
-				$propdealinfo=$common->getDealerInfobyId($data2['dealer_id']);
+			
+			$propdealinfo=$common->getDealerInfobyId($data2['dealer_id']);
+			// $count=count($getResponse);
+			// var_dump($propdealinfo);die;
 			echo '<input type="hidden" id="phone_no" value="'.$propdealinfo['dealer_phone'].'">';
 			echo '<input type="hidden" id="fname" value="'.$propdealinfo['dealer_first_name'].'">';
 			echo '<input type="hidden" id="lname" value="'.$propdealinfo['dealer_last_name'].'">';
@@ -546,13 +551,20 @@ if(isset($_POST['search_rent'])){
 			echo '<div class="row">';
 			echo '<div class="col-sm-4">';
 			echo '<div class="proprtydiv">';
-			echo '<h5>'.'Property Id:'.$data2['property_code'].'</h5>';
+			echo '<input type="hidden" id="prop_for" value='.$data2['property_for'].'>';
+			echo '<p>'.'<span>'.'ID:-'.''.$data2['property_code'].'</span>'.'</p>';
 			echo '</div>'; 
 			echo '</div>';
 			echo '<div class="col-sm-4">';
 			echo '<div class="sqrftdiv">';
-			echo '<h4>'.$data2['plot_area'].''.$data2['plot_size_area'].'</h4>';
-			echo '<h4>'.$data2['Bedroom'].' '.'BHK'.'</h4>';
+			echo '<h4>';
+			echo 'Plot area';
+			echo '&nbsp';
+			if(!empty($data2['Plot_Area'] && $data2['Plot_Area_Unit'])){echo $data2['Plot_Area'].' '.$data2['Plot_Area_Unit'];}else if(!empty($data2['Super_Built_Up_Area'] && $data2['Super_Built_Up_Area_Unit'])){echo $data2['Super_Built_Up_Area'].' '.$data2['Super_Built_Up_Area_Unit'];}else if(!empty($data2['Carpet_Area'] && $data2['Carpet_Area_Unit'])){echo $data2['Carpet_Area'].' '.$data2['Carpet_Area_Unit'];}else{}
+			echo '</h4>';
+			echo '<h4>';
+			if($data2['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data2['Bedroom'].'BHK'.'</span>'.'</p>';}
+			echo '</h4>';
 			echo '</div>'; 
 			echo '</div>';
 			echo '<div class="col-sm-4">';
@@ -561,10 +573,11 @@ if(isset($_POST['search_rent'])){
 			echo '<i class="fa fa-envelope-o" aria-hidden="true">';
 			echo '</i>';
 			if($getResponse['mail']==1){
-				echo '<a href="mailto:'.$dealerinfo['dealer_email'].'" id='.$data2['property_id'].'>'.'MAIL'.'</a>';
+				echo '<a href="mailto:'.$propdealinfo['dealer_email'].'" id='.$data2['property_id'].' style="background:red;">'.'MAIL'.'</a>';
 			}else{
-				echo '<a href="mailto:'.$dealerinfo['dealer_email'].'" onclick="mail(this.id)" id='.$data2['property_id'].'>'.'MAIL'.'</a>';
+				echo '<a href="mailto:'.$propdealinfo['dealer_email'].'" onclick="mail(this.id)" id='.$data2['property_id'].'>'.'MAIL'.'</a>';
 			}
+			
 			echo '</button>';
 			echo '</div>'; 
 			echo '</div>';
@@ -572,7 +585,7 @@ if(isset($_POST['search_rent'])){
 			echo '<div class="row">';
 			echo '<div class="col-sm-4">';
 			echo '<div class="residntlapartdiv">';
-			echo '<h5>'.$data2['property_name'].'</h5>';
+			echo '<h5>'.'Price'.'<i class="fa fa-inr"></i>'.'<span>'.number_format($data2['price']).'/-'.'</span>'.'</h5>';
 			echo '</div>'; 
 			echo '</div>';
 			echo '<div class="col-sm-4">';
@@ -583,10 +596,11 @@ if(isset($_POST['search_rent'])){
 			echo '<i class="fa fa-whatsapp" aria-hidden="true">';
 			echo '</i>';
 			if($getResponse['whatsapp']==1){
-				echo '<a target="_blank" href="https://wa.me/<number>" id='.$data2['property_id'].' style="background:red;">'.'WHATSAPP'.'</a>';
+				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" id='.$data2['property_id'].' >'.'WHATSAPP'.'</a>';
 			}else{
-				echo '<a target="_blank" href="https://wa.me/<number>" onclick="whatsapp(this.id)" id='.$data2['property_id'].'>'.'WHATSAPP'.'</a>';
+				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" onclick="whatsapp(this.id)" id='.$data2['property_id'].'>'.'WHATSAPP'.'</a>';
 			}
+			
 			echo '</button>';
 			echo '</div>'; 
 			echo '</div>';
@@ -612,10 +626,11 @@ if(isset($_POST['search_rent'])){
 			echo '<i class="fa fa-phone" aria-hidden="true">';
 			echo '</i>';
 			if($getResponse['call_to_user']==1){
-				echo '<span id='.$data2['property_id'].'>'.'CALL'.'</span>';
+				echo '<span id='.$data2['property_id'].' onclick="show_call()" >'.'CALL'.'</span>';
 			}else{
 				echo '<span id='.$data2['property_id'].' onclick="call_to(this.id)">'.'CALL'.'</span>';
 			}
+			
 			echo '</button>';
 			echo '</div>'; 
 			echo '</div>';
@@ -694,14 +709,14 @@ if(isset($_POST['automated_mail'])){
 }
 ?>
 
- <script type="text/javascript">
-    $(document).ready(function (){
-      $('input[placeholder]').placeholderLabel();
-    })
-    </script>
 <script type="text/javascript">
-    $(document).ready(function (){
-  $('input[placeholder]').placeholderLabel({
+	$(document).ready(function (){
+		$('input[placeholder]').placeholderLabel();
+	})
+</script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('input[placeholder]').placeholderLabel({
 
     // placeholder color
     placeholderColor: "#ffffff!important", 
@@ -710,9 +725,9 @@ if(isset($_POST['automated_mail'])){
     labelColor: "#4AA2CC",
 
     // size of label
-    labelSize: "14px"
+    labelSize: "14px",
     // size of color
-     color: "#000000!important";
+    color: "#000000!important",
 
     // font style
     fontStyle: "normal", 
@@ -726,6 +741,6 @@ if(isset($_POST['automated_mail'])){
     // time to move
     timeMove: 200 
     
-  });
-})
-  </script>
+});
+	})
+</script>

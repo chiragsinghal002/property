@@ -1306,8 +1306,9 @@ h4.modal-title {
     height: 40px;
     color: white;
     position: relative;
-    left: 245px;
-}
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;}
 
  .postprorp_submitbtn:focus{
      outline: none;
@@ -4029,7 +4030,9 @@ i.fa.fa-lock {
     border-radius: 0px!important;
 }
 
-
+.prct {
+    padding: 14px 0px;
+}
 /*Responsivness  media query by mukesh*/
 @media(max-width:767px){
 	.sidebar_tab {

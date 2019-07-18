@@ -59,7 +59,7 @@ $dealer_info=$common->getDealerInfobyId($_SESSION['dealer_id']);
       <?php } ?>
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home" onclick="buy_tab();">Buy</a></li>
-    <li><a data-toggle="tab" href="#menu1" onclick="rent_tab();">Rent</a></li>
+    <li><a data-toggle="tab" href="#home" onclick="rent_tab();">Rent</a></li>
   </ul>
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
@@ -109,20 +109,19 @@ $dealer_info=$common->getDealerInfobyId($_SESSION['dealer_id']);
            <input type="text" name="searchbar" placeholder="Type Locaton or Project/Society" value="" id="searching" class="srchfield" onclick="buy_show_strip();" onkeyup="location_valid(this.value);">
          </div>
        </form>
-
        <span id="searching_error" style="color: red;display: none;">*This Field is Required</span>
      </div>
      <!-- Seaech Green Button -->
      <div class="col-sm-2 padding-search">
-      <input type="button" class="srchbtn" onclick="return buy_search();" value="SEARCH">
+      <input type="button" class="srchbtn" id="search_button" onclick="return buy_search();" value="SEARCH">
     </div>
   </div>
 </div>
 </div>
-<div id="menu1" class="tab-pane fade">
+<!-- <div id="menu1" class="tab-pane fade">
  <div class="allresidntl">
   <div class="row">
-   <!-- All Residental Button -->
+  
    <div class="col-sm-3 padding-first">
     <div class="dropdown res">
       <button class="residntlbtn dropdown-toggle" type="button"  data-toggle="dropdown"><span id="rent_res">All Residential</span>
@@ -130,18 +129,18 @@ $dealer_info=$common->getDealerInfobyId($_SESSION['dealer_id']);
         <ul class="dropdown-menu" role="menu" >
           <li role="presentation">Residential<br>
             <?php $rescat=$common->propertyCategory(0);
-                                // var_dump($rescat);
+                               
             ?>
             <ul>
               <?php foreach($rescat as $data):?>
-                <!-- <li><input type="radio" onchange='rent_res_checkbox()' name="rent_residntl" value="<?php echo $data['cat_id'];?>"><?php echo $data['cat_name'];?></li><br> -->
+              
                 <li style="cursor: pointer;" id="<?php echo $data['cat_id'];?>" onclick="rent_res_checkbox_value(this.id);"><?php echo $data['cat_name'];?></li>
               <?php endforeach;?>
             </ul>
           </li>
           <li role="presentation">Commercial<br>
             <?php $commercat=$common->propertyCategory(1);
-                                // var_dump($commercat);
+                            
             ?>
             <ul>
               <?php foreach($commercat as $data):?>
@@ -155,19 +154,24 @@ $dealer_info=$common->getDealerInfobyId($_SESSION['dealer_id']);
         <input type="hidden" id="rent_property_type">
       </div>
     </div>
-    <!-- Type Location field -->
+   
     <div class="col-sm-7 padding-minus">
+      <form autocomplete="off">
+          <div class="autocomplete" style="width:584px;">
+           <input type="text" name="searchbar" placeholder="Type Locaton or Project/Society" value="" id="searching" class="srchfield" onclick="rent_show_strip();" onkeyup="location_valid(this.value);">
+         </div>
+       </form>
      <input type="text" name="searchbar" placeholder=" Type Locaton or Project/Society" value="" id="rent_searching" class="srchfield" onclick="rent_show_strip();">
      <span id="rent_searching_error" onkeyup="rent_location_valid(this.value);" style="color: red;display: none;">*This Field is Required</span>
    </div>
-   <!-- Seaech Green Button -->
+   
    <div class="col-sm-2 padding-search">
     <input type="button" class="srchbtn" onclick="return rent_search();" value="SEARCH">
   </div>
 </div>
-</div>                <!-- All Residental -->
+</div>                
 
-</div>
+</div> -->
 </div>
 
 <!-- Select Multiple Buttons -->

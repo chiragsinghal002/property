@@ -7,10 +7,13 @@ if(isset($_POST['resi_cat_id'])){
 	$result=$common->residentialsubCategory($resi_cat_id);
 	 // var_dump($result);
 	if(!empty($result)){
-		echo '<div class="apprtmnt">';
+		echo '<div class="row">';
+		echo '<div class="col-sm-2">';
 		echo '<div class="typeheading">';
 		echo '<p>'.'Subcategory Name'.'</p>';
 		echo '</div>';
+		echo '</div>';
+		echo '<div class="col-sm-4">';
 		echo '<div class="drop-html1">';
 		echo '<div class="dropdown">';
 		echo '<select onchange=child_sub_cat(this.value)>';
@@ -22,6 +25,7 @@ if(isset($_POST['resi_cat_id'])){
 		echo '</div>';
 		echo '</div>';
 		echo '</div>'; 
+		echo '</div>';
 	}else{
 		$data=$common->property_option_for_requirement($resi_cat_id);
 
@@ -29,10 +33,13 @@ if(isset($_POST['resi_cat_id'])){
 			foreach($data as $data1){
 			$value=explode(',',$data1['values']);
 			if($data1['selection_type']==1){
-				echo '<div class="apprtmnt">';
+				echo '<div class="row">';
+				echo '<div class="col-sm-2">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
+				echo '</div>';
+				echo '<div class="col-sm-4">';
 				echo '<div class="drop-html1">';
 				echo '<div class="dropdown">';
 				echo '<select name="'.$data1['subchild_name'].'">';
@@ -43,11 +50,12 @@ if(isset($_POST['resi_cat_id'])){
 				echo '</select>';
 				echo '</div>';
 				echo '</div>';
-				echo '</div>'; 
+				echo '</div>';
+				echo '</div>';  
 			}else if($data1['selection_type']==2){
 
 			}else if($data1['selection_type']==3){
-				echo '<div class="apprtmnt">';
+				echo '<div class="apprtmnt c">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
@@ -60,11 +68,16 @@ if(isset($_POST['resi_cat_id'])){
 				echo '</div>';
 				echo '</div>'; 
 			}else if($data1['selection_type']==4){
-				echo '<div class="apprtmnt">';
+				echo '<div class="row">';
+				echo '<div class="col-sm-2">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
+				echo '</div>';
+				echo '<div class="col-sm-4">';
 				echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
+				echo '</div>';
+				echo '<div class="col-sm-4">';
 				echo '<div class="drop-html1">';
 				echo '<div class="dropdown">';
 				echo '<select name="'.$data1['subchild_name'].'_'.'Unit'.'">';
@@ -76,6 +89,7 @@ if(isset($_POST['resi_cat_id'])){
 				echo '</div>';
 				echo '</div>';
 				echo '</div>'; 
+				echo '</div>';
 			}else{
 				
 			}
@@ -95,10 +109,13 @@ if(isset($_POST['comm_cat_id'])){
 	 // var_dump($result);die;
 	
 	if(!empty($result)){
-		echo '<div class="apprtmnt">';
+		echo '<div class="row">';
+		echo '<div class="col-sm-2">';
 		echo '<div class="typeheading">';
 		echo '<p>'.'Subcategory Name'.'</p>';
 		echo '</div>';
+		echo '</div>';
+		echo '<div class="col-sm-4">';
 		echo '<div class="drop-html1">';
 		echo '<div class="dropdown">';
 		echo '<select onchange=child_sub_cat(this.value)>';
@@ -110,13 +127,14 @@ if(isset($_POST['comm_cat_id'])){
 		echo '</div>';
 		echo '</div>';
 		echo '</div>'; 
+		echo '</div>'; 
 	}else{
 		$data=$common->property_option_for_requirement($comm_cat_id);
 		if(!empty($data)){
 			foreach($data as $data1){
 			$value=explode(',',$data1['values']);
 			if($data1['selection_type']==1){
-				echo '<div class="apprtmnt">';
+				echo '<div class="apprtmnt f">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
@@ -136,7 +154,7 @@ if(isset($_POST['comm_cat_id'])){
 			}else if($data1['selection_type']==2){
 
 			}else if($data1['selection_type']==3){
-				echo '<div class="apprtmnt">';
+				echo '<div class="apprtmnt g">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
@@ -149,7 +167,7 @@ if(isset($_POST['comm_cat_id'])){
 				echo '</div>';
 				echo '</div>'; 
 			}else if($data1['selection_type']==4){
-				echo '<div class="apprtmnt">';
+				echo '<div class="apprtmnt h">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
@@ -187,11 +205,13 @@ if(isset($_POST['subcat_id'])){
 		foreach($result as $data1){
 			$value=explode(',',$data1['values']);
 			if($data1['selection_type']==1){
-				echo '<div class="apprtmnt">';
+				echo '<div class="row">';
+				echo '<div class="col-sm-2">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
-
+				echo '</div>';
+				echo '<div class="col-sm-4">';
 				echo '<div class="drop-html1">';
 				echo '<div class="dropdown">';
 				echo '<select name="'.$data1['subchild_name'].'">';
@@ -201,13 +221,13 @@ if(isset($_POST['subcat_id'])){
 				}
 				echo '</select>';
 				echo '</div>';
-
+				echo '</div>'; 
 				echo '</div>';
 				echo '</div>'; 
 			}else if($data1['selection_type']==2){
 
 			}else if($data1['selection_type']==3){
-				echo '<div class="apprtmnt">';
+				echo '<div class="apprtmnt k">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
@@ -220,11 +240,16 @@ if(isset($_POST['subcat_id'])){
 				echo '</div>';
 				echo '</div>'; 
 			}else if($data1['selection_type']==4){
-				echo '<div class="apprtmnt">';
+				echo '<div class="row">';
+				echo '<div class="col-sm-2">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
+				echo '</div>';
+				echo '<div class="col-sm-4">';
 				echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
+				echo '</div>';
+				echo '<div class="col-sm-4">';
 				echo '<div class="drop-html1">';
 				echo '<div class="dropdown">';
 				echo '<select name="'.$data1['subchild_name'].'_'.'Unit'.'">';
@@ -236,6 +261,7 @@ if(isset($_POST['subcat_id'])){
 				echo '</div>';
 				echo '</div>';
 				echo '</div>'; 
+				echo '</div>';
 			}else{
 				
 			}

@@ -202,17 +202,19 @@ return $data1;
 
 
 public  function searchresultrent($data,$dealer_id) {  
-    $property_type=0;//for rent only
+    $property_type=1;//for rent only
     if($data['cat_id']==26){
 
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'])){
-        // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND property_option=0 AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."'";die;
+            // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND property_option='0' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."'";
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
+             // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."";die;
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else if($data['cat_id']==27){
+
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
@@ -227,7 +229,9 @@ public  function searchresultrent($data,$dealer_id) {
     }
 
 
-    $num=mysqli_num_rows($result);
+   
+}  
+ $num=mysqli_num_rows($result);
     if($num>0){
        while($row = mysqli_fetch_array($result)){
         $data1[]=$row;
@@ -235,10 +239,9 @@ public  function searchresultrent($data,$dealer_id) {
 }else{
     $data1='';
 }
-
+//var_dump($data1);die;
 
 return $data1;
-}  
 }
 
 

@@ -108,21 +108,21 @@
  }
 
  function rent_search(){
- 	var choose_type=$("#rent_property_type").val();
- 	var cat_id=$("#rent_cat_id").val();
+ 	var choose_type=$("#buy_property_type").val();
+ 	var cat_id=$("#buy_cat_id").val();
  	var cons_status=$("#cons_status").val();
- 	var searching=$("#rent_searching").val();
+ 	var searching=$("#searching").val();
   if(cat_id==''){
-   $("#rent_cat_id_error").show();
+   $("#buy_cat_id_error").show();
    return false;
  }else{
-   $("#rent_cat_id_error").hide();
+   $("#buy_cat_id_error").hide();
  }
  if(searching==''){
-   $("#rent_searching_error").show();
+   $("#searching_error").show();
    return false;
  }else{
-   $("#rent_searching_error").hide();
+   $("#searching_error").hide();
  }
  var price_range_min=$("#price_range_min").val();
  var price_range_max=$("#price_range_max").val();
@@ -384,4 +384,13 @@ autocomplete(document.getElementById("searching"), countries);
 
   function mail(){
     alert('chirag');
+  }
+
+  function rent_tab(){
+    // alert('chirag');
+    $("#search_button").attr('onclick',"return rent_search()");
+  }
+
+  function buy_tab(){
+    $("#search_button").attr('onclick',"return buy_search()");
   }
