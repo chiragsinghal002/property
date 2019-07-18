@@ -259,17 +259,6 @@ ul.nav.navbar-nav.side-nav li {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .tabs .btn:focus, .btn:hover {
 outline: none !important;
 color: #fff !important;
@@ -1367,7 +1356,6 @@ h4.modal-title {
 
 #property_for {
     border: none;
-    border-radius: 100px!important;
     outline: unset;
     margin-left: 15px;
     position: relative;
@@ -1610,7 +1598,7 @@ background-color: #3cb54e!important;
      padding: 31px;
 }
  .min-drop {
-     display: inline-flex;
+     display: inline-flex!important;
 }
  .dropdown {
      margin-left: 20px;
@@ -4029,6 +4017,18 @@ i.fa.fa-lock {
 .autocomplete label {
      display: none!important; 
 }
+.dropdown select {
+    width: 167px;
+    height: 2em;
+    border: none;
+    outline: unset;
+    background: none;
+    border-bottom: 1px solid #ffffff!important;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 0px!important;
+}
+
 
 /*Responsivness  media query by mukesh*/
 @media(max-width:767px){

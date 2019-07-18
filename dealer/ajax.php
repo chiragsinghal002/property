@@ -413,7 +413,6 @@ if(isset($_POST['search_buy'])){
 			echo '<input type="hidden" id="lname" value="'.$propdealinfo['dealer_last_name'].'">';
 			echo '<input type="hidden" id="firm_name" value="'.$propdealinfo['dealer_firm_name'].'">';
 			echo '<input type="hidden" id="dealer_email" value="'.$propdealinfo['dealer_email'].'">';
-
 			echo '<div class="godrejdiv">';
 			echo '<h4>';
 			if($data2['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color:red;"><?php echo $cat_name['cat_name'];?></span>&nbsp;For&nbsp;<?php echo $data2['sector'].' '.$data2['city'];
@@ -665,8 +664,10 @@ if(isset($_POST['automated_mail'])){
 	// var_dump($_POST);
 	$property_info=$common->getpropertybyid($_POST['propertyid'],$_POST['propertyfor']);
 	$dealerinfo=$common->getDealerInfobyId($property_info['dealer_id']);
-	// var_dump($property_info);
-	// var_dump($dealerinfo);
+	$contact_person=$common->getDealerInfobyId($_SESSION['dealer_id']);
+	 // var_dump($property_info);
+	 // var_dump($dealerinfo);
+	 // var_dump($_POST);die;
 	$from = $dealerinfo['dealer_email'];
 	$subject = 'Interested People Mailed you';
 	$message = '<html>
@@ -679,10 +680,10 @@ if(isset($_POST['automated_mail'])){
 	<p>Area/Sector:- '.$property_info['sector'].'</p>
 	<p>Price:- '.number_format($property_info['price']).'</p>
 	<h2>Contact Details</h2>
-	<p>Person Name:- '.$_POST['fname'].'</p>
-	<p>Email:- '.$_POST['dealer_email'].'</p>
-	<p>Contact No:- '.$_POST['ph'].'</p>
-	<p>Firm Name:- '.$_POST['firm_name'].'</p>
+	<p>Person Name:- '.$contact_person['dealer_first_name'].' '.$contact_person['dealer_last_name'].'</p>
+	<p>Email:- '.$contact_person['dealer_email'].'</p>
+	<p>Contact No:- '.$contact_person['dealer_phone'].'</p>
+	<p>Firm Name:- '.$contact_person['dealer_firm_name'].'</p>
 	<p>Thanks</p>
 	<p>Property App Team</p>
 	</body>

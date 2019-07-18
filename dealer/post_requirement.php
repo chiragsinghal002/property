@@ -29,7 +29,7 @@ $msg=$_GET['msg'];
 <span id="property_for_error" style="color: red;display: none;">*This Field is Required</span>
 </div>
 </div>
-</div><br>
+</div>
 <div class="min-drop" id="commercial_type" style="display: none;">
 <div class="menu-drop">
 <p>For:</p>
@@ -46,6 +46,7 @@ $msg=$_GET['msg'];
 </div>
 </div>
 </div>
+
 <div class="min-drop" id="sell_type" style="display: none;">
 <div class="menu-drop">
 <p>Buy Type:</p>
@@ -352,6 +353,7 @@ $commercial=$common->propertyCategory(1);?>
 </div>
 <?php include_once'include/footer.php';?>
 <script src="js/post-requirement.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.label.js"></script>
 </body>
 </html>
 <style type="text/css">
@@ -371,3 +373,38 @@ padding-top: 20px;
 }
 }
 </style>
+ <script type="text/javascript">
+    $(document).ready(function (){
+      $('input[placeholder]').placeholderLabel();
+    })
+    </script>
+<script type="text/javascript">
+    $(document).ready(function (){
+  $('input[placeholder]').placeholderLabel({
+
+    // placeholder color
+    placeholderColor: "#ffffff!important", 
+
+    // label color
+    labelColor: "#4AA2CC",
+
+    // size of label
+    labelSize: "14px"
+    // size of color
+     color: "#000000!important";
+
+    // font style
+    fontStyle: "normal", 
+
+    // uses border color
+    useBorderColor: true, 
+
+    // displayed in the input
+    inInput: true, 
+
+    // time to move
+    timeMove: 200 
+    
+  });
+})
+  </script>
