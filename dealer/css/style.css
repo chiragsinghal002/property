@@ -1598,8 +1598,11 @@ background-color: #3cb54e!important;
      background: white;
      padding: 31px;
 }
+ .pstreq .min-drop {
+     display: inline-flex;
+}
  .min-drop {
-     display: inline-flex!important;
+     display: inline-flex;
 }
  .dropdown {
      margin-left: 20px;

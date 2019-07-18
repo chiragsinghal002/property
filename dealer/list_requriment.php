@@ -5,7 +5,7 @@ include_once'include/sidebar.php';?>
 //session_start();
   // include_once'Object.php';
 $properties=$common->getdealerpropertyrequriment($_SESSION['dealer_id']);
-   // var_dump($properties);die;
+   // var_dump($properties);
 ?>
 <div class="buyrentdiv">  
 <?php if($showdetailDealer['email_verified']!=='1'){ ?>
@@ -139,9 +139,15 @@ $properties=$common->getdealerpropertyrequriment($_SESSION['dealer_id']);
           $property_for=$data['property_for'];
           $property_option='0';
           $propertyMatched=$common->getRequirementFromProperty($data,$property_for,$property_option);
-       
+        // var_dump($propertyMatched);
           ?>
-          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <a href="getrequirement.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a></p> 
+          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?>
+          <?php if(!empty($propertyMatched)):?>
+           <a href="getrequirement.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
+         <?php endif;if(empty($propertyMatched)):?>
+         <span style="color: blue;"><?php echo '0'.' '.'Property Matched';?></span>
+         <?php endif;?>
+         </p> 
             <p>Category:<span><?php echo $data['cat_name'];?></span></p>
            <?php if(!empty($data['subcat_name'])){echo  '<p>'.'SubCat:'.'<span>'.$data['subcat_name'].'</span>'.'</p>';}?>
         </div>

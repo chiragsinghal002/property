@@ -96,7 +96,7 @@ function price_check(value){
 
 
 function sell_div(value){
-		// alert(value);
+		 // alert(value);
 		if(value==0){
 			$("#sell_type").show();
 			$("#location_div").hide();
@@ -166,7 +166,7 @@ function residential_cat(id){
 	function child_sub_cat(value){
 	// alert(value);
 	$("#subcat_id").val(value);
-	var p_for=$("#property_for").val();
+	var p_for=$("input[name='property_for']:checked").val();
 	$.ajax({
 		url:'ajax_requirement.php',
 		type:'post',
@@ -220,31 +220,33 @@ function select_property(value){
 
 	function form_submit(){
 		 console.log('chirag');
-		var property_for=$("#property_for").val();
-		if(property_for==''){
+		var property_for=$("input[name='property_for']:checked").val();
+		// alert(property_for);
+		if(property_for>=0){
+			$("#property_for_error").hide();
+		}else{
 			$("#property_for_error").show();
 			return false;
-		}else{
-			$("#property_for_error").hide();
 		}
 		
 
-		var property_type_for=$("#property_type_for").val();
+		var property_type_for=$("input[name='property_type_for']:checked").val();
 		// alert(property_type_for);
-		if(property_type_for==''){
+		if(property_type_for>=0){
+			
+			$("#property_type_for_error").hide();
+		}else{
 			$("#property_type_for_error").show();
 			return false;
-		}else{
-			$("#property_type_for_error").hide();
 		}
 
 		if(property_type_for==0){
-			var sell_type_new=$("#sell_type_new").val();
-			if(sell_type_new==''){
+			var sell_type_new=$("input[name='property_sell_type']:checked").val();
+			if(sell_type_new>=0){
+				$("#sell_type_new_error").hide();
+			}else{
 				$("#sell_type_new_error").show();
 				return false;
-			}else{
-				$("#sell_type_new_error").hide();
 			}
 		}
 
@@ -312,7 +314,7 @@ function property_type(value){
 		$("#result").hide();
 		$("#result1").hide();
 	}else{
-		$('#commercial_type').css('display','block');
+		$('#commercial_type').css('display','inline-flex');
 	}
 }
 

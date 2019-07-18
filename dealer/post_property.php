@@ -229,9 +229,7 @@ if(isset($_GET['msg'])){
 									<!--/item-->
 								</div>
 								<!--/carousel-inner--> 
-								<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-
-								<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+						
 							</div>
 							<!--/myCarousel-->
 						</div>
@@ -258,8 +256,8 @@ if(isset($_GET['msg'])){
 											<?php $k=1; 
 											foreach($commercial as $data):
 												?>
-												<?php if($k<5):?>
-													<div class="col-sm-3"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
+												<?php if($k<7):?>
+													<div class="col-sm-2"><a href="#x" class="thumbnail"><img src="image/<?php echo $data['cat_image'];?>" alt="Image" class="img-responsive" id="<?php echo $data['cat_id'];?>" onclick="commercial_cat(this.id)">
 													</a>
 													<p><?php echo $data['cat_name'];?></p>
 												</div>
@@ -267,7 +265,7 @@ if(isset($_GET['msg'])){
 											<?php $k++;endforeach;?>
 										</div>
 									</div>
-									<?php if(count($commercial)>4):?>
+									<!-- <?php if(count($commercial)>4):?>
 										<div class="item">
 											<div class="row">
 												<?php $l=1; 
@@ -283,13 +281,11 @@ if(isset($_GET['msg'])){
 												<?php $l++;endforeach;?>
 											</div>
 										</div>
-									<?php endif;?>
+									<?php endif;?> -->
 
 
 								</div>
-								<a class="left carousel-control" href="#myCarousel1" data-slide="prev">‹</a>
-
-								<a class="right carousel-control" href="#myCarousel1" data-slide="next">›</a>
+							
 							</div>
 							<!--/myCarousel-->
 						</div>
