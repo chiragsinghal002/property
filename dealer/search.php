@@ -298,6 +298,11 @@ div#plot_area {
       data:{'social_track':1,dealer_id:dealer_id,id:id},
       success:function(data){
         console.log(data);
+          Swal.fire({
+        type: 'success',
+        title: 'Thank You For Your Response',
+        showConfirmButton: true
+      })
       }
     })
    }

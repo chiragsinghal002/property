@@ -487,9 +487,9 @@ if(isset($_POST['search_buy'])){
 			echo '<i class="fa fa-whatsapp" aria-hidden="true">';
 			echo '</i>';
 			if($getResponse['whatsapp']==1){
-				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" id='.$data2['property_id'].' >'.'WHATSAPP'.'</a>';
+				echo '<span onclick="whatsapp(this.id)" id='.$data2['property_id'].' >'.'WHATSAPP'.'</span>';
 			}else{
-				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" onclick="whatsapp(this.id)" id='.$data2['property_id'].'>'.'WHATSAPP'.'</a>';
+				echo '<span onclick="whatsapp(this.id)" id='.$data2['property_id'].'>'.'WHATSAPP'.'</>';
 			}
 			
 			echo '</button>';
@@ -615,9 +615,9 @@ if(isset($_POST['search_rent'])){
 			echo '<i class="fa fa-whatsapp" aria-hidden="true">';
 			echo '</i>';
 			if($getResponse['whatsapp']==1){
-				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" id='.$data2['property_id'].' >'.'WHATSAPP'.'</a>';
+				echo '<span onclick="whatsapp(this.id)" id='.$data2['property_id'].' >'.'WHATSAPP'.'</span>';
 			}else{
-				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" onclick="whatsapp(this.id)" id='.$data2['property_id'].'>'.'WHATSAPP'.'</a>';
+				echo '<span onclick="whatsapp(this.id)" id='.$data2['property_id'].'>'.'WHATSAPP'.'</span>';
 			}
 			
 			echo '</button>';
@@ -671,6 +671,7 @@ if(isset($_POST['social_track'])){
 	$table='response_tracker';
 	$date=date('Y-m-d H:i:s');
 	$res=$common->getResponseTrack($dealer_id,$property_id);
+	$whatsapp=$common->sendWhatsapp();
 	if($res==0){
 		switch ($track) {
 			case '1':

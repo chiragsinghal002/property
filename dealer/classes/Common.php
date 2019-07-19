@@ -1,6 +1,8 @@
 <?php 
 ini_set('allow_url_fopen',1);
 require_once 'db.php';
+require_once 'vendor/autoload.php';
+use Twilio\Rest\Client;
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 header("Cache-Control: no-cache");
@@ -59,8 +61,8 @@ class Common extends DB
 
     //            $mail = mail($to,$subject,$message,$headers);
 
-               return $otp;
-           }else{
+             return $otp;
+         }else{
             return $otp;
         }
 
@@ -120,13 +122,13 @@ public  function registerbyMobile($data) {
 
     //            $mail = mail($to,$subject,$message,$headers);
 
-           return $otp;
+         return $otp;
 
 
 
 
 
-       }else{
+     }else{
         return $otp;
     }
 
@@ -142,7 +144,7 @@ public  function propertyCategory($property_type) {
     
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -177,8 +179,8 @@ public  function searchresultbuy($data,$dealer_id) {
 
     }else{
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
-           $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
-       }else{
+         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+     }else{
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ") or die(mysqli_query($this->db)); 
     }
 
@@ -188,7 +190,7 @@ public  function searchresultbuy($data,$dealer_id) {
 
 $num=mysqli_num_rows($result);
 if($num>0){
-   while($row = mysqli_fetch_array($result)){
+ while($row = mysqli_fetch_array($result)){
     $data1[]=$row;
 } 
 }else{
@@ -223,19 +225,19 @@ public  function searchresultrent($data,$dealer_id) {
 
     }else{
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
-           $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
-       }else{
+         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
+     }else{
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
     }
 
 
-   
+
 }  
- $num=mysqli_num_rows($result);
-    if($num>0){
-       while($row = mysqli_fetch_array($result)){
-        $data1[]=$row;
-    } 
+$num=mysqli_num_rows($result);
+if($num>0){
+ while($row = mysqli_fetch_array($result)){
+    $data1[]=$row;
+} 
 }else{
     $data1='';
 }
@@ -250,7 +252,7 @@ public  function propertysize() {
     
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -266,15 +268,15 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
     // echo '<pre>';
     // var_dump($data);
     // echo $property_for;
-   
+
     if($property_for=='0'){
          // echo $property_option;
-    $price=$data['price'];
-    $amt_price=$price*20/100;
-    $min_price=$price-$amt_price;
-    $max_price=$price+$amt_price;
+        $price=$data['price'];
+        $amt_price=$price*20/100;
+        $min_price=$price-$amt_price;
+        $max_price=$price+$amt_price;
         if($property_option=='0'){
-         if($data['cat_id']==26){
+           if($data['cat_id']==26){
             // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
         }else if($data['cat_id']==27){
@@ -282,9 +284,9 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
         }else{
          // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'";die;
-         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
-     }
- }else{
+           $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
+       }
+   }else{
     if($data['cat_id']==26){
         // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
@@ -293,8 +295,8 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
     }else{
         //echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."'";die;
-     $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
- }
+       $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
+   }
 }
 }else{
     $price=$data['Expected_Price'];
@@ -307,14 +309,14 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
             $result=$this->db->query("SELECT * FROM commercial_properties where property_for='".$data['property_for']."' AND Expected_Price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND Super_Area='".$data['Super_Area']."' AND Super_Area_Unit='".$data['Super_Area_Unit']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db));
         }
     }else{
-          $result=$this->db->query("SELECT * FROM commercial_properties where property_for='".$data['property_for']."' AND Expected_Price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND Super_Area='".$data['Super_Area']."' AND Super_Area_Unit='".$data['Super_Area_Unit']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db));
-    }
+      $result=$this->db->query("SELECT * FROM commercial_properties where property_for='".$data['property_for']."' AND Expected_Price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND Super_Area='".$data['Super_Area']."' AND Super_Area_Unit='".$data['Super_Area_Unit']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db));
+  }
 }
 
 
 $num=mysqli_num_rows($result);
 if($num>0){
-   while($row = mysqli_fetch_array($result)){
+ while($row = mysqli_fetch_array($result)){
     $data1[]=$row;
 } 
 }else{
@@ -332,7 +334,7 @@ public  function getResiRequirementByDealerId($dealer_id) {
     $result=$this->db->query("SELECT * FROM residential_properties where dealer_id='".$dealer_id."' and property_option='1' and property_for='0' and status='1'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data1[]=$row;
     } 
 }else{
@@ -370,7 +372,7 @@ public  function getResiExpRequirementByDealerId($dealer_id) {
     $result=$this->db->query("SELECT * FROM residential_properties where dealer_id='".$dealer_id."' and property_option='1' and property_for='0' and status='1' and expired_by>'".$today."'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data1[]=$row;
     } 
 }else{
@@ -391,7 +393,7 @@ public  function getCommRequirementByDealerId($dealer_id) {
     $result=$this->db->query("SELECT * FROM commercial_properties where dealer_id='".$dealer_id."' and property_option='1' and property_for='0' and status='1'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data1[]=$row;
     } 
 }else{
@@ -428,7 +430,7 @@ public  function getExpCommRequirementByDealerId($dealer_id) {
     $result=$this->db->query("SELECT * FROM commercial_properties where dealer_id='".$dealer_id."' and property_option='1' and property_for='0' and status='1' and expired_by>'".$today."'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data1[]=$row;
     } 
 }else{
@@ -449,7 +451,7 @@ public  function getFavResiPropertyByDealerId($dealer_id) {
     $result=$this->db->query("SELECT fav_requirement.fav_id,residential_properties.* FROM fav_requirement INNER JOIN residential_properties ON fav_requirement.property_id=residential_properties.property_id where fav_requirement.dealer_id='".$dealer_id."'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -470,7 +472,7 @@ public  function getsellFavResiPropertyByDealerId($dealer_id) {
     $result=$this->db->query("SELECT sell_fav_requirement.sell_fav_id,residential_properties.* FROM sell_fav_requirement INNER JOIN residential_properties ON sell_fav_requirement.property_id=residential_properties.property_id where sell_fav_requirement.dealer_id='".$dealer_id."'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -490,7 +492,7 @@ public  function getFavCommPropertyByDealerId($dealer_id) {
     $result=$this->db->query("SELECT fav_requirement.fav_id,commercial_properties.* FROM fav_requirement INNER JOIN commercial_properties ON fav_requirement.property_id=commercial_properties.property_id where fav_requirement.dealer_id='".$dealer_id."'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -521,7 +523,7 @@ public  function residentialsubCategory($resi_cat_id) {
     $result=$this->db->query("SELECT * FROM property_subcategory where cat_id='".$resi_cat_id."' and property_type='0' and status='1'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -539,7 +541,7 @@ public  function property_option($resi_cat_id) {
     $result=$this->db->query("SELECT * FROM property_subchildcategory where cat_id='".$resi_cat_id."' and property_type='0' and property_option='0' and status='1'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -556,7 +558,7 @@ public  function property_option_for_requirement($resi_cat_id) {
     $result=$this->db->query("SELECT * FROM property_subchildcategory where cat_id='".$resi_cat_id."' and property_type='0' and property_option='1' and status='1'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -575,7 +577,7 @@ public  function commercialsubCategory($comm_cat_id) {
     $result=$this->db->query("SELECT * FROM property_subcategory where cat_id='".$comm_cat_id."' and property_type='1' and status='1'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -592,7 +594,7 @@ public  function childsubCategory($subcat_id,$property_option,$property_type) {
     $result=$this->db->query("SELECT * FROM property_subchildcategory where subcat_id='".$subcat_id."' and status='1' and property_option='".$property_option."' and property_type='".$property_type."'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -609,9 +611,9 @@ public  function childsubCategory_requirement($subcat_id,$property_option,$prope
   $result=$this->db->query("SELECT * FROM property_subchildcategory where subcat_id='".$subcat_id."' and status='1' and property_option='".$property_option."' and property_type='".$property_type."'") or die(mysqli_query($this->db));
   $num=mysqli_num_rows($result);
   if($num>0){
-   while($row = mysqli_fetch_array($result)){
-    $data[]=$row;
-} 
+     while($row = mysqli_fetch_array($result)){
+        $data[]=$row;
+    } 
 }else{
     $data='';
 }
@@ -645,12 +647,12 @@ public  function checkOTPByEmail($otp,$email) {
     $row = mysqli_fetch_array($result);
     $num=mysqli_num_rows($result);
     if($num=='1'){
-     $register = $this->db->query("UPDATE user_registration SET is_active='1' where email='$email'") or die(mysqli_error($this->db));
-     if($register){
+       $register = $this->db->query("UPDATE user_registration SET is_active='1' where email='$email'") or die(mysqli_error($this->db));
+       if($register){
         return 1;
     }
 }else{
- return 0;
+   return 0;
 }
 
 }
@@ -660,12 +662,12 @@ public  function checkOTPByMob($otp,$mob) {
     $row = mysqli_fetch_array($result);
     $num=mysqli_num_rows($result);  
     if($num=='1'){
-     $register = $this->db->query("UPDATE user_registration SET is_active='1' where mob_no='$mob'") or die(mysqli_error($this->db));
-     if($register){
+       $register = $this->db->query("UPDATE user_registration SET is_active='1' where mob_no='$mob'") or die(mysqli_error($this->db));
+       if($register){
         return 1;
     }
 }else{
- return 0;
+   return 0;
 }
 
 }
@@ -678,15 +680,15 @@ public function addViews($dealer_id,$property_id){
     $row = mysqli_fetch_array($result);
     $num=mysqli_num_rows($result);  
     if($num=='1'){
-     $register = $this->db->query("UPDATE property_views SET views=views+1 where property_id=".$property_id."") or die(mysqli_error($this->db));
-     if($register){
+       $register = $this->db->query("UPDATE property_views SET views=views+1 where property_id=".$property_id."") or die(mysqli_error($this->db));
+       if($register){
         return 1;
     }
 }else{
   $table='property_views';
-    $data=array('dealer_id'=>$dealer_id,'property_id'=>$property_id,'views'=>'1');
-    $result=$this->insert($table,$data);
-    return 2;
+  $data=array('dealer_id'=>$dealer_id,'property_id'=>$property_id,'views'=>'1');
+  $result=$this->insert($table,$data);
+  return 2;
 }
 }
 
@@ -697,17 +699,17 @@ public function addViews($dealer_id,$property_id){
 /*Views Count From Unique Users*/
 public function getViewfromUnique($property_id){
     // echo "SELECT DISTINCT(dealer_id) FROM property_views where property_id=".$property_id."";die;
-     $result=$this->db->query("SELECT DISTINCT(dealer_id) FROM property_views where property_id=".$property_id."") or die(mysqli_query($this->db));
-    
+   $result=$this->db->query("SELECT DISTINCT(dealer_id) FROM property_views where property_id=".$property_id."") or die(mysqli_query($this->db));
+
    $num=mysqli_num_rows($result);
-    if($num>0){
+   if($num>0){
         // echo 'chirag';
-   while($row = mysqli_fetch_array($result)){
-  $data[]=$row;
-}
-return $data;
+     while($row = mysqli_fetch_array($result)){
+      $data[]=$row;
+  }
+  return $data;
 }else{
-return $data='';
+    return $data='';
 }
 }
 
@@ -754,9 +756,9 @@ public  function loginbymob($mob,$password) {
         //$result1['status']=$data['status'];
 
     } else {  
-       $result1['result']='0';
-   }  
-   return $result1;
+     $result1['result']='0';
+ }  
+ return $result1;
 }  
 
 
@@ -791,7 +793,7 @@ public  function getAreaSector($city_id) {
     $result=$this->db->query("SELECT * FROM location where city_id='".$city_id."' AND status='1'") or die(mysqli_query($this->db));
     $num=mysqli_num_rows($result);
     if($num>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     } 
 }else{
@@ -929,9 +931,9 @@ public function UserSearchResult(){
     // $latitude=77.3293;
     // if(!empty($time && $time1)){
     if(1==1){
-     $selectuser = $this->db->query("  SELECT ci_hotels.*,ci_room_type.* FROM ci_hotels INNER JOIN ci_room_type ON ci_hotels.hotel_id=ci_room_type.hotel_id AND ci_hotels.hotel_status=ci_room_type.status WHERE ci_hotels.check_in<='04:00' and ci_hotels.check_out>='06:00' AND ci_room_type.status='1' AND  ci_room_type.adult_person_capacity>=3 AND ci_room_type.child_capacity>=2 AND ci_hotels.any='3' OR ci_hotels.any='1'  ORDER BY ((ci_hotels.hotel_latitude- 28.367976)*(ci_hotels.hotel_latitude- 28.367976)) + ((ci_hotels.hotel_longitude - 77.329549)*(ci_hotels.hotel_longitude- 77.329549)) ASC") or die(mysqli_error($this->db));
+       $selectuser = $this->db->query("  SELECT ci_hotels.*,ci_room_type.* FROM ci_hotels INNER JOIN ci_room_type ON ci_hotels.hotel_id=ci_room_type.hotel_id AND ci_hotels.hotel_status=ci_room_type.status WHERE ci_hotels.check_in<='04:00' and ci_hotels.check_out>='06:00' AND ci_room_type.status='1' AND  ci_room_type.adult_person_capacity>=3 AND ci_room_type.child_capacity>=2 AND ci_hotels.any='3' OR ci_hotels.any='1'  ORDER BY ((ci_hotels.hotel_latitude- 28.367976)*(ci_hotels.hotel_latitude- 28.367976)) + ((ci_hotels.hotel_longitude - 77.329549)*(ci_hotels.hotel_longitude- 77.329549)) ASC") or die(mysqli_error($this->db));
     //$selectuser = $this->db->query("SELECT users.username,users_info.* FROM users_info INNER JOIN users ON users_info.user_id=users.user_id where vegetarian='".$data['vegetarian']."' and users_info.status='0'") or die(mysqli_error($this->db));
- }else{
+   }else{
     $selectuser = $this->db->query("  SELECT ci_hotels.*,ci_room_type.* FROM ci_hotels INNER JOIN ci_room_type ON ci_hotels.hotel_id=ci_room_type.hotel_id AND ci_hotels.hotel_status=ci_room_type.status WHERE ci_hotels.check_in<='04:00' and ci_hotels.check_out>='06:00' AND ci_room_type.status='1' AND  ci_room_type.adult_person_capacity>=3 AND ci_room_type.child_capacity>=2 AND ci_hotels.any='1'  ORDER BY ((ci_hotels.hotel_latitude- 28.367976)*(ci_hotels.hotel_latitude- 28.367976)) + ((ci_hotels.hotel_longitude - 77.329549)*(ci_hotels.hotel_longitude- 77.329549)) ASC") or die(mysqli_error($this->db));
 }
 
@@ -954,10 +956,10 @@ return $fetch1;
 public function Hoteldetailbyid($id){
 
 
- $selectuser = $this->db->query("SELECT ci_hotels.*,ci_room_type.* FROM ci_hotels INNER JOIN ci_room_type ON ci_hotels.hotel_id=ci_room_type.hotel_id AND ci_hotels.hotel_status=ci_room_type.status WHERE ci_hotels.hotel_id = $id") or die(mysqli_error($this->db));  
- $fetch_num=mysqli_num_rows($selectuser);
- $fetch=mysqli_fetch_array($selectuser);
- if($fetch_num>0){
+   $selectuser = $this->db->query("SELECT ci_hotels.*,ci_room_type.* FROM ci_hotels INNER JOIN ci_room_type ON ci_hotels.hotel_id=ci_room_type.hotel_id AND ci_hotels.hotel_status=ci_room_type.status WHERE ci_hotels.hotel_id = $id") or die(mysqli_error($this->db));  
+   $fetch_num=mysqli_num_rows($selectuser);
+   $fetch=mysqli_fetch_array($selectuser);
+   if($fetch_num>0){
       // while($fetch=mysqli_fetch_array($selectuser)){
     $fetch1=$fetch;
       // }
@@ -970,10 +972,10 @@ public function Hoteldetailbyid($id){
 public function Roomdetailbyid($id){
 
 
- $selectuser = $this->db->query("SELECT * FROM ci_room_type  WHERE room_type_id = $id") or die(mysqli_error($this->db));  
- $fetch_num=mysqli_num_rows($selectuser);
- $fetch=mysqli_fetch_array($selectuser);
- if($fetch_num>0){
+   $selectuser = $this->db->query("SELECT * FROM ci_room_type  WHERE room_type_id = $id") or die(mysqli_error($this->db));  
+   $fetch_num=mysqli_num_rows($selectuser);
+   $fetch=mysqli_fetch_array($selectuser);
+   if($fetch_num>0){
       // while($fetch=mysqli_fetch_array($selectuser)){
     $fetch1=$fetch;
       // }
@@ -988,10 +990,10 @@ public function Roomdetailbyid($id){
 public function getCategoryName($id){
 // echo "SELECT property_category.cat_name,property_subcategory.subcat_name FROM property_category  LEFT JOIN property_subcategory ON property_category.cat_id=property_subcategory.cat_id WHERE property_category.cat_id = $id";
 
- $selectuser = $this->db->query("SELECT property_category.cat_name,property_subcategory.subcat_name FROM property_category  LEFT JOIN property_subcategory ON property_category.cat_id=property_subcategory.cat_id WHERE property_category.cat_id = $id") or die(mysqli_error($this->db));  
- $fetch_num=mysqli_num_rows($selectuser);
- $fetch=mysqli_fetch_array($selectuser);
- if($fetch_num>0){
+   $selectuser = $this->db->query("SELECT property_category.cat_name,property_subcategory.subcat_name FROM property_category  LEFT JOIN property_subcategory ON property_category.cat_id=property_subcategory.cat_id WHERE property_category.cat_id = $id") or die(mysqli_error($this->db));  
+   $fetch_num=mysqli_num_rows($selectuser);
+   $fetch=mysqli_fetch_array($selectuser);
+   if($fetch_num>0){
       // while($fetch=mysqli_fetch_array($selectuser)){
     $fetch1=$fetch;
       // }
@@ -1027,7 +1029,7 @@ public function getdealerproperty($dealer_id,$type){
     
     $fetch_num=mysqli_num_rows($selectproperties);
     if($fetch_num>0){
-     while($fetch=mysqli_fetch_array($selectproperties)){
+       while($fetch=mysqli_fetch_array($selectproperties)){
         $fetch1[]=$fetch;
     }
     return $fetch1;
@@ -1057,7 +1059,7 @@ public function getDealerCommProperty($dealer_id,$type){
 
     $fetch_num=mysqli_num_rows($selectproperties);
     if($fetch_num>0){
-     while($fetch=mysqli_fetch_array($selectproperties)){
+       while($fetch=mysqli_fetch_array($selectproperties)){
         $fetch1[]=$fetch;
     }
     return $fetch1;
@@ -1073,17 +1075,17 @@ public function getDealerCommProperty($dealer_id,$type){
 public function getdealerpropertyrequriment($dealer_id){
 
      $property_option=1;//for only purchase
-      
+
      $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."'") or die(mysqli_error($this->db));  
      $fetch_num=mysqli_num_rows($selectproperties);
      if($fetch_num>0){
-         while($fetch=mysqli_fetch_array($selectproperties)){
-            $fetch1[]=$fetch;
-        }
-        return $fetch1;
-    }else{
-      return 0;
-  }
+       while($fetch=mysqli_fetch_array($selectproperties)){
+        $fetch1[]=$fetch;
+    }
+    return $fetch1;
+}else{
+  return 0;
+}
 }
 
 
@@ -1113,17 +1115,17 @@ public function getpropertybyid($id,$property_for){
 
 public function GetRoomtypeByHotelId($data){
 
- $selectuser = $this->db->query("SELECT * FROM ci_room_type WHERE hotel_id = '$data'") or die(mysqli_error($this->db));
+   $selectuser = $this->db->query("SELECT * FROM ci_room_type WHERE hotel_id = '$data'") or die(mysqli_error($this->db));
 
 
- $fetch_num=mysqli_num_rows($selectuser);
- if($fetch_num>0){
-  while($fetch=mysqli_fetch_array($selectuser)){
-    $fetch1[]=$fetch;
-}
+   $fetch_num=mysqli_num_rows($selectuser);
+   if($fetch_num>0){
+      while($fetch=mysqli_fetch_array($selectuser)){
+        $fetch1[]=$fetch;
+    }
 
 
-return $fetch1;
+    return $fetch1;
 }else{
   return 0;
 }
@@ -1134,7 +1136,7 @@ return $fetch1;
      // Get user details using user_id
 
 public function update($tablename,$data,$condition){
- if (count($data) > 0) {
+   if (count($data) > 0) {
     foreach ($data as $key => $value) {
 
         $value = "'$value'";
@@ -1188,7 +1190,7 @@ public function insert($table, $data) {
     // echo "INSERT INTO $table (" . implode(', ', $key) . ") "
     //    . "VALUES ('" . implode("', '", $val) . "')";die;
     $sql = $this->db->query("INSERT INTO $table (" . implode(', ', $key) . ") "
-     . "VALUES ('" . implode("', '", $val) . "')") or die(mysqli_error($this->db));
+       . "VALUES ('" . implode("', '", $val) . "')") or die(mysqli_error($this->db));
 
     if($sql){
         return '1';
@@ -1227,9 +1229,9 @@ public function getResponseTrackDetail($dealer_id,$property_id){
     $selectuser = $this->db->query("SELECT * FROM response_tracker where dealer_id='".$dealer_id."' and property_id='".$property_id."'");
     $fetch=mysqli_num_rows($selectuser);
     if($fetch>0){
-       $fetch=mysqli_fetch_array($selectuser);
-       return $fetch;
-   }else{
+     $fetch=mysqli_fetch_array($selectuser);
+     return $fetch;
+ }else{
     return 0;
 }
 
@@ -1245,7 +1247,7 @@ public  function ViewFetchFriend($user_id) {
     $result = $this->db->query("SELECT users.fname,users.lname,users.dob,users_info.user_image,add_friend.* FROM add_friend INNER JOIN users_info ON add_friend.sender_user_id=users_info.user_id INNER JOIN users ON users_info.user_id=users.user_id where add_friend.receiver_user_id='$user_id' OR add_friend.sender_user_id='$user_id' and add_friend.status='1' GROUP BY add_friend.sender_user_id") or die(mysqli_error($this->db)); 
     $result1 = mysqli_num_rows($result);
     if($result1>0){
-       while($row = mysqli_fetch_array($result)){
+     while($row = mysqli_fetch_array($result)){
         $data[]=$row;
     }
     return $data;
@@ -1357,15 +1359,15 @@ public  function expire()
              // and projects.user_id!='$user_id'
     $num=mysqli_num_rows($expireuser);
     if($num>0){
-       while($result1=mysqli_fetch_array($expireuser)){
-          $created_date = $result1['dealer_createdat'];
+     while($result1=mysqli_fetch_array($expireuser)){
+      $created_date = $result1['dealer_createdat'];
                           // echo "<pre>";
                           // print_r($result1['dealer_email']);
 
-          $setting = $this->db->query("Select * from setting"); 
-          $setting_result = mysqli_fetch_array($setting);
+      $setting = $this->db->query("Select * from setting"); 
+      $setting_result = mysqli_fetch_array($setting);
 
-          $expire_date = $setting_result['setting_expire_date'];
+      $expire_date = $setting_result['setting_expire_date'];
 
             $now = time(); // or your date as well
             $your_date = strtotime($created_date);
@@ -1440,9 +1442,9 @@ public  function expire()
 /*Check user from email id*/
 public function checkUser($data)
 {
-   $checkuser = $this->db->query("Select * from dealer where dealer_email='".$data['email']."'");  
-   $result = mysqli_num_rows($checkuser);
-   return $result;
+ $checkuser = $this->db->query("Select * from dealer where dealer_email='".$data['email']."'");  
+ $result = mysqli_num_rows($checkuser);
+ return $result;
 }
 
 
@@ -1460,18 +1462,18 @@ public  function login($email,$password)
     $result = mysqli_num_rows($checkuser);  
     if ($result > 0)
     { 
-       $result1 = mysqli_fetch_array($checkuser);
+     $result1 = mysqli_fetch_array($checkuser);
             // session_set_cookie_params(0);
-       session_start();
-       $_SESSION['dealer_id'] = $result1['dealer_id'];
-       $_SESSION['dealer_name'] = $result1['dealer_first_name'];
-       $_SESSION['dealer_email'] = $result1['dealer_email'];
-       $_SESSION['dealer_photo'] = $result1['dealer_photo'];
+     session_start();
+     $_SESSION['dealer_id'] = $result1['dealer_id'];
+     $_SESSION['dealer_name'] = $result1['dealer_first_name'];
+     $_SESSION['dealer_email'] = $result1['dealer_email'];
+     $_SESSION['dealer_photo'] = $result1['dealer_photo'];
 
-       return 1;
-   }else{
+     return 1;
+ }else{
     return 0;
-   }
+}
 }
 
 public  function updateprofile($data,$realname) 
@@ -1488,12 +1490,12 @@ public  function updateprofile($data,$realname)
     $dealer_company_profile=$data['dealer_company_profile'];
     $img = $realname;
     if($realname==0){
-     $register = $this->db->query("update dealer SET dealer_type='Dealer',dealer_phone='".$data['dealer_phone']."',dealer_first_name='".$fname."',dealer_last_name='".$lname."',dealer_address='".$data['dealer_address']."',sector='".$data['sector']."',dealer_phone_second='".$dealer_phone_second."',dealer_telephone_no='".$dealer_telephone_no."',dealer_company_profile='".$dealer_company_profile."',dealer_modifiedat= '$created' where dealer_email='$email'") or die(mysqli_error($this->db));
- }else{
-     $register = $this->db->query("update dealer SET dealer_type='Dealer',dealer_phone='".$data['dealer_phone']."',dealer_first_name='".$fname."',dealer_last_name='".$lname."',dealer_photo='".$img."',dealer_address='".$data['dealer_address']."',dealer_modifiedat= '$created' where dealer_email='$email'") or die(mysqli_error($this->db));
- }
- if($register)
- {
+       $register = $this->db->query("update dealer SET dealer_type='Dealer',dealer_phone='".$data['dealer_phone']."',dealer_first_name='".$fname."',dealer_last_name='".$lname."',dealer_address='".$data['dealer_address']."',sector='".$data['sector']."',dealer_phone_second='".$dealer_phone_second."',dealer_telephone_no='".$dealer_telephone_no."',dealer_company_profile='".$dealer_company_profile."',dealer_modifiedat= '$created' where dealer_email='$email'") or die(mysqli_error($this->db));
+   }else{
+       $register = $this->db->query("update dealer SET dealer_type='Dealer',dealer_phone='".$data['dealer_phone']."',dealer_first_name='".$fname."',dealer_last_name='".$lname."',dealer_photo='".$img."',dealer_address='".$data['dealer_address']."',dealer_modifiedat= '$created' where dealer_email='$email'") or die(mysqli_error($this->db));
+   }
+   if($register)
+   {
     return "1";
 }
 else
@@ -1776,28 +1778,28 @@ public  function UserChangePasswordNew($new_password,$email)
     if($changepassword)
     {             
 
-       $from = $email;
-       $subject = 'Password Reset';
-       $message = '<html>
+     $from = $email;
+     $subject = 'Password Reset';
+     $message = '<html>
 
-       <body>
-       <h3>Dear '.$fetch['dealer_first_name'].'</h3>
+     <body>
+     <h3>Dear '.$fetch['dealer_first_name'].'</h3>
 
-       <p>Greetings! Hope you are having a good day.</p>
-       <p>Password has been changed for your Property App account. You can now log in (<a href="http://yards360.com">Login</a>) using your new password. </p>
+     <p>Greetings! Hope you are having a good day.</p>
+     <p>Password has been changed for your Property App account. You can now log in (<a href="http://yards360.com">Login</a>) using your new password. </p>
 
-       <p>If you did not changed the password, please let us know immediately by replying this email.</p>
-       <p>Thanks</p>
-       <p>Property App Team</p>
-       </body>
-       </html>
+     <p>If you did not changed the password, please let us know immediately by replying this email.</p>
+     <p>Thanks</p>
+     <p>Property App Team</p>
+     </body>
+     </html>
 
-       ';    $this->mail($subject,$message,$from);
+     ';    $this->mail($subject,$message,$from);
 
-       return "1";
-   }
-   else
-   {
+     return "1";
+ }
+ else
+ {
     return "0";
 }
 }
@@ -1891,10 +1893,10 @@ public function smsApi(){
 public  function showDealerrDetail($email) 
 { 
         //echo "select * from dealer where dealer_email='$email'";
-   $query = $this->db->query("select * from dealer where dealer_email='$email'") or die(mysqli_error($this->db));
-   $result = mysqli_fetch_array($query);
-   if($result)
-   {
+ $query = $this->db->query("select * from dealer where dealer_email='$email'") or die(mysqli_error($this->db));
+ $result = mysqli_fetch_array($query);
+ if($result)
+ {
     return $result;
 }
 else
@@ -1908,10 +1910,10 @@ else
 public  function getDealerInfobyId($id) 
 { 
         //echo "select * from dealer where dealer_email='$email'";
-   $query = $this->db->query("select * from dealer where dealer_id='".$id."'") or die(mysqli_error($this->db));
-   $result = mysqli_fetch_array($query);
-   if($result)
-   {
+ $query = $this->db->query("select * from dealer where dealer_id='".$id."'") or die(mysqli_error($this->db));
+ $result = mysqli_fetch_array($query);
+ if($result)
+ {
     return $result;
 }
 else
@@ -2007,5 +2009,23 @@ public  function adminmail($subject1,$message1,$from1)
 }
 }
 
-} 
-?>
+
+
+public function sendWhatsapp(){
+    $sid    = "AC531d1283dcacc21748e849fcbcf9d29b";
+    $token  = "387af36294a09e87d08e9b7b60b50deb";
+    $twilio = new Client($sid, $token);
+
+    $message = $twilio->messages
+                  ->create('whatsapp:+919560855334', // Text this number
+                     array(
+                        "from" => "whatsapp:+14155238886",
+                         "body" => "Your Yummy Cupcakes Company order of 1 dozen frosted cupcakes has shipped and should be delivered on July 10, 2019. Details: http://www.yards360.com/"
+                     )
+                 );
+
+                  print($message->sid);
+              }
+ 
+          } 
+          ?>
