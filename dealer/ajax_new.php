@@ -269,5 +269,175 @@ if(isset($_POST['favourite'])){
 
 
 
+/*Sell Fav Requirement*/
+if(isset($_POST['sell_favourite'])){
+  // include_once'Object.php';
+// session_start();
+	
+	$type='All';
+	$getrequirementresi=$common->getsellFavResiPropertyByDealerId($_SESSION['dealer_id']);
+  // var_dump($getrequirementresi);die;
+	$getrequirementcomm=$common->getCommRequirementByDealerId($_SESSION['dealer_id']);
+    // var_dump($comm_properties);
+	if(!empty($getrequirementresi)){
+		$prop=count($getrequirementresi);
+	}else{
+		$prop=0;
+	}
+
+	if(!empty($getrequirementcomm)){
+		$comm_prop=count($getrequirementcomm);
+	}else{
+		$comm_prop=0;
+	}
+	$total_pro=$prop+$comm_prop;
+	
+	echo '<div class="resultactiveprdcts">';
+	echo '<p>'.$total_pro.' '.'Active Properties'.'</p>';
+
+	echo '</div>';
+	if(!empty($getrequirementresi)){
+		foreach($getrequirementresi as $data){
+			$cat=$common->getCategoryName($data['cat_id']); 
+    //var_dump($cat);
+			$today=date('Y-m-d H:i:s');
+			$data['cat_name']=$cat['cat_name'];
+			$data['subcat_name']=$cat['subcat_name'];
+			echo '<div class="landforsale">';
+			echo '<div class="row">';
+			echo '<div class="col-sm-8">';
+			
+			echo '<div class="contentoflandfor">';
+			echo '<h4>';
+			if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}
+			echo '&nbsp';
+			echo '<span style="color: blue;">';
+			if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}
+			echo '</span>';
+			echo '&nbsp';
+			echo 'For';
+			echo '&nbsp';
+			echo $data['sector'].' '.$data['city'];
+			echo '</h4>';
+			echo '<p>'.'Price:'.'<span>';
+			echo '<i class="fa fa-inr">';
+			echo '</i>';
+			echo number_format($data['price']).'/-';
+			echo '</span>';
+			echo '</p>';    
+			echo '<p>'.'Plot area:'.'<span>';
+			if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}
+			echo '</span>';
+			echo '</p>';
+			if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}  
+
+			echo '</div>';
+			
+			echo '<div class="expireon">';
+			echo '<p>';
+			echo $data['property_code'];
+			echo '<span>';
+			echo $today<$data['expired_by']?'Active':'Expired';
+			echo '</span>';
+			echo '</p>';
+			echo '<p class="postedon">';
+			echo 'Posted On:';
+			echo '<span style="border: none;">';
+			echo date('d M Y',strtotime($data['posted_by']));
+			echo '</span>';
+			echo '</p>';
+			echo '</div>';
+
+			
+			echo '<div class="extnddurtion">';
+			echo '<p>';
+			echo 'Expiry On:';
+			echo date('d M Y',strtotime($data['expired_by']));
+			echo '<span>';
+			echo '</span>';
+			echo '</p>'; 
+			echo '<p>'.'Category:'.'<span>';
+			echo $data['cat_name'];
+			echo '</span>';
+			echo '</p>';        
+			echo '</div>';
+			echo '</div>';
+			echo '<div class="col-sm-4">';
+			
+			echo '</div>';
+			echo '</div>';  
+			echo '</div>';
+		}
+	}
+	/*for Commercial Properties*/
+	if(!empty($getrequirementcomm)){
+		foreach($getrequirementcomm[0] as $data){
+			$cat=$common->getCategoryName($data['cat_id']); 
+			
+			$data['cat_name']=$cat['cat_name'];
+			$data['subcat_name']=$cat['subcat_name'];
+			echo '<div class="landforsale">';
+			echo '<div class="row">';
+			echo '<div class="col-sm-8">';
+			
+			echo '<div class="contentoflandfor">';
+			echo '<h4>';
+			if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}
+			echo '&nbsp';
+			echo '<span style="color: blue;">';
+			if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}
+			echo '</span>';
+			echo '&nbsp'.'For'.'&nbsp';
+			echo $data['sector'].' '.$data['city'];
+			echo '</h4>';
+			echo '<p>'.'Price:'.'<span>';
+			echo '<i class="fa fa-inr">';
+			echo '</i>';
+			echo number_format($data['Expected_Price']).'/-';
+			echo '</span>';
+			echo '</p>';    
+			echo '<p>'.'Plot area:'.'<span>';
+			if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}
+			echo '</span>';
+			echo '</p>';
+			if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}   
+
+			echo '</div>';
+			
+			echo '<div class="expireon">';
+			echo '<p>';
+			echo $data['property_code'];
+			echo '<span>'.'Active'.'</span>';
+			echo '</p>';
+			echo '<p class="postedon">';
+			echo 'Posted On:';
+			echo '<span style="border: none;">';
+			echo date('d M Y',strtotime($data['posted_by']));
+			echo '</span>';
+			echo '</p>';
+			echo '</div>';
+			echo '<div class="extnddurtion">';
+			echo '<p>'.'Expiry On:';
+			echo date('d M Y',strtotime($data['expired_by']));
+			echo  '<span>';
+			echo '</span>';
+			echo '</p>'; 
+			echo '<p>'.'Category:'.'<span>';
+			echo $data['cat_name'];
+			echo '</span>';
+			echo '</p>';
+
+			echo '</div>';
+			echo '</div>';
+			
+			echo '</div>';  
+			echo '</div>';
+		}
+	}
+
+}
+
+/*Sell Fav Requirement Close*/
+
 
 ?>

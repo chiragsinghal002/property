@@ -6,7 +6,7 @@ include_once'include/sidebar.php';?>
 if(isset($_GET['property_id'])){
 	$getproperty_id=base64_decode($_GET['property_id']);
 	$getproperty_for=base64_decode($_GET['property_for']);
-	$getproperty_option='0';
+	$getproperty_option='1';
 	$data1=$common->getpropertybyid($getproperty_id,$getproperty_for);
 			 //var_dump($data);
 }
@@ -640,7 +640,7 @@ function fav(value){
         $.ajax({
         	url:'ajax.php',
         	type:'post',
-        	data:{'fav_property':1,req_property_id:value,dealer_id:dealer_id},
+        	data:{'sell_fav_property':1,req_property_id:value,dealer_id:dealer_id},
         	success:function(data){
             // document.location.reload(true);
             console.log(data);
@@ -664,7 +664,7 @@ function unfav(value){
         $.ajax({
         	url:'ajax.php',
         	type:'post',
-        	data:{'unfav_property':1,req_property_id:value,dealer_id:dealer_id},
+        	data:{'sell_unfav_property':1,req_property_id:value,dealer_id:dealer_id},
         	success:function(data){
             // document.location.reload(true);
             console.log(data);
@@ -713,7 +713,7 @@ function change_div(id){
 		$.ajax({
 			url:'ajax_new.php',
 			type:'post',
-			data:{'favourite':1},
+			data:{'sell_favourite':1},
 			success:function(data){
 				$("#favorite_properties").html(data);
 			}

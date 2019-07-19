@@ -372,6 +372,17 @@ if(isset($_POST['fav_property'])){
 
 /*Close fav requirement Property By Dealer*/
 
+if(isset($_POST['sell_fav_property'])){
+	$property_id=$_POST['req_property_id'];
+	$dealer_id=$_POST['dealer_id'];
+	$result=$common->addSellFavRequirement($property_id,$dealer_id);
+	if($result==1){
+		echo '1';
+	}
+}
+
+
+
 /*Unfav a Requirement Property by Dealer*/
 
 if(isset($_POST['unfav_property'])){
@@ -386,6 +397,14 @@ if(isset($_POST['unfav_property'])){
 
 /*Close Unfav Requirement Property by Dealer*/
 
+if(isset($_POST['sell_unfav_property'])){
+	$property_id=$_POST['req_property_id'];
+	$dealer_id=$_POST['dealer_id'];
+	$result=$common->delSellFavRequirement($property_id,$dealer_id);
+	if($result==1){
+		echo '1';
+	}
+}
 
 
 if(isset($_POST['search_buy'])){

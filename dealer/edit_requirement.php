@@ -16,7 +16,7 @@ if(isset($_GET['msg'])){
 <div class="main1">
 	<?php if(!empty($msg)){echo '<span style="color:red;">'.$msg.'</span>';}?>
 	<form id="form">
-		<div class="container extrapaddng">
+		<div class="container extrapaddng editreq">
 			<div class="min-drop">
 			<div class="min-drop">
 				<div class="menu-drop">
@@ -125,11 +125,13 @@ if(isset($_GET['msg'])){
 				<p>Property Type:</p><h5><?php if($propertydata['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?></h5>
 			</div>
 			
-		 
-			<div class="apprtmnt">
+		  <div class="row">
+			<div class="col-sm-2">
 					<div class="typeheading">
 						<p>Category Name:</p>
 					</div>
+					</div>
+					<div class="col-sm-4">
 					<div class="drop-html1	">
 						<div class="dropdown">
 							<div class="drop-html1">
@@ -148,7 +150,7 @@ if(isset($_GET['msg'])){
 				<?php if($propertydata['property_for']=='0'){ ?>
 
 				<?php if(!empty($propertydata['Plot_Area'])):?>
-					<div class="apprtmnt">
+					<div class="col-sm-4">
 						<div class="typeheading">
 							<p>Plot Area</p>
 						</div>
@@ -162,6 +164,7 @@ if(isset($_GET['msg'])){
 						</div>
 					</div>
 				<?php endif;?>
+					</div>
 				<?php if(!empty($propertydata['Carpet_Area'])):?>
 					<div class="apprtmnt">
 						<div class="typeheading">
@@ -464,12 +467,13 @@ if(isset($_GET['msg'])){
 			<?php } ?>
 
 
-			<div class="apprtmnt">
-
+			<div class="row">
+				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Expected Price:<span style="color: red;">*</span></p>
 				</div>
-
+				</div>
+				<div class="col-sm-4">
 				<div class="drop-html1">
 					<input type="number" name="price" placeholder="Exp. Price" class="ginputfield" id="price" value="<?php echo $propertydata['price'];?>" onkeyup="price_check(this.value)" name="exp_price" min="1">
 					<span id="price_error" style="color:red;display: none;">Select Price*</span>
@@ -482,33 +486,42 @@ if(isset($_GET['msg'])){
 				<span id="word_result"></span>
 
 				
-
+			</div> 
 			</div> 
 
-			<div class="apprtmnt" id="negotiable_div">
+			<div class="" id="negotiable_div">
 
+			<div class="row">
+				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Negotiable:</p>
 				</div>
-
+				</div>
+				<div class="col-sm-4">
 				<div class="drop-html1">
 
 					<select class="selectofplotarea" id="negotiable" name="negotiable">
 						<option value="Yes"<?php if($propertydata['negotiable']=="Yes") echo 'selected="selected"'; ?>>Yes</option>
 						<option value="No"<?php if($propertydata['negotiable']=="No") echo 'selected="selected"'; ?>>No</option>
 					</select>
+								</div>
 				</div>
-
+				</div>
+				<div class="row">
+				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Loan Approval:</p>
 				</div>
-
+				</div>
+				<div class="col-sm-4">
 				<div class="drop-html1">
 
 					<select class="selectofplotarea" id="loan_approval" name="loan_approval">
 						<option value="1"<?php if($propertydata['loan_approval']=="1") echo 'selected="selected"'; ?>>Yes</option>
 						<option value="0"<?php if($propertydata['loan_approval']=="0") echo 'selected="selected"'; ?>>No</option>
 					</select>
+				</div>
+			</div>
 				</div>
 
 				

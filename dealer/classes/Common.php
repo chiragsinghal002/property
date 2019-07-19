@@ -286,10 +286,10 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
      }
  }else{
     if($data['cat_id']==26){
-          //echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";
+        // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
     }else if($data['cat_id']==27){
-         //echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";
+         // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
     }else{
         //echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."'";die;
@@ -461,6 +461,27 @@ return $data;
 }
 /*Close Get Favorite Residencial Properties by Dealer Id*/
 
+
+
+
+/*Get Sell Fav Properties*/
+public  function getsellFavResiPropertyByDealerId($dealer_id) {  
+  // echo "SELECT fav_requirement.fav_id,residential_properties.* FROM fav_requirement INNER JOIN residential_properties ON fav_requirement.property_id=residential_properties.property_id where fav_requirement.dealer_id='".$dealer_id."'";die;
+    $result=$this->db->query("SELECT sell_fav_requirement.sell_fav_id,residential_properties.* FROM sell_fav_requirement INNER JOIN residential_properties ON sell_fav_requirement.property_id=residential_properties.property_id where sell_fav_requirement.dealer_id='".$dealer_id."'") or die(mysqli_query($this->db));
+    $num=mysqli_num_rows($result);
+    if($num>0){
+       while($row = mysqli_fetch_array($result)){
+        $data[]=$row;
+    } 
+}else{
+    $data='';
+}
+
+ // var_dump($data);die;
+return $data;
+}
+
+/*Get Sell Fav Properties Close*/
 
 /*Get Favorite Commercial Properties By Dealer Id*/
 /*Get Favorite Residential Properties by Dealer Id*/
@@ -851,7 +872,12 @@ public function addFavRequirement($property_id,$dealer_id){
 }
 
 /*Close Requirement in fav list of dealer*/
-
+public function addSellFavRequirement($property_id,$dealer_id){
+    $table='sell_fav_requirement';
+    $data=array('dealer_id'=>$dealer_id,'property_id'=>$property_id,'status'=>'1');
+    $result=$this->insert($table,$data);
+    return 1;
+}
 
 /*Remove Requirement in fav list of dealer*/
 public function delFavRequirement($property_id,$dealer_id){
@@ -860,7 +886,10 @@ public function delFavRequirement($property_id,$dealer_id){
 }
 
 /*Close Requirement in Remove fav list of dealer*/
-
+public function delSellFavRequirement($property_id,$dealer_id){
+    $selectuser = $this->db->query("DELETE FROM sell_fav_requirement WHERE property_id='".$property_id."' and dealer_id='".$dealer_id."' and status='1'");
+    return 1;
+}
 
 
 

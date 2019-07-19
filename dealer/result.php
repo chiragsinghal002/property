@@ -81,7 +81,14 @@ include_once'include/sidebar.php';?>
           
          ?>
          <div class="extnddurtion">
-          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <span><?php echo $countViews.' '.'Views';?></span></p><a href="">Match Property</a> 
+          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <span><?php echo $countViews.' '.'Views';?></span>
+             <?php if(!empty($propertyMatched)):?>
+              <a href="buy_matched.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
+            <?php endif;?>
+             <?php if(empty($propertyMatched)):?>
+              <a href="#"><?php echo '0'.' '.'Property Matched';?></a>
+            <?php endif;?>
+          </p> 
           <p>Category:<span><?php echo $data['cat_name'];?></span></p>        
         </div>
 
@@ -245,14 +252,14 @@ include_once'include/sidebar.php';?>
          // var_dump($propertyMatched);
           ?>
           <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <span><?php echo $countViews.' '.'Views'?></span>
-            <span>
+            
                 <?php if(!empty($propertyMatched)):?>
-              <a href="getrequirement.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
+              <a href="buy_matched.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
             <?php endif;?>
              <?php if(empty($propertyMatched)):?>
               <a href="#"><?php echo '0'.' '.'Property Matched';?></a>
             <?php endif;?>
-            </span>
+           
         </p> 
           <p>Category:<span><?php echo $data['cat_name'];?></span></p>        
         </div>
