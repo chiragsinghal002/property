@@ -91,6 +91,16 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
   </li>
 <?php endif;?>
 
+<?php 
+if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):
+  ?>
+  <li>
+
+    <a href="match_sell_property.php"><i class="fa fa-building"></i>Match Sell Property</a>
+
+  </li>
+<?php endif;?>
+
 
 <li>
 
