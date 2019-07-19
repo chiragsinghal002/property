@@ -266,15 +266,16 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
     // echo '<pre>';
     // var_dump($data);
     // echo $property_for;
-    // echo $property_option;
+   
+    if($property_for=='0'){
+         // echo $property_option;
     $price=$data['price'];
     $amt_price=$price*20/100;
     $min_price=$price-$amt_price;
     $max_price=$price+$amt_price;
-    if($property_for=='0'){
         if($property_option=='0'){
          if($data['cat_id']==26){
-           // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
+            // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
         }else if($data['cat_id']==27){
         // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";die;
@@ -285,10 +286,10 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
      }
  }else{
     if($data['cat_id']==26){
-        // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
+          //echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
     }else if($data['cat_id']==27){
-        // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";die;
+         //echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db)); 
     }else{
         //echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."'";die;
@@ -306,7 +307,7 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
             $result=$this->db->query("SELECT * FROM commercial_properties where property_for='".$data['property_for']."' AND Expected_Price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND Super_Area='".$data['Super_Area']."' AND Super_Area_Unit='".$data['Super_Area_Unit']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db));
         }
     }else{
-
+          $result=$this->db->query("SELECT * FROM commercial_properties where property_for='".$data['property_for']."' AND Expected_Price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND Super_Area='".$data['Super_Area']."' AND Super_Area_Unit='".$data['Super_Area_Unit']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."'") or die(mysqli_query($this->db));
     }
 }
 
@@ -1043,7 +1044,7 @@ public function getDealerCommProperty($dealer_id,$type){
 public function getdealerpropertyrequriment($dealer_id){
 
      $property_option=1;//for only purchase
-      // echo "SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='1' AND residential_properties.property_option='".$property_option."'";die;
+      
      $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."'") or die(mysqli_error($this->db));  
      $fetch_num=mysqli_num_rows($selectproperties);
      if($fetch_num>0){

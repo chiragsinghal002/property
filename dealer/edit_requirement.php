@@ -18,6 +18,7 @@ if(isset($_GET['msg'])){
 	<form id="form">
 		<div class="container extrapaddng">
 			<div class="min-drop">
+			<div class="min-drop">
 				<div class="menu-drop">
 					<p>List Property<span style="color: red;">*</span></p>
 				</div>
@@ -79,6 +80,7 @@ if(isset($_GET['msg'])){
 					<span id="property_sell_type_error" style="color: red;display: none;">*Please select any one</span>
 				</div>
 			</div>
+				</div>
 			<!-- Propety Type: -->
 			<div id="location_div">
 				<div class="apprtmnt">
