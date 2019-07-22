@@ -437,6 +437,8 @@ if(isset($_POST['search_buy'])){
 			if($data2['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color:red;"><?php echo $cat_name['cat_name'];?></span>&nbsp;For&nbsp;<?php echo $data2['sector'].' '.$data2['city'];
 			echo '</h4>';
 			echo '<div class="serach_extrabtn">';
+			echo '<i class="fa fa-heart" aria-hidden="true">';
+			echo '</i>';
 			echo '<button onclick="interest(this.value)" value='.$data2['property_id'].'>'.'Interested'.'</button>';
 			echo '</div>';
 			echo '<div class="row">';
@@ -565,6 +567,8 @@ if(isset($_POST['search_rent'])){
 			if($data2['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color:red;"><?php echo $cat_name['cat_name'];?></span>&nbsp;For&nbsp;<?php echo $data2['sector'].' '.$data2['city'];
 			echo '</h4>';
 			echo '<div class="serach_extrabtn">';
+			echo '<i class="fa fa-heart" aria-hidden="true">';
+			echo '</i>';
 			echo '<button onclick="interest(this.value)" value='.$data2['property_id'].'>'.'Interested'.'</button>';
 			echo '</div>';
 			echo '<div class="row">';

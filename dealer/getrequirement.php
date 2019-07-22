@@ -115,7 +115,7 @@ if(isset($_GET['property_id'])){
      <div class="deletebutton">
      	<?php $getResult=$common->getFavPropertyByDealerId($data['property_id'],$_SESSION['dealer_id']);?>
      	<?php if($getResult==false){?>
-     		<button class="dtebtn" onclick="fav(this.value)" value="<?php echo $data['property_id'];?>" id="<?php echo $data['property_id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i>fav</button>         <?php }else{ ?>
+     		<button class="dtebtn" onclick="fav(this.value)" value="<?php echo $data['property_id'];?>" id="<?php echo $data['property_id'];?>"><i class="fa fa-heart" aria-hidden="true"></i>fav</button>         <?php }else{ ?>
      			<button class="dtebtn" style="background-color: red;" onclick="unfav(this.value)" value="<?php echo $data['property_id'];?>" id="<?php echo $data['property_id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i>fav</button>
      		<?php } ?>                                          
 
@@ -272,27 +272,28 @@ if(isset($_GET['property_id'])){
 
  			<button class="dtebtn" onclick="interest(this.value);" value="<?php echo $data['property_id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i>Interested</button>                                                   
  		</div><br>
- 		<div class="deletebutton">
+ 		<div class="mailbtngt">
  			<?php if($getResponse['mail']==1){
- 				echo '<a href="mailto:'.$propdealinfo['dealer_email'].'" id='.$data['property_id'].' style="background:red;">'.'MAIL'.'</a>';
+
+ 				echo '<a href="mailto:'.$propdealinfo['dealer_email'].'" id='.$data['property_id'].' style="background:red;"><i class="fa fa-envelope-o" aria-hidden="true"></i>'.'MAIL'.'</a>';
  			}else{
- 				echo '<a href="mailto:'.$propdealinfo['dealer_email'].'" onclick="mail(this.id)" id='.$data['property_id'].'>'.'MAIL'.'</a>';
+ 				echo '<a href="mailto:'.$propdealinfo['dealer_email'].'" onclick="mail(this.id)" id='.$data['property_id'].'><i class="fa fa-envelope-o" aria-hidden="true"></i>'.'MAIL'.'</a>';
  			}        ?>                                           
  		</div><br>
- 		<div class="deletebutton">
+ 		<div class="whtappgt">
 
  			<?php if($getResponse['whatsapp']==1){
- 				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" id='.$data['property_id'].' style="background:red;">'.'WHATSAPP'.'</a>';
+ 				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" id='.$data['property_id'].' style="background:red;"><i class="fa fa-whatsapp" aria-hidden="true"></i>'.'WHATSAPP'.'</a>';
  			}else{
- 				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" onclick="whatsapp(this.id)" id='.$data['property_id'].'>'.'WHATSAPP'.'</a>';
+ 				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" onclick="whatsapp(this.id)" id='.$data['property_id'].'><i class="fa fa-whatsapp" aria-hidden="true"></i>'.'WHATSAPP'.'</a>';
  			}    ?>                                              
  		</div><br>
- 		<div class="deletebutton">
+ 		<div class="callbtngt">
  			<?php 
  			if($getResponse['call_to_user']==1){
- 				echo '<span id='.$data['property_id'].' onclick="show_call()" style="background:red;">'.'CALL'.'</span>';
+ 				echo '<span id='.$data['property_id'].' onclick="show_call()" style="background:red;"><i class="fa fa-phone" aria-hidden="true"></i>'.'CALL'.'</span>';
  			}else{
- 				echo '<span id='.$data['property_id'].' onclick="call_to(this.id)">'.'CALL'.'</span>';
+ 				echo '<span id='.$data['property_id'].' onclick="call_to(this.id)"><i class="fa fa-phone" aria-hidden="true"></i>'.'CALL'.'</span>';
  			} ?>
  			
  		</div>

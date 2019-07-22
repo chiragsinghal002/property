@@ -1845,7 +1845,7 @@ public function otpVerification($data){
     $subject='OTP FOR MOBILE VERIFICATION';
     $message='Dear '.$data['fname'].' Your Otp is '.$data['otp'].'';
     $from=$data['email'];
-     // $this->smsApi();
+      // $this->smsApi();
     //Load Composer's autoloader
     require 'mail/autoload.php';
     $mail = new PHPMailer(true); 
@@ -2026,6 +2026,152 @@ public function sendWhatsapp(){
 
                   print($message->sid);
               }
+
+
+
+
+               public function accountExpired(){
+                  $created=date('Y-m-d'); 
+                  $checkuser = $this->db->query("SELECT * FROM dealer where dealer_type = 'Dealer' AND dealer_status='1'");  
+
+                  $result = mysqli_num_rows($checkuser);  
+
+                  if ($result > 0)
+
+                  { 
+                     $setting = $this->db->query("Select * from setting"); 
+
+                     $setting_result = mysqli_fetch_array($setting);
+
+                     $expire_date = $setting_result['setting_expire_date'];
+
+                     while($result1 = mysqli_fetch_array($checkuser)){
+
+                         $created_date = $result1['dealer_createdat'];
+
+                         $now=date('Y-m-d H:i:s');
+                         $expired_by=date('Y-m-d H:i:s', strtotime($created_date. ' + 5 day'));
+
+                       // $your_date = strtotime($created_date);
+
+                       // $datediff = $now - $your_date;
+
+                       // $date1 =  round($datediff / (60 * 60 * 24));
+
+                       // $remaindate = $expire_date - $date1;
+
+                       // $remaindate1 = $expire_date - $remaindate;
+
+
+
+                         if ($now>$expired_by) {
+                            // $to=$result1['dealer_email'];
+
+                          $from = $result1['dealer_email'];
+
+                          $subject = 'Oops! Expiration of subscribed package with Property App';
+
+                          $message = '<html>
+
+                          <body>
+
+                          <h3>Dear '.$result1['dealer_first_name'].'</h3>
+
+                          <p>We are sad to inform that your subscribed package has been expired soon</p>
+
+                          <p>Kindly get it renewed timely for uninterrupted service. </p>
+
+                          <p>PS: We also love hearing from you and helping you with any issues you have. Please reply to this email if you want to ask a question or just say Hi!</p>
+
+                          <p>Thanks</p>
+
+                          <p>Property App Team</p>
+
+                          </body>
+
+                          </html>
+
+                          ';    
+
+                          $this->mail($subject,$message,$from);
+                          // echo "UPDATE dealer SET dealer_status='2' where dealer_email='".$result1['dealer_email']."'";
+                          $updatestatus = $this->db->query("UPDATE dealer SET dealer_status='2' where dealer_email='".$result1['dealer_email']."'") or die(mysqli_error($this->db));
+                      }
+                      
+                  }
+
+              }
+
+
+          }
+
+
+
+          public function propertyExpired(){
+              $exp=date('Y-m-d H:i:s'); 
+              // echo "SELECT residential_properties.property_code,dealer.* FROM residential_properties INNER JOIN dealer ON residential_properties.dealer_id=dealer.dealer_id where residential_properties.status='1' and expired_by<'".$exp."'";die;
+              $checkuser = $this->db->query("SELECT residential_properties.property_code,dealer.* FROM residential_properties INNER JOIN dealer ON residential_properties.dealer_id=dealer.dealer_id where residential_properties.status='1' and expired_by<'".$exp."'");  
+
+              $result = mysqli_num_rows($checkuser);  
+
+              if ($result > 0)
+
+              { 
+                 
+
+                 while($result1 = mysqli_fetch_array($checkuser)){
+
+                       // $your_date = strtotime($created_date);
+
+                       // $datediff = $now - $your_date;
+
+                       // $date1 =  round($datediff / (60 * 60 * 24));
+
+                       // $remaindate = $expire_date - $date1;
+
+                       // $remaindate1 = $expire_date - $remaindate;
+
+
+                  
+                            // $to=$result1['dealer_email'];
+
+                      $from = $result1['dealer_email'];
+
+                      $subject = 'Oops! Expiration of Your Property';
+
+                      $message = '<html>
+
+                      <body>
+
+                      <h3>Dear '.$result1['dealer_first_name'].'</h3>
+
+                      <p>We are sad to inform that your property has been expired</p>
+
+                      <p>Property Code '.$result1['property_code'].'</p>
+
+                      <p>PS: We also love hearing from you and helping you with any issues you have. Please reply to this email if you want to ask a question or just say Hi!</p>
+
+                      <p>Thanks</p>
+
+                      <p>Property App Team</p>
+
+                      </body>
+
+                      </html>
+
+                      ';    
+
+                      $this->mail($subject,$message,$from);
+                          // echo "UPDATE dealer SET dealer_status='2' where dealer_email='".$result1['dealer_email']."'";
+                      $updatestatus = $this->db->query("UPDATE residential_properties SET status='3' where property_code='".$result1['property_code']."'") or die(mysqli_error($this->db));
+                  
+
+              }
+
+          }
+
+
+      }
  
           } 
           ?>

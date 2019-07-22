@@ -86,7 +86,7 @@ if(isset($_GET['msg'])){
 					</div>
 					<div class="drop-html1	">
 						<div class="dropdown">
-							<div class="drop-html1">
+							<div class="drop-html1 brsc">
 								<?php $location=$common->getAreaSector(1);?>
 								<!-- <input type="text" name="sector" placeholder="Area/Sector" class="ginputfield" id="sector"> -->
 

@@ -14,10 +14,11 @@ if(isset($_GET['msg'])){
 
 ?>
 <!-- Div for Grey Background -->
-<div class="main1">
+<div class="main1 ">
 	<?php if(!empty($msg)){echo '<span style="color:red;">'.$msg.'</span>';}?>
 	<form id="form">
 		<div class="container extrapaddng">
+			<div class="min-drop">
 			<div class="min-drop">
 				<div class="menu-drop">
 					<p>List Property<span style="color: red;">*</span></p>
@@ -44,6 +45,8 @@ if(isset($_GET['msg'])){
 				
 				<div class="menu-drop">
 					<p> For:<span style="color:red;">*</span></p>
+					</div>
+					<div class="drop-html">
 					<div class="dropdown">
 						<input type="radio" name="property_type1" id="property_type_new" onchange="sell_div(this.value)" value="0"<?php echo ($propertydata['property_option']==0)?'checked':'' ?> disabled>Sell
 						<input type="radio" name="property_type1" id="property_type_new" onchange="sell_div(this.value)" value="1"<?php echo ($propertydata['property_option']==1)?'checked':'' ?> disabled>Rent
@@ -80,12 +83,15 @@ if(isset($_GET['msg'])){
 					<span id="property_sell_type_error" style="color: red;display: none;">*Please select any one</span>
 				</div>
 			</div>
+			</div>
 			<!-- Propety Type: -->
-			<div id="location_div">
-				<div class="apprtmnt">
+			<div id="location_div" class="row ediloc">
+					<div class="col-sm-2">
 					<div class="typeheading">
 						<p>City:<span style="color:red;">*</span></p>
 					</div>
+					</div>
+					<div class="col-sm-4">
 					<div class="drop-html1	">
 						<div class="dropdown">
 <!-- 							<select id="city" name="city">
@@ -94,11 +100,14 @@ if(isset($_GET['msg'])){
 							<p><?php echo $propertydata['city'];?></p>
 						</div>
 					</div>
-				</div>
-				<div class="apprtmnt">
+					</div>
+				
+				<div class="col-sm-2">
 					<div class="typeheading">
 						<p>Area/Sector:<span style="color:red;">*</span></p>
 					</div>
+					</div>
+					<div class="col-sm-4">
 					<div class="drop-html1	">
 						<div class="dropdown">
 							<div class="drop-html1">
@@ -117,7 +126,7 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
-				</div>
+		</div>
 				
 			</div>
 			<div class="proptype">
@@ -125,10 +134,13 @@ if(isset($_GET['msg'])){
 			</div>
 			
 
-			<div class="apprtmnt">
+			<div class="row">
+				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Category Name:</p>
 				</div>
+				</div>
+				<div class="col-sm-4">
 				<div class="drop-html1	">
 					<div class="dropdown">
 						<div class="drop-html1">
@@ -137,6 +149,7 @@ if(isset($_GET['msg'])){
 							<span id="sector_error" style="color:red;display: none;">*Select Sector</span>
 						</div>
 					</div>
+				</div>
 				</div>
 			</div>
 			<?php if($propertydata['property_for']=='0'){ ?>
@@ -157,10 +170,13 @@ if(isset($_GET['msg'])){
 					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Carpet_Area'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Carpet Area</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -168,13 +184,17 @@ if(isset($_GET['msg'])){
 								</div>
 							</div>
 						</div>
+						</div>
 					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Super_Built_Up_Area'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Super Built Up Area</p>
 						</div>
+							</div>
+								<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -183,12 +203,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Bedroom'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Bedroom</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -197,12 +221,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Bathroom'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Bathroom</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -211,26 +239,34 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Furnishing_Status'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Furnishing Status</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
 									<p><?php echo $propertydata['Furnishing_Status'];?></p>
 								</div>
 							</div>
+									</div>
 						</div>
 					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Property_on_Floor'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Property On Floor</p>
 						</div>
+							</div>
+								<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -239,12 +275,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Floors_In_Buliding'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Floors In Buliding</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -253,12 +293,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Car_Parking_Space'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Car Parking Space</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -267,13 +311,17 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+						</div>
 				<?php endif;?>
 			<?php }else{ ?>
 						<?php if(!empty($propertydata['Super_Area'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Super Area</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -283,12 +331,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Carpet_Area'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Carpet Area</p>
 						</div>
+						</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -297,12 +349,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+						</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Built_Up_Area'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Built Up Area</p>
 						</div>
+							</div>
+							<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -311,12 +367,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+						</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Wash_Room'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Wash Room</p>
 						</div>
+					</div>
+					<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -325,12 +385,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Pantry'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Pantry</p>
 						</div>
+					</div>
+					<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -339,12 +403,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Status'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Status</p>
 						</div>
+					</div>
+					<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -353,12 +421,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Furnishing_Status'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Furnishing Status</p>
 						</div>
+					</div>
+					<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -367,12 +439,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Parking_Space'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Parking Space</p>
 						</div>
+					</div>
+					<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -381,12 +457,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Ownership'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Ownership</p>
 						</div>
+					</div>
+					<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -395,12 +475,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>	
 				<?php if(!empty($propertydata['Facing'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Facing</p>
 						</div>
+					</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -409,12 +493,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>	
 				<?php if(!empty($propertydata['Possesion'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+						<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Possesion</p>
 						</div>
+					</div>
+					<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -423,12 +511,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+					</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Amenities'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+							<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Amenities</p>
 						</div>
+					</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -437,12 +529,16 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>
 				<?php if(!empty($propertydata['Maintenance'])):?>
-					<div class="apprtmnt">
+					<div class="row">
+							<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Maintenance</p>
 						</div>
+					</div>
+						<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -451,6 +547,7 @@ if(isset($_GET['msg'])){
 							</div>
 						</div>
 					</div>
+				</div>
 				<?php endif;?>	
 						
 
@@ -458,13 +555,14 @@ if(isset($_GET['msg'])){
 			<?php } ?>
 
 
-			<div class="apprtmnt">
-
+			<div class="row">
+			 <div class="col-sm-2">
 				<div class="typeheading">
 					<p>Expected Price:<span style="color: red;">*</span></p>
 				</div>
-
-				<div class="drop-html1">
+			</div>
+					<div class="col-sm-4">
+				<div class="drop-html1 edtproexpr">
 					<input type="number" name="price" placeholder="Exp. Price" class="ginputfield" id="price" value="<?php if(!empty($propertydata['property_for']=='0')){echo $propertydata['price'];}else{echo $propertydata['Expected_Price'];}?>" onkeyup="price_check(this.value)" name="exp_price" min="1">
 					<span id="price_error" style="color:red;display: none;">Select Price*</span>
 					
@@ -473,18 +571,21 @@ if(isset($_GET['msg'])){
 						<option value="crores">Crores</option>
 					</select> -->
 				</div>
+			</div>
 				<span id="word_result"></span>
 
 				
 
 			</div> 
 
-			<div class="apprtmnt" id="negotiable_div">
-
+			<div class="edneg" id="negotiable_div">
+				<div class="row">
+						<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Negotiable:</p>
 				</div>
-
+			</div>
+					<div class="col-sm-4">
 				<div class="drop-html1">
 
 					<select class="selectofplotarea" id="negotiable" name="negotiable">
@@ -492,11 +593,16 @@ if(isset($_GET['msg'])){
 						<option value="No"<?php if($propertydata['negotiable']=="No") echo 'selected="selected"'; ?>>No</option>
 					</select>
 				</div>
+			</div>
+			 </div>
 
+					<div class="row">
+							<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Loan Approval:</p>
 				</div>
-
+			</div>
+	<div class="col-sm-4">
 				<div class="drop-html1">
 
 					<select class="selectofplotarea" id="loan_approval" name="loan_approval">
@@ -505,7 +611,8 @@ if(isset($_GET['msg'])){
 					</select>
 				</div>
 
-				
+				</div>
+			</div>
 
 			</div> 
 			
@@ -513,14 +620,15 @@ if(isset($_GET['msg'])){
 
 
 			<!-- Add Construction Status -->
-			<div class="apprtmnt" id="construction_status">
-
+			<div class="row" id="construction_status">
+					<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Construction Status:</p>
 				</div>
-
+			</div>
+					<div class="col-sm-4">
 				<div class="drop-html1">
-					<div class="dropdown">
+					<div class="dropdown edprcon">
 						<select id="status1" name="construction_status">
 							<option value="0"<?php if($propertydata['construction_status']=="0") echo 'selected="selected"'; ?>>Under Construction</option>
 							<option value="1"<?php if($propertydata['construction_status']=="1") echo 'selected="selected"'; ?>>Ready to Move</option>
@@ -528,6 +636,7 @@ if(isset($_GET['msg'])){
 						</select>
 					</div>
 				</div>
+			</div>
 
 			</div>
 

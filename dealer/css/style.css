@@ -3519,6 +3519,20 @@ img.admnimg {
      background: white;
      margin-top: 37px;
 }
+.serach_extrabtn i {
+    margin-right: -6px;
+    z-index: 9999;
+    margin-top: 10px;
+    color: #ffff;
+}
+.serach_extrabtn {
+    display: inline-flex;
+    float: right;
+    /* margin-right: 14px; */
+}
+.btnsdledblckdiv .editbutton .edtbtn i {
+    margin-right: 10px;
+}
 /*Responsivness For Result Page:*/
 /*For Samsung & Apple*/
  @media only screen and (max-width: 480px) {
@@ -3686,6 +3700,12 @@ img.admnimg {
 }
 .usimg {
     font-size: 15px!important;
+}
+.edreql select {
+    margin-left: 42px;
+}
+.edreqrw .row {
+    padding: 10px 0px;
 }
 /*Responsvness For Change Password Page*/
  @media only screen and (max-width: 480px){
@@ -4035,6 +4055,98 @@ i.fa.fa-lock {
 
 .prct {
     padding: 14px 0px;
+}
+.ediloc {
+    padding: 20px 0px;
+}
+.edtproexpr input {
+    margin-left: 20px!important;
+}
+.edneg select {
+    margin-left: 20px;
+}
+.edprcon select {
+    margin-left: 0px;
+}
+.mailbtngt {
+    position: relative;
+    top: 13px;
+    border: none;
+    background: #0f1926;
+    width: 36%;
+    height: 32px;
+    border-radius: 12px;
+    color: #ffffff;
+    outline: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.mailbtngt a {
+ color: #ffffff;
+     display: block;
+    position: relative;
+} 
+.whtappgt {
+    position: relative;
+    top: 13px;
+    border: none;
+    background: #3cb54a;
+    width: 36%;
+    height: 32px;
+    border-radius: 12px;
+    color: #ffffff;
+    outline: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.whtappgt a {
+ color: #ffffff;
+     display: block;
+    position: relative;
+}
+.callbtngt {
+    position: relative;
+    top: 13px;
+    border: none;
+    background: #0f1926;
+    width: 36%;
+    height: 32px;
+    border-radius: 12px;
+    color: #ffffff;
+    outline: none;
+    text-align: center;
+    line-height: 30px;
+    font-size: 16px;
+}
+.callbtngt a {
+ color: #ffffff;
+     display: block;
+    position: relative;
+}
+.edtpro .drop-html1 {
+    font-size: 17px;
+    text-transform: capitalize;
+}
+.erpdl p {
+    margin-left: 20px;
+}
+.brsc {
+    border-bottom: 1px solid #ffff;
+}
+.brsc.select2-container--default .select2-selection--single .select2-selection__rendered {
+    margin: 0px;
+    padding: 0px;
+    line-height: 0px;
+}
+.brsc .selection span#select2-sector-container {
+    padding-left: 13px;
+        line-height: 24px!important;
+}
+}
+.brsc .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 18px !important;
 }
 /*Responsivness  media query by mukesh*/
 @media(max-width:767px){

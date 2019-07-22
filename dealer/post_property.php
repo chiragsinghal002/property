@@ -103,8 +103,8 @@ if(isset($_GET['msg'])){
 					</div>
 					<div class="drop-html1	">
 						<div class="dropdown">
-							<div class="drop-html1">
-								<?php $location=$common->getAreaSector(1);?>
+							<div class="drop-html1 ">
+								<?php $location_div=$common->getAreaSector(1);?>
 								<!-- <input type="text" name="sector" placeholder="Area/Sector" class="ginputfield" id="sector"> -->
 
 								<select id="sector" name="sector" class="js-example-basic-single">
@@ -332,8 +332,9 @@ if(isset($_GET['msg'])){
 				
 			</div> 
 			</div> 
-			<div class="row">
-			<div class="apprtmnt" id="negotiable_div" style="display: none;">
+			
+			<div  id="negotiable_div" style="display: none;">
+				<div class="row">
 				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Negotiable:</p>
@@ -348,10 +349,14 @@ if(isset($_GET['msg'])){
 					</select>
 				</div>
 				</div>
+				</div>
+				<div class="row">
+				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Loan Approval:</p>
 				</div>
-
+					</div>
+					<div class="col-sm-4">
 				<div class="drop-html1">
 
 					<select class="selectofplotarea" id="loan_approval" name="loan_approval">
@@ -359,22 +364,26 @@ if(isset($_GET['msg'])){
 						<option value="0">No</option>
 					</select>
 				</div>
+				</div>
+			</div>
+
 
 				
 
 			</div> 
-			</div>
+			
 
 
 
 
 			<!-- Add Construction Status -->
-			<div class="apprtmnt" id="construction_status" style="display: none;">
-
+			<div class="row" id="construction_status" style="display: none;">
+				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Construction Status:</p>
 				</div>
-
+			</div>
+			<div class="col-sm-4">
 				<div class="drop-html1">
 					<div class="dropdown">
 						<select id="status1" name="construction_status">
@@ -384,7 +393,7 @@ if(isset($_GET['msg'])){
 						</select>
 					</div>
 				</div>
-
+				</div>
 			</div>
 
 			<!-- Status -->

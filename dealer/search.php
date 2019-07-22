@@ -406,11 +406,14 @@ div#plot_area {
     position: relative;
     /* right: 4em; */
     border-radius: 100px;
-    background: red;
+    background: #3cb54a;
     color: white;
     border: none;
     width: 114px;
     height: 32px;
     right: 15px;
   }
+ .mailbtn a {
+    color: #ffffff;
+}
 </style>

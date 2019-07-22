@@ -13,7 +13,7 @@ if(isset($_GET['msg'])){
 
 ?>
 <!-- Div for Grey Background -->
-<div class="main1">
+<div class="main1 edtpro">
 	<?php if(!empty($msg)){echo '<span style="color:red;">'.$msg.'</span>';}?>
 	<form id="form">
 		<div class="container extrapaddng editreq">
@@ -44,6 +44,8 @@ if(isset($_GET['msg'])){
 				
 				<div class="menu-drop">
 					<p> For:<span style="color:red;">*</span></p>
+						</div>
+							<div class="drop-html">
 					<div class="dropdown">
 						<input type="radio" name="property_type1" id="property_type_new" onchange="sell_div(this.value)" value="0"<?php echo ($propertydata['property_option']==0)?'checked':'' ?> disabled>Sell
 						<input type="radio" name="property_type1" id="property_type_new" onchange="sell_div(this.value)" value="1"<?php echo ($propertydata['property_option']==1)?'checked':'' ?> disabled>Rent
@@ -53,13 +55,14 @@ if(isset($_GET['msg'])){
 							<option value="1">Rent</option>
 						</select> -->
 					</div>
+			
 				</div>
-				
 				
 				<span id="property_type_new_error" style="color: red;display: none;">*Please select any one</span>
 				<!-- </div> -->
 			</div>
 
+			
 			<div class="min-drop" id="sell_type">
 
 				
@@ -82,11 +85,13 @@ if(isset($_GET['msg'])){
 			</div>
 				</div>
 			<!-- Propety Type: -->
-			<div id="location_div">
-				<div class="apprtmnt">
+			<div class="row ediloc" id="location_div">
+				<div class="col-sm-2">
 					<div class="typeheading">
 						<p>City:<span style="color:red;">*</span></p>
 					</div>
+					</div>
+					<div class="col-sm-4">
 					<div class="drop-html1	">
 						<div class="dropdown">
 <!-- 							<select id="city" name="city">
@@ -96,10 +101,12 @@ if(isset($_GET['msg'])){
 						</div>
 					</div>
 				</div>
-				<div class="apprtmnt">
+				<div class="col-sm-2">
 					<div class="typeheading">
 						<p>Area/Sector:<span style="color:red;">*</span></p>
 					</div>
+					</div>
+					<div class="col-sm-4">
 					<div class="drop-html1	">
 						<div class="dropdown">
 							<div class="drop-html1">
@@ -134,7 +141,7 @@ if(isset($_GET['msg'])){
 					<div class="col-sm-4">
 					<div class="drop-html1	">
 						<div class="dropdown">
-							<div class="drop-html1">
+							<div class="drop-html1 erpdl">
 								<?php $cat=$common->getCategoryName($propertydata['cat_id']);?>
 								<p><?php echo $cat['cat_name'];?></p>
 								<span id="sector_error" style="color:red;display: none;">*Select Sector</span>
@@ -150,10 +157,12 @@ if(isset($_GET['msg'])){
 				<?php if($propertydata['property_for']=='0'){ ?>
 
 				<?php if(!empty($propertydata['Plot_Area'])):?>
-					<div class="col-sm-4">
+					<div class="col-sm-2">
 						<div class="typeheading">
 							<p>Plot Area</p>
 						</div>
+						</div>
+							<div class="col-sm-4">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -162,6 +171,7 @@ if(isset($_GET['msg'])){
 								</div>
 							</div>
 						</div>
+
 					</div>
 				<?php endif;?>
 					</div>
@@ -489,7 +499,7 @@ if(isset($_GET['msg'])){
 			</div> 
 			</div> 
 
-			<div class="" id="negotiable_div">
+			<div class="edreqrw" id="negotiable_div">
 
 			<div class="row">
 				<div class="col-sm-2">
@@ -498,7 +508,7 @@ if(isset($_GET['msg'])){
 				</div>
 				</div>
 				<div class="col-sm-4">
-				<div class="drop-html1">
+				<div class="drop-html1 edreql">
 
 					<select class="selectofplotarea" id="negotiable" name="negotiable">
 						<option value="Yes"<?php if($propertydata['negotiable']=="Yes") echo 'selected="selected"'; ?>>Yes</option>
@@ -514,7 +524,7 @@ if(isset($_GET['msg'])){
 				</div>
 				</div>
 				<div class="col-sm-4">
-				<div class="drop-html1">
+				<div class="drop-html1 edreql">
 
 					<select class="selectofplotarea" id="loan_approval" name="loan_approval">
 						<option value="1"<?php if($propertydata['loan_approval']=="1") echo 'selected="selected"'; ?>>Yes</option>
@@ -532,12 +542,14 @@ if(isset($_GET['msg'])){
 
 
 			<!-- Add Construction Status -->
-			<div class="apprtmnt" id="construction_status">
-
+					<div class="edreqrw">
+			<div class="row" id="construction_status">
+				<div class="col-sm-2">
 				<div class="typeheading">
 					<p>Construction Status:</p>
 				</div>
-
+				</div>
+				<div class="col-sm-4">
 				<div class="drop-html1">
 					<div class="dropdown">
 						<select id="status1" name="construction_status">
@@ -547,7 +559,8 @@ if(isset($_GET['msg'])){
 						</select>
 					</div>
 				</div>
-
+				</div>
+			</div>
 			</div>
 
 			<!-- Status -->
@@ -570,7 +583,7 @@ if(isset($_GET['msg'])){
 			</div>
 			<!-- Dashboard Submit Button -->
 
-			<div class="apprtmnt">
+			<div class="row edtreqbtn">
 				<input class="postprorp_submitbtn" type="button" name="submit" value="Submit" onclick="return form_submit()"></input>
 			</div>
 		</div>  
