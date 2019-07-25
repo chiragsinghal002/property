@@ -155,7 +155,7 @@ include_once'Object.php';
                                 <!-- <input type="submit" class="btn btn-success1200" value="REGISTRATION" onClick="return ValidateRegister();" /> -->
                                 <input type="button" class="btn btn-success1200" onClick="return login();" value="LOG IN" />
 
-                                <p class="new">Not a member as yet?  &nbsp; <a href="registration.php"> Create Account</a></p>
+                                <p class="new">Not a member?  &nbsp; <a href="registration.php"> Create Account</a></p>
 
                                 <div class="image-gallery">
                                     <img src="image/login-pic.jpg" />
@@ -178,7 +178,7 @@ include_once'Object.php';
                 <div class="col-sm-6">
                     <div class="footer-menu">
                         <ul>
-                            <li><a href="#">About Us</a></li>
+                            <li><a href="about_us.php">About Us</a></li>
                             <li><a href="#">FAQ's</a></li>
                             <li><a href="#">Contact Us</a></li>
                             <li><a href="#">Terms & Conditions</a></li>

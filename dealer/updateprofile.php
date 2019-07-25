@@ -63,7 +63,7 @@ include_once'include/sidebar.php';
 				</div>
 
 				<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 col-xs-6">
 				<div class="uppro-container">
 						<i class="glyphicon glyphicon-user"></i>
 						<input required type="text" name='dealer_fname' value="<?php if(!empty($showdetailDealer['dealer_first_name'])){ echo $showdetailDealer['dealer_first_name']; } ?>" class="uppro_input" required="" placeholder="Please Enter First Name">
@@ -72,7 +72,7 @@ include_once'include/sidebar.php';
 					</div>
 
 			</div>
-			<div class="col-sm-6">
+			<div class="col-sm-6 col-xs-6">
 				<div class="uppro-container">
 						<i class="glyphicon glyphicon-user"></i>
 						<input required type="text" name='dealer_lname' value="<?php if(!empty($showdetailDealer['dealer_last_name'])){ echo $showdetailDealer['dealer_last_name']; } ?>" class="uppro_input" required="" placeholder="Please Enter last Name">
@@ -83,7 +83,7 @@ include_once'include/sidebar.php';
 			</div>
 		</div>
 		<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 col-xs-6">
 					<div class="uppro-container">
 
 						<i class="glyphicon glyphicon-phone-alt"></i>
@@ -92,10 +92,10 @@ include_once'include/sidebar.php';
 					</div>
 
 			</div>	
-				<div class="col-sm-6">
+				<div class="col-sm-6 col-xs-6">
 					<div class="uppro-container">
 						<i class="glyphicon glyphicon-home"></i>
-						<input type="text" class="uppro_input" name="dealer_firm_name" placeholder="Bussinees Name" value="<?php if(!empty($showdetailDealer['dealer_firm_name'])){ echo $showdetailDealer['dealer_firm_name']; } ?>" disabled>
+						<input type="text" class="uppro_input bussiness_input" name="dealer_firm_name" placeholder="Bussinees Name" value="<?php if(!empty($showdetailDealer['dealer_firm_name'])){ echo $showdetailDealer['dealer_firm_name']; } ?>" disabled>
 					<a href="mailto: info@yards360.com" style="color: red;" class="uplock"><i class="fa fa-lock" aria-hidden="true"></i></a>
 					</div>
 
@@ -106,13 +106,17 @@ include_once'include/sidebar.php';
 				<div class="col-sm-6">
 
 				<div class="uppro_mobiles">
+					
 					 <i class="fa fa-phone" aria-hidden="true"></i>
+					
 						<input required type="tel" name='dealer_phone' minlength="10" maxlength="10" class="uppro_mob"  value="<?php if(!empty($showdetailDealer['dealer_phone'])){ echo $showdetailDealer['dealer_phone']; } ?>" id="pwd" placeholder="Please Enter Phone" readonly/>
 						<?php if($showdetailDealer['mob_verified']=='1'){echo '<span style="color:green;" class="check-color">'.'<i class="fa fa-check" aria-hidden="true"></i>'.'</span>';}else{echo '<span style="color:red;">'.'<i class="fa fa-times" aria-hidden="true"></i>'.'</span>';}?>
 						<a href="mailto: info@yards360.com" style="color: red;" class="uplock"><i class="fa fa-lock" aria-hidden="true"></i></a>
 						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 						<div class="help-block with-errors"></div>
+					
 						 <input type="text" class="uppro_mob" name="dealer_phone_second" placeholder="Mobile Number" value="<?php if(!empty($showdetailDealer['dealer_phone_second'])){ echo $showdetailDealer['dealer_phone_second']; } ?>">
+						
 			
 				</div>
 
@@ -129,7 +133,7 @@ include_once'include/sidebar.php';
 			</div>
 
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6 col-xs-6">
 				<div class="uppro-container">
 						<i class="glyphicon glyphicon-home"></i>
 						 <?php $location=$common->getAreaSector(1);?>
@@ -146,7 +150,7 @@ include_once'include/sidebar.php';
 						<div class="help-block with-errors"></div>
 				</div>
 			</div>
-		<div class="col-sm-6">
+		<div class="col-sm-6 col-xs-6">
 
 				<div class="uppro-container">
 						<i class="glyphicon glyphicon-home"></i>

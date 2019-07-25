@@ -115,7 +115,7 @@ if(isset($_GET['property_id'])){
      <div class="deletebutton">
      	<?php $getResult=$common->getFavPropertyByDealerId($data['property_id'],$_SESSION['dealer_id']);?>
      	<?php if($getResult==false){?>
-     		<button class="dtebtn" onclick="fav(this.value)" value="<?php echo $data['property_id'];?>" id="<?php echo $data['property_id'];?>"><i class="fa fa-heart" aria-hidden="true"></i>fav</button>         <?php }else{ ?>
+     		<button class="dtebtn favbtn" onclick="fav(this.value)" value="<?php echo $data['property_id'];?>" id="<?php echo $data['property_id'];?>"><i class="fa fa-heart" aria-hidden="true"></i>fav</button>         <?php }else{ ?>
      			<button class="dtebtn" style="background-color: red;" onclick="unfav(this.value)" value="<?php echo $data['property_id'];?>" id="<?php echo $data['property_id'];?>"><i class="fa fa-trash-o" aria-hidden="true"></i>fav</button>
      		<?php } ?>                                          
 

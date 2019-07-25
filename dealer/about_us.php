@@ -111,9 +111,9 @@ It is a platform where property dealers can share property leads, property selli
 You can also think of <a href="https://www.yards360.com/">Yards360</a> as an online social network platform where propertt dealers share their real estate experiences and dealings truthfully. 
 The mission of <a href="https://www.yards360.com/">Yards360</a> is to improve the overall level of communication, professionalism, and transparency in the property dealing business. It wants to bring together knowledgable property dealers sharing first-hand, quality information on Indian real estate, which users can easily explore by location.</p>
 
-<p><a href="https://www.yards360.com/">Yards360</a> is a high-end property portal that caters to a global market with its unique services and novel online features. Having been launched in the year 2006 by Times Group, Magicbricks has quickly risen to being the No. 1 Property Portal in India.</p>
+<p><a href="https://www.yards360.com/">Yards360</a> is a high-end property portal that caters to a global market with its unique services and novel online features. Having been launched in the year 2006 by Times Group, Yards360 has quickly risen to being the No. 1 Property Portal in India.</p>
 
-<p>The Magicbricks design is based on rigorous research, unique product developments, and innovative initiative which has been readily accepted by users. In an attempt to best serve the users, features on the Magicbricks realty portal are constantly invented, evaluated and upgraded. </p>
+<p>The Yards360 design is based on rigorous research, unique product developments, and innovative initiative which has been readily accepted by users. In an attempt to best serve the users, features on the Yards360 realty portal are constantly invented, evaluated and upgraded. </p>
 
 <p>In addition to all else, <a href="https://www.yards360.com/">Yards360</a> is synonymous with internationally acclaimed property fairs. It is here that top-notch properties of major Indian metros are showcased for audiences in India and abroad. </p>
 

@@ -17,7 +17,7 @@ if(isset($_GET['msg'])){
 <div class="main1 ">
 	<?php if(!empty($msg)){echo '<span style="color:red;">'.$msg.'</span>';}?>
 	<form id="form">
-		<div class="container extrapaddng">
+		<div class="container extrapaddng edtpro">
 			<div class="min-drop">
 			<div class="min-drop">
 				<div class="menu-drop">

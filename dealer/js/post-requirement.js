@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 
 	});
-
+	
 
 $(document).ready(function() {
 		$('#myCarousel').carousel({
@@ -23,6 +23,10 @@ $(document).ready(function() {
 
 	});
 
+$('img').click(function(){
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+});
 
 function price_check(value){
 		

@@ -281,7 +281,7 @@ if(isset($_GET['msg'])){
 
 </div> 
 
-<div class="" id="negotiable_div" style="display: none;">
+<div class="negoslct" id="negotiable_div" style="display: none;">
 	<div class="row">
 		<div class="col-sm-2">
 	<div class="typeheading">
@@ -316,7 +316,7 @@ if(isset($_GET['msg'])){
 </div>
 </div>
 <!-- Add Construction Status -->
-<div class="apprtmnt" id="construction_status" style="display: none;">
+<div class="apprtmnt contrucpst" id="construction_status" style="display: none;">
 
 	<div class="typeheading">
 		<p>Construction Status:</p>
@@ -418,3 +418,10 @@ if(isset($_GET['msg'])){
 });
 	})
 </script>
+<style type="text/css">
+	img{margin:10px;}
+.selected{
+    box-shadow:0px 12px 22px 1px #333;
+    border: 2px solid #000000;
+}
+</style>

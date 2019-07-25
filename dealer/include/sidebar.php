@@ -9,7 +9,20 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
 ?>
 <body>
+
+  <div class="stripmob">
+    <div class="row">
+      <div class="col-sm-6 col-xs-6">
+           <!-- Logo For Search Page -->
+           <!--  <img src="image/inner-logo.png" class="srchimg"> -->
+           <img src="image/yards360logo.png" class="srplogo">
+       
+      </div>
+      <div class="col-sm-6 col-xs-6">
   <button class="openbtn" onclick="openNav()">☰</button>
+</div>
+</div>
+</div>
   <!-- Sidebar of Search propety: -->
   <div class="sidebar">
     <div class="">
@@ -52,7 +65,7 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
 
 
-                <p><?php echo 'Welcome'.' '.$showdetailDealer['dealer_first_name'];?></p>
+                <p><?php echo 'Welcome'.' <span class="nmclr">'.$showdetailDealer['dealer_first_name'].'<span>';?></p>
 
               </div>
               <div class="srchlogoutbtn">
@@ -86,7 +99,7 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
   ?>
   <li>
 
-    <a href="post_property.php"><i class="fa fa-building"></i>Sell Property</a>
+    <a href="post_property.php"><i class="fa fa-building"></i>Sell Rent</a>
 
   </li>
 <?php endif;?>
@@ -108,10 +121,10 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
 
 </li>
 <?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
-  <li><a href="post_requirement.php"><i class="fa fa-pencil-square-o"></i>Buy Property</a></li>
+  <li><a href="post_requirement.php"><i class="fa fa-pencil-square-o"></i>Buy Rent</a></li>
 <?php endif;?>
 <?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
-  <li><a href="list_requriment.php"><i class="fa fa-pencil-square-o"></i>List Requirement</a></li>
+  <li><a href="list_requriment.php"><i class="fa fa-pencil-square-o"></i>List Property</a></li>
 <?php endif;?>
 <!-- <?php 
 if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):

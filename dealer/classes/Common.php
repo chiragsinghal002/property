@@ -1828,7 +1828,8 @@ public function requirementMatchMail($search){
         </body>
         </html>
 
-        ';    $this->mail($to,$subject,$message,$from);
+        ';    
+        $this->mail($to,$subject,$message,$from);
 
         return "1";
     }
@@ -1877,7 +1878,6 @@ public function otpVerification($data){
     echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
 }
-
 
 /*Send text on mobile*/
 public function smsApi(){
@@ -1986,7 +1986,6 @@ public  function adminmail($subject1,$message1,$from1)
     $mail->Password = 'info@123';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 25;                                // TCP port to connect to
-
     //Recipients
     $mail->setFrom('info@yards360.com', 'yards360');
     $mail->addAddress($from1, 'yards360');     // Add a recipient

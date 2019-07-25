@@ -333,7 +333,7 @@ if(isset($_GET['msg'])){
 			</div> 
 			</div> 
 			
-			<div  id="negotiable_div" style="display: none;">
+			<div  id="negotiable_div" class="negoslct" style="display: none;">
 				<div class="row">
 				<div class="col-sm-2">
 				<div class="typeheading">
@@ -416,7 +416,7 @@ if(isset($_GET['msg'])){
 			</div>
 			<!-- Dashboard Submit Button -->
 
-			<div class="apprtmnt">
+			<div class="row">
 				<input class="postprorp_submitbtn" type="button" name="submit" value="Submit" onclick="return form_submit()"></input>
 			</div>
 		</div>  

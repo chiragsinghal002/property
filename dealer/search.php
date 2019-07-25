@@ -175,7 +175,7 @@ $dealer_info=$common->getDealerInfobyId($_SESSION['dealer_id']);
 </div>
 
 <!-- Select Multiple Buttons -->
-<div class="slctmiulbtns src-btn" style="display: none;">
+<div class="slctmiulbtns src-btn resdivhide" style="display: none;">
   <!-- Price RangeMin and max -->
 <div class="dropdown_pricerange src_prc">
   <!-- <input type="text" name="" placeholder="Min-Price"> -->

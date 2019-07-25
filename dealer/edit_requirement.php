@@ -86,12 +86,12 @@ if(isset($_GET['msg'])){
 				</div>
 			<!-- Propety Type: -->
 			<div class="row ediloc" id="location_div">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 					<div class="typeheading">
 						<p>City:<span style="color:red;">*</span></p>
 					</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 col-xs-6">
 					<div class="drop-html1	">
 						<div class="dropdown">
 <!-- 							<select id="city" name="city">
@@ -101,12 +101,12 @@ if(isset($_GET['msg'])){
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 					<div class="typeheading">
 						<p>Area/Sector:<span style="color:red;">*</span></p>
 					</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 col-xs-6">
 					<div class="drop-html1	">
 						<div class="dropdown">
 							<div class="drop-html1">
@@ -133,15 +133,15 @@ if(isset($_GET['msg'])){
 			</div>
 			
 		  <div class="row">
-			<div class="col-sm-2">
+			<div class="col-sm-2 col-xs-6">
 					<div class="typeheading">
 						<p>Category Name:</p>
 					</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 col-xs-6">
 					<div class="drop-html1	">
 						<div class="dropdown">
-							<div class="drop-html1 erpdl">
+							<div class="drop-html1">
 								<?php $cat=$common->getCategoryName($propertydata['cat_id']);?>
 								<p><?php echo $cat['cat_name'];?></p>
 								<span id="sector_error" style="color:red;display: none;">*Select Sector</span>
@@ -157,12 +157,12 @@ if(isset($_GET['msg'])){
 				<?php if($propertydata['property_for']=='0'){ ?>
 
 				<?php if(!empty($propertydata['Plot_Area'])):?>
-					<div class="col-sm-2">
+					<div class="col-sm-2 col-xs-6">
 						<div class="typeheading">
 							<p>Plot Area</p>
 						</div>
 						</div>
-							<div class="col-sm-4">
+							<div class="col-sm-4 col-xs-6">
 						<div class="drop-html1	">
 							<div class="dropdown">
 								<div class="drop-html1">
@@ -477,15 +477,15 @@ if(isset($_GET['msg'])){
 			<?php } ?>
 
 
-			<div class="row">
-				<div class="col-sm-2">
+			<div class="row edreqex">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Expected Price:<span style="color: red;">*</span></p>
 				</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 col-xs-6">
 				<div class="drop-html1">
-					<input type="number" name="price" placeholder="Exp. Price" class="ginputfield" id="price" value="<?php echo $propertydata['price'];?>" onkeyup="price_check(this.value)" name="exp_price" min="1">
+					<input type="number" name="price" placeholder="Exp. Price" class="ginputfield edreqexpr" id="price" value="<?php echo $propertydata['price'];?>" onkeyup="price_check(this.value)" name="exp_price" min="1">
 					<span id="price_error" style="color:red;display: none;">Select Price*</span>
 					
 					<!-- <select class="selectofplotarea" id="price_unit" name="price_unit">
@@ -502,12 +502,12 @@ if(isset($_GET['msg'])){
 			<div class="edreqrw" id="negotiable_div">
 
 			<div class="row">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Negotiable:</p>
 				</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 col-xs-6">
 				<div class="drop-html1 edreql">
 
 					<select class="selectofplotarea" id="negotiable" name="negotiable">
@@ -518,12 +518,12 @@ if(isset($_GET['msg'])){
 				</div>
 				</div>
 				<div class="row">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Loan Approval:</p>
 				</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 col-xs-6">
 				<div class="drop-html1 edreql">
 
 					<select class="selectofplotarea" id="loan_approval" name="loan_approval">
@@ -544,12 +544,12 @@ if(isset($_GET['msg'])){
 			<!-- Add Construction Status -->
 					<div class="edreqrw">
 			<div class="row" id="construction_status">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Construction Status:</p>
 				</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 col-xs-6">
 				<div class="drop-html1">
 					<div class="dropdown">
 						<select id="status1" name="construction_status">
