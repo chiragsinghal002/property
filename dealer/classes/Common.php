@@ -1846,7 +1846,14 @@ public function requirementMatchMail($search){
 public function otpVerification($data){
 
     $subject='OTP FOR MOBILE VERIFICATION';
-    $message='Dear '.$data['fname'].' Your Otp is '.$data['otp'].'';
+    $message='<html>
+
+    <div class="divofsocioecnomic">
+                        
+                            <p style="color:white;font-size:22px;">Dear '.$data['fname'].' You Otp is '.$data['otp'].'</p>
+                     </div>
+    </html>';
+
     $from=$data['email'];
     $msg='YourOtpIs'.$data['otp'];
        $this->smsApi($msg,$data['phone']);
@@ -2181,3 +2188,12 @@ public function sendWhatsapp(){
  
           } 
           ?>
+
+
+
+
+          <style type="text/css">
+              .divofsocioecnomic{
+                background:cyan;
+              }
+          </style>
