@@ -7,8 +7,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 header("Cache-Control: no-cache");
 // $base_url='';
-DEFINE('BASEURL','http://property.nmx.com/dealer/');
-//DEFINE('BASEURL','http://yards360.com/');
+//DEFINE('BASEURL','http://property.nmx.com/dealer/');
+DEFINE('BASEURL','http://yards360.com/');
 
 class Common extends DB
 { 
@@ -278,7 +278,7 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
         $max_price=$price+$amt_price;
         if($property_option=='0'){
            if($data['cat_id']==26){
-           // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."";die;
+            // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
         }else if($data['cat_id']==27){
         // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";die;
@@ -289,7 +289,7 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
        }
    }else{
     if($data['cat_id']==26){
-       // echo  "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
+        // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
     }else if($data['cat_id']==27){
          // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";
@@ -1470,6 +1470,7 @@ public  function login($email,$password)
      $_SESSION['dealer_name'] = $result1['dealer_first_name'];
      $_SESSION['dealer_email'] = $result1['dealer_email'];
      $_SESSION['dealer_photo'] = $result1['dealer_photo'];
+     $_SESSION['dealer_phone']=$result1['dealer_phone'];
 
      return 1;
  }else{
@@ -1884,6 +1885,8 @@ public function otpVerification($data){
 /*Send text on mobile*/
 public function smsApi($msg,$mobile){
     // echo $msg;
+    // echo $msg;
+    // echo $mobile;
    
     file('http://198.24.149.4/API/pushsms.aspx?loginID=taru123&password=taru@123&mobile='.$mobile.'&text='.$msg.'&senderid=CHPSMS&route_id=2&Unicode=0');
 }

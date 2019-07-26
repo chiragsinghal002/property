@@ -59,7 +59,7 @@ include_once'include/sidebar.php';?>
         <div class="col-sm-8">
          <!-- Land for Sale: -->   
          <div class="contentoflandfor">
-           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
            <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
            <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></span></p>
            <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
@@ -104,7 +104,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a> 
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a> 
        </div>
 
 
@@ -132,7 +132,7 @@ include_once'include/sidebar.php';?>
       <div class="col-sm-8">
        <!-- Land for Sale: -->   
        <div class="contentoflandfor">
-         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
          <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['Expected_Price']).'/-';?></span></p>    
          <p>Plot area:<span><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}?></span></p>
          <?php if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}?>   
@@ -170,7 +170,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a>
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a>
        </div>
        <!-- Delete Button -->
 
@@ -223,7 +223,7 @@ include_once'include/sidebar.php';?>
         <div class="col-sm-8">
          <!-- Land for Sale: -->   
          <div class="contentoflandfor">
-           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
            <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
            <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></span></p>
            <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
@@ -304,7 +304,7 @@ include_once'include/sidebar.php';?>
       <div class="col-sm-8">
        <!-- Land for Sale: -->   
        <div class="contentoflandfor">
-         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
          <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['Expected_Price']).'/-';?></span></p>    
          <p>Plot area:<span><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}?></span></p>
          <?php if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}?>   
@@ -356,7 +356,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a>
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a>
        </div>
        <!-- Delete Button -->
 
@@ -416,7 +416,7 @@ include_once'include/sidebar.php';?>
         <div class="col-sm-8">
          <!-- Land for Sale: -->   
          <div class="contentoflandfor">
-           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
            <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
            <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></span></p>
            <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
@@ -454,7 +454,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a> 
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a> 
        </div>
 
 
@@ -482,7 +482,7 @@ include_once'include/sidebar.php';?>
       <div class="col-sm-8">
        <!-- Land for Sale: -->   
        <div class="contentoflandfor">
-         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
          <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['Expected_Price']).'/-';?></span></p>    
          <p>Plot area:<span><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}?></span></p>
          <?php if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}?>   
@@ -520,7 +520,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a>
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a>
        </div>
        <!-- Delete Button -->
 

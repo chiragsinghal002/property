@@ -40,12 +40,13 @@ if(isset($_POST['property_for'])){
 			$subject1="".count($search)." Property Matched From Your Requirement";
 			$common->mail($subject1,$message,$torequirementDealer);
 			$msg=count($search).'PropertyMatchedFromYourRequirement';
-			// $common->smsApi($msg,$requirementDealer['dealer_phone']);
+			$common->smsApi($msg,$requirementDealer['dealer_phone']);
 		}
 		// $common->smsApi($msg,$data['phone']);
 		$common->mail($subject,$message,$from);
 		$msg1=count($search).'PropertyMatched';
-		// $common->smsApi($msg1,$_SESSION['dealer_phone'];);
+		$common->smsApi($msg1,$_SESSION['dealer_phone']);
+		//$common->sendWhatsapp();
 		// $subject,$message,$from
 	}
 	

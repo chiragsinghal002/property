@@ -9,12 +9,12 @@ if(isset($_POST['resi_cat_id'])){
 	if(!empty($result)){
 
 		echo '<div class="row 1">';
-		echo '<div class="col-sm-2 col-xs-6">';
+		echo '<div class="col-sm-2">';
 		echo '<div class="typeheading">';
 		echo '<p>'.'Subcategory Name'.'</p>';
 		echo '</div>';
 		echo '</div>';
-		echo '<div class="col-sm-4 col-xs-6">';
+		echo '<div class="col-sm-4">';
 		echo '<div class="drop-html1">';
 		echo '<div class="dropdown">';
 		echo '<select onchange=child_sub_cat(this.value)>';
@@ -37,12 +37,12 @@ if(isset($_POST['resi_cat_id'])){
 				$value=explode(',',$data1['values']);
 				if($data1['selection_type']==1){
 					echo '<div class="row">';
-					echo '<div class="col-sm-2 col-xs-6">';
+					echo '<div class="col-sm-2">';
 					echo '<div class="typeheading">';
 					echo '<p>'.$data1['subchild_name'].'</p>';
 					echo '</div>';
 					echo '</div>';
-					echo '<div class="col-sm-2 col-xs-6">';
+					echo '<div class="col-sm-2">';
 					echo '<div class="drop-html1">';
 					echo '<div class="dropdown">';
 					echo '<select name="'.$data1['subchild_name'].'">';
@@ -59,7 +59,7 @@ if(isset($_POST['resi_cat_id'])){
 
 				}else if($data1['selection_type']==3){
 					echo '<div class="row">';
-					echo '<div class="col-sm-2 col-xs-6">';
+					echo '<div class="col-sm-2">';
 					echo '<div class="typeheading">';
 					echo '<p>'.$data1['subchild_name'].'</p>';
 					echo '</div>';
@@ -79,7 +79,7 @@ if(isset($_POST['resi_cat_id'])){
 					//echo '<p class="price-heading">'.'PLOT AREA'.'</p>';
 
 					echo '<div class="row ">';
-					echo '<div class="col-sm-2 col-xs-6">';
+					echo '<div class="col-sm-2">';
 					echo '<div class="typeheading">';
 					echo '<p>'.$data1['subchild_name'].'</p>';
 					echo '</div>';
@@ -87,7 +87,7 @@ if(isset($_POST['resi_cat_id'])){
 					echo '<div class="col-sm-3 ">';
 					echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
 					echo '</div>';
-					echo '<div class="col-sm-4 col-xs-6 1">';
+					echo '<div class="col-sm-4 ">';
 					echo '<div class="drop-html1">';
 					echo '<div class="dropdown">';
 					echo '<select name="'.$data1['subchild_name'].'_'.'Unit'.'">';
@@ -122,12 +122,12 @@ if(isset($_POST['comm_cat_id'])){
 	if(!empty($result)){
 		
 		echo '<div class="row">';
-		echo '<div class="col-sm-2 col-xs-6">';
+		echo '<div class="col-sm-2">';
 		echo '<div class="typeheading">';
 		echo '<p>'.'Subcategory Name'.'</p>';
 		echo '</div>';
 		echo '</div>';
-		echo '<div class="col-sm-4 col-xs-6">';
+		echo '<div class="col-sm-4">';
 		echo '<div class="drop-html1">';
 		echo '<div class="dropdown">';
 		echo '<select onchange=child_sub_cat(this.value)>';
@@ -222,12 +222,12 @@ if(isset($_POST['subcat_id'])){
 			$value=explode(',',$data1['values']);
 			if($data1['selection_type']==1){
 				echo '<div class="row">';
-				echo '<div class="col-sm-2 col-xs-6">';
+				echo '<div class="col-sm-2">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
 				echo '</div>';
-				echo '<div class="col-sm-4 col-xs-6">';
+				echo '<div class="col-sm-4">';
 				echo '<div class="drop-html1">';
 				echo '<div class="dropdown">';
 				echo '<select name="'.$data1['subchild_name'].'">';
@@ -246,7 +246,7 @@ if(isset($_POST['subcat_id'])){
 			}else if($data1['selection_type']==3){
 
 				echo '<div class="row">';
-				echo '<div class="col-sm-2 col-xs-6">';
+				echo '<div class="col-sm-2">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
@@ -263,7 +263,7 @@ if(isset($_POST['subcat_id'])){
 				echo '</div>'; 
 			}else if($data1['selection_type']==4){
 				echo '<div class="row lfpd">';
-				echo '<div class="col-sm-2 col-xs-6">';
+				echo '<div class="col-sm-2">';
 				echo '<div class="typeheading">';
 				echo '<p>'.$data1['subchild_name'].'</p>';
 				echo '</div>';
@@ -271,7 +271,7 @@ if(isset($_POST['subcat_id'])){
 				echo '<div class="col-sm-3">';
 				echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
 				echo '</div>';
-				echo '<div class="col-sm-4 col-xs-12">';
+				echo '<div class="col-sm-4">';
 				echo '<div class="drop-html1">';
 				echo '<div class="dropdown">';
 				echo '<select name="'.$data1['subchild_name'].'_'.'Unit'.'">';
@@ -434,7 +434,7 @@ if(isset($_POST['search_buy'])){
 			echo '<input type="hidden" id="dealer_email" value="'.$propdealinfo['dealer_email'].'">';
 			echo '<div class="godrejdiv">';
 			echo '<h4>';
-			if($data2['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color:red;"><?php echo $cat_name['cat_name'];?></span>&nbsp;For&nbsp;<?php echo $data2['sector'].' '.$data2['city'];
+			if($data2['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color:red;"><?php echo $cat_name['cat_name'];?></span>&nbsp;In&nbsp;<?php echo $data2['sector'].' '.$data2['city'];
 			echo '</h4>';
 			echo '<div class="serach_extrabtn">';
 			echo '<i class="fa fa-heart" aria-hidden="true">';
@@ -442,13 +442,13 @@ if(isset($_POST['search_buy'])){
 			echo '<button onclick="interest(this.value)" value='.$data2['property_id'].'>'.'Interested'.'</button>';
 			echo '</div>';
 			echo '<div class="row">';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="proprtydiv">';
 			echo '<input type="hidden" id="prop_for" value='.$data2['property_for'].'>';
 			echo '<p>'.'<span>'.'ID:-'.''.$data2['property_code'].'</span>'.'</p>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="sqrftdiv">';
 			echo '<h4>';
 			echo 'Plot area';
@@ -460,7 +460,7 @@ if(isset($_POST['search_buy'])){
 			echo '</h4>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="bhkdiv">';
 			echo '<button class="mailbtn">';
 			echo '<i class="fa fa-envelope-o" aria-hidden="true">';
@@ -476,14 +476,14 @@ if(isset($_POST['search_buy'])){
 			echo '</div>';
 			echo '</div>';
 			echo '<div class="row">';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="residntlapartdiv">';
 			echo '<h5>'.'Price'.'<i class="fa fa-inr"></i>'.'<span>'.number_format($data2['price']).'/-'.'</span>'.'</h5>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="bhkdiv">';
 			echo '<button class="whtsapbtn">';
 			echo '<i class="fa fa-whatsapp" aria-hidden="true">';
@@ -499,7 +499,7 @@ if(isset($_POST['search_buy'])){
 			echo '</div>';
 			echo '</div>';
 			echo '<div class="row">';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="postdondiv">';
 			echo '<h6>';
 			echo 'posted on';
@@ -511,9 +511,9 @@ if(isset($_POST['search_buy'])){
 			echo '</h6>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="callbtndiv">';
 			echo '<button class="callbtn">';
 			echo '<i class="fa fa-phone" aria-hidden="true">';
@@ -564,7 +564,7 @@ if(isset($_POST['search_rent'])){
 			echo '<input type="hidden" id="dealer_email" value="'.$propdealinfo['dealer_email'].'">';
 			echo '<div class="godrejdiv">';
 			echo '<h4>';
-			if($data2['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color:red;"><?php echo $cat_name['cat_name'];?></span>&nbsp;For&nbsp;<?php echo $data2['sector'].' '.$data2['city'];
+			if($data2['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color:red;"><?php echo $cat_name['cat_name'];?></span>&nbsp;In&nbsp;<?php echo $data2['sector'].' '.$data2['city'];
 			echo '</h4>';
 			echo '<div class="serach_extrabtn">';
 			echo '<i class="fa fa-heart" aria-hidden="true">';
@@ -572,13 +572,13 @@ if(isset($_POST['search_rent'])){
 			echo '<button onclick="interest(this.value)" value='.$data2['property_id'].'>'.'Interested'.'</button>';
 			echo '</div>';
 			echo '<div class="row">';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="proprtydiv">';
 			echo '<input type="hidden" id="prop_for" value='.$data2['property_for'].'>';
 			echo '<p>'.'<span>'.'ID:-'.''.$data2['property_code'].'</span>'.'</p>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="sqrftdiv">';
 			echo '<h4>';
 			echo 'Plot area';
@@ -590,7 +590,7 @@ if(isset($_POST['search_rent'])){
 			echo '</h4>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="bhkdiv">';
 			echo '<button class="mailbtn">';
 			echo '<i class="fa fa-envelope-o" aria-hidden="true">';
@@ -606,14 +606,14 @@ if(isset($_POST['search_rent'])){
 			echo '</div>';
 			echo '</div>';
 			echo '<div class="row">';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="residntlapartdiv">';
 			echo '<h5>'.'Price'.'<i class="fa fa-inr"></i>'.'<span>'.number_format($data2['price']).'/-'.'</span>'.'</h5>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="bhkdiv">';
 			echo '<button class="whtsapbtn">';
 			echo '<i class="fa fa-whatsapp" aria-hidden="true">';
@@ -629,7 +629,7 @@ if(isset($_POST['search_rent'])){
 			echo '</div>';
 			echo '</div>';
 			echo '<div class="row">';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="postdondiv">';
 			echo '<h6>';
 			echo 'posted on';
@@ -641,9 +641,9 @@ if(isset($_POST['search_rent'])){
 			echo '</h6>';
 			echo '</div>'; 
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '</div>';
-			echo '<div class="col-sm-4 col-xs-6">';
+			echo '<div class="col-sm-4">';
 			echo '<div class="callbtndiv">';
 			echo '<button class="callbtn">';
 			echo '<i class="fa fa-phone" aria-hidden="true">';

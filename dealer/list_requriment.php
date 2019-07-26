@@ -114,7 +114,7 @@ $properties=$common->getdealerpropertyrequriment($_SESSION['dealer_id']);
         <div class="col-sm-8">
          <!-- Land for Sale: -->   
          <div class="contentoflandfor">
-           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<?php echo $data['cat_name'];?>&nbsp;For&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<?php echo $data['cat_name'];?>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
            <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
            <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></span></p>
            <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
