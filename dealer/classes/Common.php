@@ -8,6 +8,7 @@ use PHPMailer\PHPMailer\Exception;
 header("Cache-Control: no-cache");
 // $base_url='';
 DEFINE('BASEURL','http://property.nmx.com/dealer/');
+//DEFINE('BASEURL','http://yards360.com/');
 
 class Common extends DB
 { 
@@ -277,7 +278,7 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
         $max_price=$price+$amt_price;
         if($property_option=='0'){
            if($data['cat_id']==26){
-            // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
+           // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."";die;
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
         }else if($data['cat_id']==27){
         // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";die;
@@ -288,7 +289,7 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
        }
    }else{
     if($data['cat_id']==26){
-        // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";
+       // echo  "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
         $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
     }else if($data['cat_id']==27){
          // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['Bedroom']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";
@@ -1204,7 +1205,7 @@ public function insert($table, $data) {
 
 
 
-	// start user by user id
+    // start user by user id
 
 public function UserbyId($user_id){
 
@@ -1846,7 +1847,8 @@ public function otpVerification($data){
     $subject='OTP FOR MOBILE VERIFICATION';
     $message='Dear '.$data['fname'].' Your Otp is '.$data['otp'].'';
     $from=$data['email'];
-      // $this->smsApi();
+    $msg='YourOtpIs'.$data['otp'];
+       $this->smsApi($msg,$data['phone']);
     //Load Composer's autoloader
     require 'mail/autoload.php';
     $mail = new PHPMailer(true); 
@@ -1880,8 +1882,10 @@ public function otpVerification($data){
 }
 
 /*Send text on mobile*/
-public function smsApi(){
-    file('http://198.24.149.4/API/pushsms.aspx?loginID=taru123&password=taru@123&mobile=9560855334&text=HI%20HOW%20ARE%20YOU&senderid=CHPSMS&route_id=2&Unicode=0');
+public function smsApi($msg,$mobile){
+    // echo $msg;
+   
+    file('http://198.24.149.4/API/pushsms.aspx?loginID=taru123&password=taru@123&mobile='.$mobile.'&text='.$msg.'&senderid=CHPSMS&route_id=2&Unicode=0');
 }
 
 

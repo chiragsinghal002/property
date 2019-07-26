@@ -49,15 +49,20 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
             <?php   
             if (!empty($showdetailDealer['dealer_photo'])) {
               ?>
-
+             
               <div class="sidebar-top">
-                <img src="image/uploads/<?php echo $showdetailDealer['dealer_photo'];?>" class="admnimg">
+
+                <img  src="image/uploads/<?php echo $showdetailDealer['dealer_photo'];?>" class="admnimg">
+                 <a href="updateprofile.php" class="update_lnk">edit</i></a>
                 <?php 
               }
               else{
                 ?>
+                 
                 <div class="sidebar-top">
+                 
                   <img src="image/admin.png" class="admnimg">
+                    <a href="updateprofile.php" class="update_lnk">edit</i></a>
                   <?php
                 }
 
@@ -80,7 +85,7 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
 <ul class="nav navbar-nav side-nav" id="myDIV">
   <li>
-    <a href="updateprofile.php" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-user"></i>Update Profile</a>
+    <!-- <a href="updateprofile.php" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-user"></i>Update Profile</a> -->
 
   </li>
   <li>

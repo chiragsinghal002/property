@@ -104,7 +104,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a> 
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a> 
        </div>
 
 
@@ -170,7 +170,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a>
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a>
        </div>
        <!-- Delete Button -->
 
@@ -356,7 +356,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a>
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a>
        </div>
        <!-- Delete Button -->
 
@@ -454,7 +454,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a> 
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a> 
        </div>
 
 
@@ -520,7 +520,7 @@ include_once'include/sidebar.php';?>
         <!-- Assist to User -->
         <div class="editbutton">
          <!-- <p>Assist to subuser</p> -->
-         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-check-square-o" aria-hidden="true"></i><span>EDIT</span></button></a>
+         <a href="edit_property.php?id=<?php echo base64_encode($data['property_id']);?>&&prop_for=<?php echo base64_encode($data['property_for']);?>"><button class="edtbtn"><i class="fa fa-edit"></i><span>EDIT</span></button></a>
        </div>
        <!-- Delete Button -->
 

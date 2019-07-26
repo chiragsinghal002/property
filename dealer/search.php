@@ -67,7 +67,7 @@ $dealer_info=$common->getDealerInfobyId($_SESSION['dealer_id']);
      <div class="allresidntl">
       <div class="row">
        <!-- All Residental Button -->
-       <div class="col-sm-3 padding-first">
+       <div class="col-sm-3  padding-first">
         <div class="dropdown res">
           <button class="residntlbtn dropdown-toggle" type="button"  data-toggle="dropdown"><span id="buy_res">All Residential</span>
             <span class="caret"></span></button>
@@ -111,6 +111,59 @@ $dealer_info=$common->getDealerInfobyId($_SESSION['dealer_id']);
        </form>
        <span id="searching_error" style="color: red;display: none;">*This Field is Required</span>
      </div>
+
+
+
+
+
+     <!-- Select Multiple Buttons -->
+<div class="slctmiulbtns src-btn resdivshow" style="display: none;">
+  <!-- Price RangeMin and max -->
+<div class="dropdown_pricerange src_prc">
+  <!-- <input type="text" name="" placeholder="Min-Price"> -->
+  <input type="number" name="price" placeholder="Min Price"  alt="Min Price" class="ginputfield" id="price_range_min" value="" onkeyup="price_check(this.value)" min="1">
+  <input type="number" name="price" placeholder="Max Price" alt="Max Price" class="ginputfield" id="price_range_max" value="" onkeyup="price_check1(this.value)" min="1">
+  <select id="show_bkh" style="display: none;">
+ <?php for($i=1;$i<=9;$i++){?>
+   <option value="<?php echo $i;?>"><?php echo $i;?> BHK</option>
+ <?php } ?>
+</select>
+</div>
+  <select name="constuction_status" id="cons_status">
+   <option value="">Constructon Status</option>
+   <option value="0">Under Construction</option>
+   <option value="1">Ready to Move</option>
+ </select>
+ 
+ <div id="plot_area" class="plt_area">
+  <input type="text" id="plot_area1" class="pricebtn_inputfld" value="" placeholder="Area">
+   <select class="selectofplotarea" id="plot_size_area_value">
+    <?php 
+   $sizeofproperty=$common->propertysize();
+   ?>
+    <option>Select Plot Area</option>
+    <?php foreach($sizeofproperty as $data){?>
+      <option value="<?php echo $data['property_size'];?>"><?php echo $data['property_size'];?></option>
+    <?php } ?>
+  </select>
+   
+   
+  
+</div>
+
+<div class="srcwrd">
+<span id="word_result"></span>
+<span id="word_result1"></span>
+</div>
+
+
+<!-- <button class="clrbtn">Clear All</button> -->
+</div>
+
+
+
+
+
      <!-- Seaech Green Button -->
      <div class="col-sm-2 padding-search">
       <input type="button" class="srchbtn" id="search_button" onclick="return buy_search();" value="SEARCH">

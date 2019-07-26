@@ -69,17 +69,20 @@ if(isset($_GET['msg'])){
 			<!-- Propety Type: -->
 			<div id="location_div" style="display: none;">
 				<div class="apprtmnt">
+				
 					<div class="typeheading">
 						<p>City:</p>
 					</div>
-					<div class="drop-html1	">
+					
+					<div class="drop-html1">
 						<div class="dropdown">
 							<select id="city" name="city">
 								<option value="faridabad">Faridabad</option>
 							</select>
 						</div>
 					</div>
-				</div>
+		
+					</div>
 				<div class="apprtmnt">
 					<div class="typeheading">
 						<p>Area/Sector:</p>

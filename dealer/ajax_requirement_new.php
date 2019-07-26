@@ -22,36 +22,29 @@ if(isset($_POST['property_for'])){
 
 	$result=$common->insert($table,$data);
 	if(!empty($search)){
-		 $from = "info@netmaxims.in";
-		 $subject = "".count($search)." Property Matched";
+		$from =$_SESSION['dealer_email'];
+		$subject = "".count($search)." Property Matched From Your Requirement";
 
-		 foreach($search as $data){
-		 	$cat_name=$common->getCategoryName($data['cat_id']);
-		 	$message = 'Property Code:-';
-		 	$message .=$data['property_code'].'<br>';
-		 	$message .='Property Category:-'.$cat_name['cat_name'].'<br>';
-		 	$message .='City:-'.$data['city'].'<br>';
-		 	$message .='Sector:-'.$data['sector'].'<br>';
-		 	$common->mail($subject,$message,$from);
-		 }
-		 
-		// $headers = "MIME-Version: 1.0" . "\r\n";
-		// $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-  //                       // More headers
-		// $headers .= 'from:<webmail@netmaxims.in>' . "\r\n";
-  //           // $headers .= 'Cc: bhawna@netmaxims.com' . "\r\n";
-		// $headers .= 'Cc: chirag@netmaxims.in' . "\r\n";
-
-		// $mail=mail($to,$subject,$txt,$headers);
-		// if($mail){
-		// 	echo 'successfully';
-		// }else{
-		// 	echo 'Not Successfully';
-		// }
+		foreach($search as $data){
+			$cat_name=$common->getCategoryName($data['cat_id']);
+			$message = 'Property Code:-';
+			$message .=$data['property_code'].'<br>';
+			$message .='Property Category:-'.$cat_name['cat_name'].'<br>';
+			$message .='City:-'.$data['city'].'<br>';
+			$message .='Sector:-'.$data['sector'].'<br>';
+			$message .='<a href="yards360.com/list_requriment.php">Yards360.com</a>';
+			$requirementDealer=$common->getDealerInfobyId($data['dealer_id']);
+			$torequirementDealer=$requirementDealer['dealer_email'];
+			$subject1="".count($search)." Property Matched";
+			$common->mail($subject1,$message,$torequirementDealer);
+			$msg=count($search).'PropertyMatched';
+			// $common->smsApi($msg,$requirementDealer['dealer_phone']);
+		}
+		$common->mail($subject,$message,$from);
+		$msg1=count($search).'PropertyMatchedFromYourRequirement';
+		// $common->smsApi($msg1,$_SESSION['dealer_phone'];);
 		
-		// $subject,$message,$from
-		 return 1;
+		return 1;
 	}else{
 		return 1;
 	}

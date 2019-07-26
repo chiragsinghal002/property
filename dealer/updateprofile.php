@@ -75,7 +75,7 @@ include_once'include/sidebar.php';
 			<div class="col-sm-6 col-xs-6">
 				<div class="uppro-container">
 						<i class="glyphicon glyphicon-user"></i>
-						<input required type="text" name='dealer_lname' value="<?php if(!empty($showdetailDealer['dealer_last_name'])){ echo $showdetailDealer['dealer_last_name']; } ?>" class="uppro_input" required="" placeholder="Please Enter last Name">
+						<input required type="text"  name='dealer_lname' value="<?php if(!empty($showdetailDealer['dealer_last_name'])){ echo $showdetailDealer['dealer_last_name']; } ?>" class="uppro_input updt_buss" required="" placeholder="Please Enter last Name">
 						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 						<div class="help-block with-errors"></div>
 					</div>
@@ -86,7 +86,7 @@ include_once'include/sidebar.php';
 				<div class="col-sm-6 col-xs-6">
 					<div class="uppro-container">
 
-						<i class="glyphicon glyphicon-phone-alt"></i>
+						<i class="fa fa-whatsapp"></i>
 						<input type="text" class="uppro_input" name="dealer_telephone_no" placeholder="Telephone Number" value="<?php if(!empty($showdetailDealer['dealer_telephone_no'])){ echo $showdetailDealer['dealer_telephone_no']; } ?>">
 		
 					</div>
@@ -109,13 +109,13 @@ include_once'include/sidebar.php';
 					
 					 <i class="fa fa-phone" aria-hidden="true"></i>
 					
-						<input required type="tel" name='dealer_phone' minlength="10" maxlength="10" class="uppro_mob"  value="<?php if(!empty($showdetailDealer['dealer_phone'])){ echo $showdetailDealer['dealer_phone']; } ?>" id="pwd" placeholder="Please Enter Phone" readonly/>
+						<input required type="tel" name='dealer_phone' minlength="10" maxlength="10" class="uppro_mob"  value=" <?php if(!empty($showdetailDealer['dealer_phone'])){ echo $showdetailDealer['dealer_phone']; } ?>" id="pwd" placeholder="Please Enter Phone" readonly/>
 						<?php if($showdetailDealer['mob_verified']=='1'){echo '<span style="color:green;" class="check-color">'.'<i class="fa fa-check" aria-hidden="true"></i>'.'</span>';}else{echo '<span style="color:red;">'.'<i class="fa fa-times" aria-hidden="true"></i>'.'</span>';}?>
 						<a href="mailto: info@yards360.com" style="color: red;" class="uplock"><i class="fa fa-lock" aria-hidden="true"></i></a>
 						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 						<div class="help-block with-errors"></div>
 					
-						 <input type="text" class="uppro_mob" name="dealer_phone_second" placeholder="Mobile Number" value="<?php if(!empty($showdetailDealer['dealer_phone_second'])){ echo $showdetailDealer['dealer_phone_second']; } ?>">
+						 <input type="text" class="uppro_mob" name="dealer_phone_second" placeholder="Mobile Number" value="+91 <?php if(!empty($showdetailDealer['dealer_phone_second'])){ echo $showdetailDealer['dealer_phone_second']; } ?>">
 						
 			
 				</div>
@@ -171,7 +171,7 @@ include_once'include/sidebar.php';
 				<div class="col-sm-6">
 				<div class="uppro-container">
 						 <i class="fa fa-envelope" aria-hidden="true"></i>
-						<input type="email"  id="email" class="uppro_input" name="dealer_email" readonly value="<?php echo $_SESSION['dealer_email']; ?>" />
+						<input type="email"  id="email" class="uppro_input upemail" name="dealer_email" readonly value="<?php echo $_SESSION['dealer_email']; ?>" />
 						<?php if($showdetailDealer['email_verified']=='1'){echo '<span style="color:green;" class="check-color">'.'<i class="fa fa-check" aria-hidden="true"></i>'.'</span>';}else{
 							echo '<span style="color:red;">';
 							echo '<a  onclick="email_verify();" href="#">';

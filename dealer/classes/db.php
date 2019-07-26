@@ -2,9 +2,9 @@
 class DB  
 
 {
-	// protected $db_name = 'logodesi_property';
-	// protected $db_user = 'logodesi_propert';
-	// protected $db_pass = 'logodesi_propert';
+	// 	protected $db_name = 'yards360_property';
+	// protected $db_user = 'yards360_propert';
+	// protected $db_pass = 'yards360_propert';
 	// protected $db_host = 'localhost';
 	protected $db_name = 'property';
 	protected $db_user = 'property';

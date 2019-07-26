@@ -21,10 +21,11 @@ if(isset($_POST['property_for'])){
 		$search=$common->getRequirementFromProperty($data,$property_for,$property_option);
 	}
 	
-	 // var_dump($data);die;
+	 // var_dump($search);die;
 	$result=$common->insert($table,$data);
 	if(!empty($search)){
-		$from = "info@netmaxims.in";
+		
+		$from = $_SESSION['dealer_email'];
 		$subject = "".count($search)." Property Matched";
 		foreach($search as $data){
 			$cat_name=$common->getCategoryName($data['cat_id']);
@@ -33,22 +34,18 @@ if(isset($_POST['property_for'])){
 			$message .='Property Category:-'.$cat_name['cat_name'].'<br>';
 			$message .='City:-'.$data['city'].'<br>';
 			$message .='Sector:-'.$data['sector'].'<br>';
+			$message .='<a href="yards360.com/list_requriment.php">Yards360.com</a>';
+			$requirementDealer=$common->getDealerInfobyId($data['dealer_id']);
+			$torequirementDealer=$requirementDealer['dealer_email'];
+			$subject1="".count($search)." Property Matched From Your Requirement";
+			$common->mail($subject1,$message,$torequirementDealer);
+			$msg=count($search).'PropertyMatchedFromYourRequirement';
+			// $common->smsApi($msg,$requirementDealer['dealer_phone']);
 		}
-		// $headers = "MIME-Version: 1.0" . "\r\n";
-		// $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
-
-  //                       // More headers
-		// $headers .= 'from:<webmail@netmaxims.in>' . "\r\n";
-  //           // $headers .= 'Cc: bhawna@netmaxims.com' . "\r\n";
-		// $headers .= 'Cc: chirag@netmaxims.in' . "\r\n";
-
-		// $mail=mail($to,$subject,$txt,$headers);
-		// if($mail){
-		// 	echo 'successfully';
-		// }else{
-		// 	echo 'Not Successfully';
-		// }
+		// $common->smsApi($msg,$data['phone']);
 		$common->mail($subject,$message,$from);
+		$msg1=count($search).'PropertyMatched';
+		// $common->smsApi($msg1,$_SESSION['dealer_phone'];);
 		// $subject,$message,$from
 	}
 	

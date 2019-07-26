@@ -109,7 +109,7 @@ if(isset($_GET['msg'])){
 
 								<select id="sector" name="sector" class="js-example-basic-single">
 									<option value=""></option>
-									<?php foreach($location as $data){
+									<?php foreach($location_div as $data){
 										echo '<option value="'.$data['sector_area'].'">'.$data['sector_area'].'</option>';
 									}?>
 
@@ -635,9 +635,12 @@ function select_property(value){
 			url:'ajax_new.php',
 			method:'post',
 			data:$('#form').serialize(),
+			beforeSend:function(data){
+				 window.location.href = 'post_property.php?msg=Property Added successfully';
+			},
 			success:function(data){
 				console.log(data);
-				window.location.href = 'post_property.php?msg=Property Added successfully';
+				 window.location.href = 'post_property.php?msg=Property Added successfully';
 				// alert('Property Added successfully');
 				// window.location.reload();
 			}

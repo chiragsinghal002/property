@@ -1,5 +1,6 @@
 body{
     font-family: 'Lato', sans-serif !important;
+    -webkit-overflow-scrolling: touch;
 }
  p,input{
     font-family: 'Lato', sans-serif !important;
@@ -1391,14 +1392,15 @@ p.price-heading:after {
 }
 /*Maiin div of 3 cols*/
  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-     color: black!important;
+     color: #ffffff!important;
      cursor: default;
      /*background-color: #b3b3b3!important;*/
+     background-color: #3cb54e!important;
      border: none!important;
 }
 .nav-tabs>li.active>a{
     color: #fff!important;
-background-color: #3cb54e!important;
+/*background-color: #3cb54e!important;*/
 }
 
 .btnslidr ul.nav.nav-tabs li a {
@@ -2538,9 +2540,7 @@ input.ginputfield {
      margin-left: -44px;
 }
 
-.resdivhide{
-display: block;
-}
+
 /*Responsivness:*/
 /*Samsung Mobile*/
  @media only screen and (max-width: 360px) {
@@ -2568,12 +2568,12 @@ display: block;
          width: 23%;
          height: 30px;
     }*/
-     .srchfield {
+  /*   .srchfield {
          width: 93%;
          height: 50px;
          margin-top: 20px;
          margin-left: 15px;
-    }
+    }*/
      .srchbtn {
          background: #3cb54a;
          border: none;
@@ -2667,12 +2667,12 @@ display: block;
          width: 96%;
          border-right: 1px solid black;
     }
-     .srchfield {
+  /*   .srchfield {
          width: 93%;
          height: 50px;
          margin-top: 20px;
          margin-left: 15px;
-    }
+    }*/
      .srchbtn {
          background: #3cb54a;
          border: none;
@@ -3158,16 +3158,16 @@ img.admnimg {
          background: lightgrey;
          padding: 3px;
     }*/
-     .dropdown.res button {
+    /* .dropdown.res button {
          width: 96%;
          border-right: 1px solid black;
-    }
-     .srchfield {
+    }*/
+  /*   .srchfield {
          width: 93%;
          height: 50px;
          margin-top: 20px;
          margin-left: 15px;
-    }
+    }*/
      .srchbtn {
          background: #3cb54a;
          border: none;
@@ -3244,12 +3244,12 @@ img.admnimg {
          width: 23%;
          height: 30px;
     }
-     .srchfield {
+    /* .srchfield {
          width: 93%;
          height: 50px;
          margin-top: 20px;
          margin-left: 15px;
-    }
+    }*/
      .srchbtn {
          background: #3cb54a;
          border: none;
@@ -4188,6 +4188,25 @@ i.fa.fa-lock {
 .stripmob {
     display: none;
 }
+.resdivhide{
+display: block;
+}
+.resdivshow{
+    display: none!important;
+}
+.update_lnk {
+    text-align: center;
+    display: block;
+    margin-left: 64px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+.uppro-container .fa.fa-whatsapp {
+
+    font-size: 18px;
+
+}
+
 /*Responsivness  media query by mukesh*/
 @media(max-width:767px){
 	.sidebar_tab {
@@ -4241,7 +4260,7 @@ i.fa.fa-lock {
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: #000000;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -4415,17 +4434,75 @@ input.uppro_mob {
     padding-left: 0px !important;
 }
 
-.srchfield {
-    width: 53%;
-}
-
 .srchbtn {
     display: block;
     margin: 20px auto;
 }
 .resdivhide{
 
-display: none;
+display: none!important;
+}
+.resdivshow{
+    display: block!important;
+    padding: 20px 60px!important;
+    margin-top: 20px;
+
+}
+.src_prc {
+    display: block;
+}
+.src_prc label {
+    display: block;
+}
+.plt_area  {
+    display: block;
+}
+.plt_area label {
+    display: block;
+}
+.plt_area input {
+    margin: 0px 0px;
+}
+.src-btn select {
+    margin: 0px;
+}
+.resdivshow input, .resdivshow select{
+    margin: 10px auto;
+    color: #000;
+    line-height: 30px !important;
+ }
+ .autocomplete-items {
+    width: 340px;
+}
+.godrejdiv h4 {
+    margin: 18px 18px;
+}
+.upemail {
+    width: 90% !important;
+}
+.bussiness_input {
+    width: 80% !important;
+}
+.autocomplete {
+    width: auto !important;
+    display: block!important;
+    margin: 0 auto!important;
+    padding: 0px 0px;
+    margin-top: 10px!important;
+}
+.autocomplete input#searching {
+    text-align: center!important;
+    /* margin: 0px auto!important; */
+    padding: 0px;
+    display: block!important;
+}
+.col-sm-3.padding-first {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.col-sm-7.padding-minus {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 
