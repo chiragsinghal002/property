@@ -74,9 +74,9 @@ include_once'Object.php';
 
                         <div class="tollfree">
 
-                            <p class="para">CALL US TOLL FREE</p>
+                            <p class="para">CALL US</p>
 
-                            <p class="para1">1800-00-0000</p>
+                            <p class="para1">9999077365</p>
 
                         </div>
                         <?php if(!empty($_SESSION)):?>
@@ -158,7 +158,7 @@ include_once'Object.php';
                                 <p class="new">Not a member?  &nbsp; <a href="registration.php"> Create Account</a></p>
 
                                 <div class="image-gallery">
-                                    <img src="image/login-pic.jpg" />
+                                    <img src="image/login-lock-image.jpg" />
                                 </div>
 
                             </div>
@@ -179,9 +179,9 @@ include_once'Object.php';
                     <div class="footer-menu">
                         <ul>
                             <li><a href="about_us.php">About Us</a></li>
-                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="faq.php">FAQ's</a></li>
                             <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="terms-and-conditions.php">Terms & Conditions</a></li>
                             <li class="last-policy"><a href="#">Privacy Policy</a></li>
                         </ul>
                     </div>

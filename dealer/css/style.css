@@ -4195,11 +4195,12 @@ display: block;
     display: none!important;
 }
 .update_lnk {
-    text-align: center;
+     text-align: center;
     display: block;
-    margin-left: 64px;
+    margin-left: 124px;
     color: #ffffff;
     text-transform: capitalize;
+    margin-top: -20px;
 }
 .uppro-container .fa.fa-whatsapp {
 

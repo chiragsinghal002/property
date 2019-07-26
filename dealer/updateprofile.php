@@ -115,7 +115,7 @@ include_once'include/sidebar.php';
 						<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 						<div class="help-block with-errors"></div>
 					
-						 <input type="text" class="uppro_mob" name="dealer_phone_second" placeholder="Mobile Number" value="+91 <?php if(!empty($showdetailDealer['dealer_phone_second'])){ echo $showdetailDealer['dealer_phone_second']; } ?>">
+						 <input type="text" class="uppro_mob" name="dealer_phone_second" placeholder="Mobile Number" value="<?php if(!empty($showdetailDealer['dealer_phone_second'])){ echo $showdetailDealer['dealer_phone_second']; } ?>">
 						
 			
 				</div>

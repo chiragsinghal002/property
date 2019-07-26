@@ -73,9 +73,9 @@ include_once'Object.php';
 
             <div class="tollfree">
 
-              <p class="para">CALL US TOLL FREE</p>
+              <p class="para">CALL US</p>
 
-              <p class="para1">1800-00-0000</p>
+              <p class="para1">9999077365</p>
 
             </div>
           
@@ -232,11 +232,11 @@ include_once'Object.php';
                             <div class="col-sm-6">
                               <div class="footer-menu">
                                 <ul>
-                                  <li><a href="#">About Us</a></li>
-                                  <li><a href="#">FAQ's</a></li>
-                                  <li><a href="#">Contact Us</a></li>
-                                  <li><a href="#">Terms & Conditions</a></li>
-                                  <li class="last-policy"><a href="#">Privacy Policy</a></li>
+                                      <li><a href="about_us.php">About Us</a></li>
+                            <li><a href="faq.php">FAQ's</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="terms-and-conditions.php">Terms & Conditions</a></li>
+                            <li class="last-policy"><a href="privacy-policy.php">Privacy Policy</a></li>
                                 </ul>
                               </div>
                             </div>
