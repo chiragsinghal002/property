@@ -267,7 +267,10 @@ include_once'Object.php';
     			var id=1;
     		}else if(value=='noida'){
     			var id=3;
-    		}else{
+    		}else if(value=='delhi'){
+    			var id=2;
+    		}
+    		else{
     			var id='';
     		}
 

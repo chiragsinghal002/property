@@ -1846,7 +1846,7 @@ public function requirementMatchMail($search){
 public function otpVerification($data){
 
     $subject='OTP FOR MOBILE VERIFICATION';
-    echo $message='
+    $message='
  <!doctype html>
     <html>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
@@ -1861,7 +1861,7 @@ public function otpVerification($data){
                 
                 
                 <tr>
-                  <td><img src="http://property.nmx.com/dealer/image/yards360logoemail.png" style="width: 55px;transform: translate(0px, -54px);"></td>
+                  <td><img src="http://property.nmx.com/dealer/image/yards360logoemail.png" style="width: 80px;transform: translate(0px, -54px);"></td>
                 </tr>
 
               <tr>
