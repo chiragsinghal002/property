@@ -72,7 +72,7 @@ if(isset($_GET['msg'])){
 			<!-- Div for Dropdown -->
 			<div class="drop-html" >
 				<div class="dropdown">
-					<input type="radio" name="property_sell_type" id="property_sell_type" onchange="show_address(this.value)" value="0">Resale
+					<input type="radio" name="property_sell_type" id="property_sell_type" onchange="show_address(this.value)" value="0" checked="checked">Resale
 					<input type="radio" name="property_sell_type" id="property_sell_type" onchange="show_address(this.value)" value="1">New Booking
 						<!-- <select  name="property_type1" id="property_sell_type" class="listprop_select" onchange="show_address(this.value)">
 							<option value="">--select--</option>
@@ -91,8 +91,11 @@ if(isset($_GET['msg'])){
 					</div>
 					<div class="drop-html1	">
 						<div class="dropdown">
-							<select id="city" name="city">
+							<select id="city" name="city" onchange="changecity(this.value)">
+								<option value="" style="color: #ccc;">--Select City--</option>
 								<option value="faridabad">Faridabad</option>
+								<option value="noida">Noida</option>
+								<option value="delhi">Delhi</option>
 							</select>
 						</div>
 					</div>
@@ -104,8 +107,7 @@ if(isset($_GET['msg'])){
 					<div class="drop-html1	">
 						<div class="dropdown">
 							<div class="drop-html1 brsc">
-								<?php $location_div=$common->getAreaSector(1);?>
-								<!-- <input type="text" name="sector" placeholder="Area/Sector" class="ginputfield" id="sector"> -->
+								<!-- <?php $location_div=$common->getAreaSector(1);?>
 
 								<select id="sector" name="sector" class="js-example-basic-single">
 									<option value=""></option>
@@ -113,7 +115,10 @@ if(isset($_GET['msg'])){
 										echo '<option value="'.$data['sector_area'].'">'.$data['sector_area'].'</option>';
 									}?>
 
-								</select>
+								</select> -->
+								<div id="change_sector">
+
+								</div>
 								<span id="sector_error" style="color:red;display: none;">*Select Sector</span>
 							</div>
 						</div>
@@ -229,7 +234,7 @@ if(isset($_GET['msg'])){
 									<!--/item-->
 								</div>
 								<!--/carousel-inner--> 
-						
+
 							</div>
 							<!--/myCarousel-->
 						</div>
@@ -281,47 +286,47 @@ if(isset($_GET['msg'])){
 												<?php $l++;endforeach;?>
 											</div>
 										</div>
-									<?php endif;?> -->
+										<?php endif;?> -->
 
+
+									</div>
 
 								</div>
-							
+								<!--/myCarousel-->
 							</div>
-							<!--/myCarousel-->
+
 						</div>
-						
 					</div>
+
+				</div>  
+				<input type="hidden" id="subcat_id" name="subcat_id">
+
+				<div id="result">
+
 				</div>
 
-			</div>  
-			<input type="hidden" id="subcat_id" name="subcat_id">
+				<!-- Child Sub-Categry -->
+				<div id="result1">
 
-			<div id="result">
-				
-			</div>
-
-			<!-- Child Sub-Categry -->
-			<div id="result1">
-				
-			</div>
-			
-			<input type="hidden" id="category_id" name="category_id" value="">
-
-
-			<p class="price-heading prc-hd"> PRICING AREA</p>
-
-
-			<div class="row">
-				<div class="col-sm-2 col-xs-6">
-				<div class="typeheading">
-					<p>Expected <span id="price_span">Price:</span><span style="color: red;">*</span></p>
 				</div>
-				</div>
-				<div class="col-sm-8 col-xs-6">
-				<div class="drop-html1">
-					<input type="number" name="price" placeholder="Exp. Price" class="ginputfield" id="price" value="" onkeyup="price_check(this.value)" name="exp_price" min="1" max="999999999">
-					<span id="price_error" style="color:red;display: none;">Select Price*</span>
-					
+
+				<input type="hidden" id="category_id" name="category_id" value="">
+
+
+				<p class="price-heading prc-hd"> PRICING AREA</p>
+
+
+				<div class="row">
+					<div class="col-sm-2 col-xs-6">
+						<div class="typeheading">
+							<p>Expected <span id="price_span">Price:</span><span style="color: red;">*</span></p>
+						</div>
+					</div>
+					<div class="col-sm-8 col-xs-6">
+						<div class="drop-html1">
+							<input type="number" name="price" placeholder="Exp. Price" class="ginputfield" id="price" value="" onkeyup="price_check(this.value)" name="exp_price" min="1" max="999999999">
+							<span id="price_error" style="color:red;display: none;">Select Price*</span>
+
 					<!-- <select class="selectofplotarea" id="price_unit" name="price_unit">
 						<option value="lakhs">Lakhs</option>
 						<option value="crores">Crores</option>
@@ -331,54 +336,54 @@ if(isset($_GET['msg'])){
 
 				
 			</div> 
-			</div> 
-			
-			<div  id="negotiable_div" class="negoslct" style="display: none;">
-				<div class="row">
+		</div> 
+
+		<div  id="negotiable_div" class="negoslct" style="display: none;">
+			<div class="row">
 				<div class="col-sm-2 col-xs-6">
-				<div class="typeheading">
-					<p>Negotiable:</p>
-				</div>
+					<div class="typeheading">
+						<p>Negotiable:</p>
+					</div>
 				</div>
 				<div class="col-sm-4 col-xs-6">
-				<div class="drop-html1">
+					<div class="drop-html1">
 
-					<select class="selectofplotarea" id="negotiable" name="negotiable">
-						<option value="Yes">Yes</option>
-						<option value="No">No</option>
-					</select>
-				</div>
-				</div>
-				</div>
-				<div class="row" id="loan_approval_div">
-				<div class="col-sm-2 col-xs-6">
-				<div class="typeheading">
-					<p>Loan Approval:</p>
-				</div>
+						<select class="selectofplotarea" id="negotiable" name="negotiable">
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+						</select>
 					</div>
-					<div class="col-sm-4 col-xs-6">
-				<div class="drop-html1">
-
-					<select class="selectofplotarea" id="loan_approval" name="loan_approval">
-						<option value="1">Yes</option>
-						<option value="0">No</option>
-					</select>
 				</div>
+			</div>
+			<div class="row" id="loan_approval_div">
+				<div class="col-sm-2 col-xs-6">
+					<div class="typeheading">
+						<p>Loan Approval:</p>
+					</div>
+				</div>
+				<div class="col-sm-4 col-xs-6">
+					<div class="drop-html1">
+
+						<select class="selectofplotarea" id="loan_approval" name="loan_approval">
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</div>
 				</div>
 			</div>
 
 
-				
 
-			</div> 
-			
 
+		</div> 
 
 
 
-			<!-- Add Construction Status -->
-			<div class="row" id="construction_status" style="display: none;">
-				<div class="col-sm-2 col-xs-6">
+
+
+		<!-- Add Construction Status -->
+		<div class="row" id="construction_status" style="display: none;">
+			<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Construction Status:</p>
 				</div>
@@ -393,34 +398,34 @@ if(isset($_GET['msg'])){
 						</select>
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<!-- Status -->
+		<div class="apprtmnt" id="status" style="display: none;">
+
+			<div class="typeheading">
+				<p>Status:</p>
+			</div>
+
+			<div class="drop-html1">
+				<div class="dropdown">
+					<select id="status1" name="status">
+						<option value="1">Active</option>
+
+
+					</select>
 				</div>
 			</div>
 
-			<!-- Status -->
-			<div class="apprtmnt" id="status" style="display: none;">
+		</div>
+		<!-- Dashboard Submit Button -->
 
-				<div class="typeheading">
-					<p>Status:</p>
-				</div>
-
-				<div class="drop-html1">
-					<div class="dropdown">
-						<select id="status1" name="status">
-							<option value="1">Active</option>
-							
-
-						</select>
-					</div>
-				</div>
-
-			</div>
-			<!-- Dashboard Submit Button -->
-
-			<div class="row">
-				<input class="postprorp_submitbtn" type="button" name="submit" value="Submit" onclick="return form_submit()"></input>
-			</div>
-		</div>  
-	</form>
+		<div class="row">
+			<input class="postprorp_submitbtn" type="button" name="submit" value="Submit" onclick="return form_submit()"></input>
+		</div>
+	</div>  
+</form>
 </div>
 </div>
 </div>
@@ -434,6 +439,28 @@ if(isset($_GET['msg'])){
 </body>
 </html>
 <script type="text/javascript">
+	function changecity(value){
+		if(value=='faridabad'){
+			var id=1;
+		}else if(value=='noida'){
+			var id=3;
+		}else if(value=='delhi'){
+			var id=2;
+		}
+		else{
+			var id='';
+		}
+
+		$.ajax({
+			url:'ajax.php',
+			type:'post',
+			data:{'changecity':'1',change_city:id},
+			success:function(data){
+				console.log(data);
+				$("#change_sector").html(data);
+			}
+		})
+	}
 	function sell_div(value){
 		// alert(value);
 		if(value==0){
@@ -510,11 +537,11 @@ function residential_cat(id){
 	$("#subcat_id").val(value);
 	var p_for=$("input[name='property_for']:checked").val();
 	 // alert(p_for);
-	$.ajax({
-		url:'ajax.php',
-		type:'post',
-		data:{'subcat_id':value,p_for:p_for},
-		success:function(data){
+	 $.ajax({
+	 	url:'ajax.php',
+	 	type:'post',
+	 	data:{'subcat_id':value,p_for:p_for},
+	 	success:function(data){
 			 // alert(data);
 			 console.log(data);
 			 if(data!==''){
@@ -524,9 +551,9 @@ function residential_cat(id){
 			 }
 			}
 		})
-}
+	}
 
-function select_property(value){
+	function select_property(value){
 	  // alert(value);
 	  $("#child_id").val(value);
 	  $.ajax({
@@ -819,19 +846,19 @@ function show_address(value){
     });
 	});
 	$('img').click(function(){
-    $('.selected').removeClass('selected');
-    $(this).addClass('selected');
-});
+		$('.selected').removeClass('selected');
+		$(this).addClass('selected');
+	});
 
 </script>
- <script type="text/javascript">
-    $(document).ready(function (){
-      $('input[placeholder]').placeholderLabel();
-    })
-    </script>
 <script type="text/javascript">
-    $(document).ready(function (){
-  $('input[placeholder]').placeholderLabel({
+	$(document).ready(function (){
+		$('input[placeholder]').placeholderLabel();
+	})
+</script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('input[placeholder]').placeholderLabel({
 
     // placeholder color
     placeholderColor: "#ffffff!important", 
@@ -842,7 +869,7 @@ function show_address(value){
     // size of label
     labelSize: "14px"
     // size of color
-     color: "#000000!important";
+    color: "#000000!important";
 
     // font style
     fontStyle: "normal", 
@@ -856,13 +883,13 @@ function show_address(value){
     // time to move
     timeMove: 200 
     
-  });
-})
-  </script>
+});
+	})
+</script>
 <style type="text/css">
 	img{margin:10px;}
-.selected{
-    box-shadow:0px 12px 22px 1px #333;
-    border: 2px solid #000000;
-}
+	.selected{
+		box-shadow:0px 12px 22px 1px #333;
+		border: 2px solid #000000;
+	}
 </style>

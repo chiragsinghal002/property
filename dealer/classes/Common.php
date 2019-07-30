@@ -1523,16 +1523,42 @@ public function UserForgotPassword($email){
         // $from = 'chirag.netmaxims@gmail.com';
         $to=$fetch['dealer_email'];
         // $subject = 'Forgot your Password for Property App?';
-        $message = '<html>
-        <body>
-        <h3>Dear '.$fetch['dealer_first_name'].'</h3>
-        <p>Greetings! Hope you are having a good day.</p>
-        <p>Seems like you forgot your password for Property App. If this is true, click below to reset your password.</p>
-        <a href="'.BASEURL.'reset_password.php?key='.$pass.'">Reset Password Link</a>
-        <p>Thanks</p>
-        <p>Property App Team</p>
-        </body>
-        </html>
+        $message = '<!doctype html>
+   <html>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+   
+    <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+      <thead style="background:#fafafa">
+        <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
+        </tr>
+    </thead>
+    <tbody style="position: relative">
+    <tr>
+    <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
+    <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
+    ">Dear '.$fetch['dealer_first_name'].'</h4>
+      <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Someone, hopefully you, has requested to reset the password for your yards360 account on<a href="http://yards360.com/" style="padding-left:15px;">http://yards360.com/</a></p>
+      <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email.</p>
+      <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Otherwise, click the link below to complete the process.</p>
+    <p style="font-size: 15px;font-weight: 600;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;"><br><br><a href="'.BASEURL.'reset_password.php?key='.$pass.'" style="color: #1155cc;
+    letter-spacing: 1px;">Reset Password Link.</a></p>
+    </td>
+    </tr>
+    </tbody>
+    
+     <tfoot style="float: left;">
+    <tr>
+      <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
+    </tr>
+
+    <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
+    <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
+  </tfoot>
+
+    </table>
+    </body> 
+    </html>
         ';    
         $subject='RESET PASSWORD LINK';
     // $message='Dear '.$data['name'].' Your Otp is '.$data['otp'].'';
@@ -1587,16 +1613,41 @@ public function verifyEmail($email){
         // $from = 'chirag.netmaxims@gmail.com';
         $to=$fetch['dealer_email'];
         // $subject = 'Forgot your Password for Property App?';
-        $message = '<html>
-        <body>
-        <h3>Dear '.$fetch['dealer_first_name'].'</h3>
-        <p>Greetings! Hope you are having a good day.</p>
-        <p>Seems like you forgot your password for Property App. If this is true, click below to reset your password.</p>
-        <a href="'.BASEURL.'verify_email.php?key='.$pass.'">Verify Email Link</a>
-        <p>Thanks</p>
-        <p>Property App Team</p>
-        </body>
-        </html>
+        $message = '<!doctype html>
+   <html>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+   
+    <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+      <thead style="background:#fafafa">
+        <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
+        </tr>
+    </thead>
+    <tbody style="position: relative">
+    <tr>
+    <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
+    <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
+    ">Dear '.$fetch['dealer_first_name'].'</h4>
+      <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Thanks for signing up to Yards360!<a href="http://yards360.com/" style="padding-left:15px;">http://yards360.com/</a></p>
+      <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">To get started, click the link below to confirm your account.</p>
+    <p style="font-size: 15px;font-weight: 600;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;"><br><br><a href="'.BASEURL.'verify_email.php?key='.$pass.'" style="color: #1155cc;
+    letter-spacing: 1px;">Verify Email Link.</a></p>
+    </td>
+    </tr>
+    </tbody>
+    
+     <tfoot style="float: left;">
+    <tr>
+      <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
+    </tr>
+
+    <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
+    <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
+  </tfoot>
+
+    </table>
+    </body> 
+    </html>
         ';    
         $subject='EMAIL VERIFY LINK';
     // $message='Dear '.$data['name'].' Your Otp is '.$data['otp'].'';
@@ -1848,40 +1899,38 @@ public function otpVerification($data){
     $subject='OTP FOR MOBILE VERIFICATION';
     $message='
  <!doctype html>
-    <html>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+   <html>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+   
+    <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+      <thead style="background:#fafafa">
+	    <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
+	    </tr>
+    </thead>
+    <tbody style="position: relative">
+    <tr>
+    <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
+    <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
+    ">Dear '.$data['fname'].'</h4>
+    <p style="font-size: 15px;font-weight: 600;;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Your Otp is '.$data['otp'].'<br><br><a href="http://yards360.com" style="color: blue;
+    letter-spacing: 1px;">http://yards360.com.</a></p>
+    <span style="padding: 10px;color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email. Otherwise, click the link below to complete the process.</span>
+    </td>
+    </tr>
+    </tbody>
+    
+     <tfoot style="float: left;">
+    <tr>
+      <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
+    </tr>
 
-      <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+    <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
+    <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
+  </tfoot>
 
-         
-     <table style="box-shadow: 1px 1px 6px #ccc;border: 1px solid #ededed;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
-               
-            
-             <tbody style="position: relative">
-                
-                
-                <tr>
-                  <td><img src="http://property.nmx.com/dealer/image/yards360logoemail.png" style="width: 80px;transform: translate(0px, -54px);"></td>
-                </tr>
-
-              <tr>
-                
-                <td style="position: absolute; top: 43px;">
-
-                    <h4 style="color: black;letter-spacing: 1px;font-size: 22px;
-">Hello, Taru Malik!</h4>
-
-                     <p style="padding: 10px;color: black;letter-spacing: 1px;">Someone, hopefully you, has requested to reset the password for your GitLab account on <a href="" style="color: blue;
-    letter-spacing: 1px;">https://gitlab.com.</a></p>
-
-                    <span style="padding: 10px;color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email. Otherwise, click the link below to complete the process.</span>
-
-                </td>
-
-            </tr>
-           </tbody>
-        </table>
-       </body> 
+    </table>
+    </body> 
     </html> 
     ';
     /*Dear '.$data['fname'].' Your Otp is '.$data['otp'].*/

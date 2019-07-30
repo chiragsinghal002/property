@@ -162,14 +162,14 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
               <div class="collapse navbar-collapse navbar-ex1-collapse">
 
-			   <!--
+         <!--
 
  <button onclick="myFunction()" id="amit">
 
  <img src="image/toggle.png" /> </button>
 
 -->
-
+<a href="#" class="myyards360">My Yards360</a>
 
 
 <ul class="nav navbar-nav side-nav" id="myDIV">
@@ -181,13 +181,22 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
 
   </li>
- <li><a href="#" class="myyards360">My Yards360</a></li>
+
   <p>MANAGE LISTING</p>
 
+
+<li> <a href="#.php" >Post Property</a></li>
+<li> <a href="#.php" >All Properties</a></li>
+<li> <a href="#.php" >My Matched Properties</a></li>
+<p>MANAGE REQUIREMENT</p>
+
+<li> <a href="#.php" >Post Requirement</a></li>
+<li> <a href="#.php" >All Requirements</a></li>
+<li> <a href="#.php" >MY Matched Requirements</a></li>
+<li> <a href="search.php">Search Property</a></li>
+<li> <a href="#.php" >My Subscription Status</a></li>
+<li> <a href="#.php" >Manage Subuser</a></li>
   <li>
-
-
-
     <a href="result.php" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-home"></i>My Property</a>
 
 

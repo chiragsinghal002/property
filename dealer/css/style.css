@@ -2791,7 +2791,7 @@ p.new.yards {
 }
  .nav.navbar-nav.side-nav li a{
      color: white;
-     font-size: 16px;
+     font-size: 15px;
      font-family: 'Lato', sans-serif;
 }
  .nav.navbar-nav.side-nav li a:hover {
@@ -4282,16 +4282,20 @@ font-weight: 600;
 .myyards360 {
     color: #3CB54E;
     text-decoration: underline;
-    padding: 10px 30px;
+    padding: 10px 17px;
+    margin-top: 11px!important;
+    position: absolute;
 }
 .side-nav p {
 
     color: #939598;
-    font-size: 17px;
+    font-size: 16px;
     padding-top: 20px;
-    padding-left: 57px;
 
 }
+
+
+
 
 
 /*Responsivness  media query by mukesh*/
