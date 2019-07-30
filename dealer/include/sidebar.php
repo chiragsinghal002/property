@@ -68,7 +68,7 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
           <div class="row">
             
           <!-- Logo For Search Page -->
-        <div class="col-xs-9">
+        <div class="col-sm-12 col-xs-9">
           <div class="searchlogo">
 
            <!--  <img src="image/inner-logo.png" class="srchimg"> -->
@@ -77,7 +77,7 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
           </div>
             </div>
-            <div class="col-xs-2">
+            <div class="col-sm-0 col-xs-2">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
             </div>
 
@@ -112,7 +112,7 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
                 <img  src="image/uploads/<?php echo $showdetailDealer['dealer_photo'];?>" class="admnimg">
 
-                 <a href="updateprofile.php" class="update_lnk">edit</i></a>
+               
 
                 <?php 
 
@@ -130,7 +130,7 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
                   <img src="image/admin.png" class="admnimg">
 
-                    <a href="updateprofile.php" class="update_lnk">edit</i></a>
+                    
 
                   <?php
 
@@ -146,15 +146,15 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
 
 
-                <p><?php echo 'Welcome'.' <span class="nmclr">'.$showdetailDealer['dealer_first_name'].'<span>';?></p>
+                <p><?php echo ' <span class="nmclr">'.$showdetailDealer['dealer_first_name'].'!<span><br>' . 'Master User';?></p>
 
 
-
+                  <a href="updateprofile.php" class="update_lnk"><i class="fa fa-pencil"></i>modify</a>
               </div>
 
               <div class="srchlogoutbtn">
 
-                <a href="logout.php"><button class="srchlgoutbtn">Logout</button></a>
+                <!-- <a href="logout.php"><button class="srchlgoutbtn">Logout</button></a> -->
 
               </div>
 
@@ -181,6 +181,8 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
 
   </li>
+ <li><a href="#" class="myyards360">My Yards360</a></li>
+  <p>MANAGE LISTING</p>
 
   <li>
 

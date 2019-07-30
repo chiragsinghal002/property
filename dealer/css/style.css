@@ -60,6 +60,8 @@ ul.nav.navbar-nav.side-nav.desktop {
 
 .sidebar-top {
     text-align: center;
+    background: #3CB54E;
+    padding: 30px 0px 20px 0px;
 }
 /*
 div#commercial_type {
@@ -2182,23 +2184,22 @@ input.ginputfield {
 }
 .srchimg {
     width: 100%;
-    padding-right: 18px;
-    padding-left: 7px;
+ 
 }
  .searchadmnlogo {
-     margin-top: 2em;
+     /*margin-top: 2em;*/
      /*margin-left: 4em;*/
 }
  .searchlogo {
      margin-top: 1em;
      margin-left: 11px;
 }
- .searchadmnlogo p {
+/* .searchadmnlogo p {
      color: white;
      margin-top: 13px;
      font-size: 18px;
      margin-left: 12px;
-}
+}*/
 /* Top Navigation */
  .top-nav {
      padding: 0 15px;
@@ -2721,7 +2722,7 @@ input.ginputfield {
      width: 100%;
 }
  .searchadmnlogo {
-     margin-top: 2em;
+     margin-top: 1em;
      /*margin-left: 4em;*/
 }
  .searchlogo {
@@ -2730,9 +2731,9 @@ input.ginputfield {
 }
  .searchadmnlogo p {
      color: white;
-     margin-top: 13px;
+ /*    margin-top: 13px;*/
      font-size: 18px;
-     margin-left: 12px;
+  
      font-family: 'Lato', sans-serif;
 }
 /* Top Navigation */
@@ -4200,7 +4201,7 @@ i.fa.fa-lock {
 }
 .nmclr {
     text-transform: capitalize;
-    color: #3cb54a;
+    color: #ffffff;
 }
 .stripmob {
     display: none;
@@ -4212,12 +4213,13 @@ display: block;
     display: none!important;
 }
 .update_lnk {
-     text-align: center;
     display: block;
-    margin-left: 124px;
     color: #ffffff;
-    text-transform: capitalize;
-    margin-top: -20px;
+    float: right;
+bottom: 0px;
+background: #000;
+margin: 0px;
+padding: 0px 5px;
 }
 .uppro-container .fa.fa-whatsapp {
 
@@ -4276,6 +4278,19 @@ font-weight: 600;
     }
     .logreg .reg-btn {
     text-align: center;
+}
+.myyards360 {
+    color: #3CB54E;
+    text-decoration: underline;
+    padding: 10px 30px;
+}
+.side-nav p {
+
+    color: #939598;
+    font-size: 17px;
+    padding-top: 20px;
+    padding-left: 57px;
+
 }
 
 

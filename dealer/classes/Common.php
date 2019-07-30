@@ -1849,18 +1849,32 @@ public function otpVerification($data){
     echo $message='
  <!doctype html>
     <html>
-      <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
-     <table align="center" style="background:white;width:52%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;top: 27%;" >
-             <tbody>
-              <tr>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
 
-                <td style="position: absolute; top: 43px;margin-top:200px;">
+      <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+
+         
+     <table style="box-shadow: 1px 1px 6px #ccc;border: 1px solid #ededed;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+               
+            
+             <tbody style="position: relative">
+                
+                
+                <tr>
+                  <td><img src="http://property.nmx.com/dealer/image/yards360logoemail.png" style="width: 55px;transform: translate(0px, -54px);"></td>
+                </tr>
+
+              <tr>
+                
+                <td style="position: absolute; top: 43px;">
 
                     <h4 style="color: black;letter-spacing: 1px;font-size: 22px;
 ">Hello, Taru Malik!</h4>
-                     <p style="    color: black;letter-spacing: 1px;">Someone, hopefully you, has requested to reset the password for your GitLab account on <a href="">https://gitlab.com.</a></p>
 
-                    <span style="color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email. Otherwise, click the link below to complete the process.</span>
+                     <p style="padding: 10px;color: black;letter-spacing: 1px;">Someone, hopefully you, has requested to reset the password for your GitLab account on <a href="" style="color: blue;
+    letter-spacing: 1px;">https://gitlab.com.</a></p>
+
+                    <span style="padding: 10px;color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email. Otherwise, click the link below to complete the process.</span>
 
                 </td>
 
@@ -1868,7 +1882,7 @@ public function otpVerification($data){
            </tbody>
         </table>
        </body> 
-    </html>
+    </html> 
     ';
     /*Dear '.$data['fname'].' Your Otp is '.$data['otp'].*/
     $from=$data['email'];

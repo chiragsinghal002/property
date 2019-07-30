@@ -731,8 +731,41 @@ if(isset($_POST['automated_mail'])){
 	echo $result= $common->mail($subject,$message,$from);
 
 }
-?>
 
+
+if(isset($_POST['changecity'])){
+	$id=$_POST['change_city'];
+	if(!empty($id)){
+		$location=$common->getAreaSector($id);
+		echo '<select id="sector" name="sector" class="js-example-basic-single sector input-field" style="width:330px;">';
+
+
+		echo '<option value="">';
+		echo '</option>';
+		foreach($location as $data){
+			echo '<option value="'.$data['sector_area'].'">'.$data['sector_area'].'</option>';
+		}
+		echo '</select>';
+	}else{
+		
+	}
+	
+}
+?>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.js-example-basic-single').select2();
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$selectElement = $('#sector').select2({
+			placeholder: "Area/Sector",
+			allowClear: true
+		});
+	});
+
+</script>
 <script type="text/javascript">
 	$(document).ready(function (){
 		$('input[placeholder]').placeholderLabel();
