@@ -98,7 +98,19 @@ include_once'Object.php';
             <div class="container">
                 <div class="row">
 
-                    <div class="col-sm-6"></div>
+                    <div class="col-sm-2"></div>
+
+                    <div class="col-sm-4 logreg">
+                        <h2>New to Yards360.com?</h2>
+                        <ul>
+                        <li><img src="image/1.jpg"><p>Make Property Search Easy & Fast.</p></li>
+                        <li><img src="image/2.jpg"><p>Get Connected in Dealer Community.</p></li>
+                        <li><img src="image/3.jpg"><p>Visibility of Properties For Sale or Rent.</p></li>
+                        <li><img src="image/4.jpg"><p>Get Deals From Multiple Sources.</p></li>
+
+                    </ul>
+                   <div class="reg-btn"> <a href="registration.php" class="loreg">Register now</a></div>
+                    </div>
 
                     <div class="col-sm-6 submition-form">
 
@@ -125,7 +137,7 @@ include_once'Object.php';
 
                                 <div class="input-container">
 
-                                    <i class="glyphicon glyphicon-user"><span>*</span></i>
+                                    <i class="glyphicon glyphicon-user"></i>
 
                                     <input class="input-field" type="text" placeholder="Username / Email" id="email" name="email">
                                     <div class="input-msg" style="color: red;margin-left: 26px;"><span id="email-info" class="info"></span></div>
@@ -137,7 +149,7 @@ include_once'Object.php';
 
                                 <div class="input-container">
 
-                                    <i class="glyphicon glyphicon-lock"><span>*</span></i>
+                                    <i class="glyphicon glyphicon-lock"></i>
 
                                     <input class="input-field" type="password" placeholder="Password" id="password" name="password">
                                     <div class="input-msg" style="color: red;margin-left: 26px;"><span id="password-info" class="info"></span></div>

@@ -696,7 +696,7 @@ button.btn.act.btn-success {
     margin-bottom: 21em;
     width: 500px;
     margin: 0 auto;
-    border: 3px solid #3cb54e94;
+    border: 3px solid #ffffff;;
 }
  .btn.btn-success {
      margin-top: 21px;
@@ -758,7 +758,7 @@ button.btn.act.btn-success {
      top: -6px;
 }
  .input-field {
-     height: 35px;
+  
      width: 214px;
 }
  .rembr{
@@ -799,7 +799,7 @@ button.btn.act.btn-success {
      color: white;
 }
  .input-field {
-     height: 35px;
+    
      width: 80%;
      background: none;
      border: 0px;
@@ -1255,7 +1255,7 @@ h4.modal-title {
     float: left;
 }
      .input-field {
-         height: 35px;
+       
          width: 77%;
     }
      .form-group a {
@@ -2636,15 +2636,15 @@ input.ginputfield {
          position: relative;
          right: 0em!important;
     }
-     .searchlogo {
+  /*   .searchlogo {
          margin-top: 1em;
          padding-left: 16px;
-    }
+    }*/
      .srchimg {
          width: 92%;
     }
      .searchadmnlogo {
-         margin-top: 2em;
+         /*margin-top: 2em;*/
          /*margin-left: 10em;*/
     }
    /*  .srchlgoutbtn {
@@ -3122,15 +3122,15 @@ button.srchlgoutbtn:focus {
 /*Responsivness:*/
 /*Apple Mobile*/
  @media only screen and (max-width: 375px) {
-     .searchlogo {
+    /* .searchlogo {
          margin-top: 1em;
          padding-left: 16px;
-    }
+    }*/
      .srchimg {
          width: 92%;
     }
      .searchadmnlogo {
-         margin-top: 2em;
+       /*  margin-top: 2em;*/
          /*margin-left: 10em;*/
     }
 
@@ -3342,7 +3342,7 @@ img.admnimg {
      background: white;
      border: none;
      padding: 11px;
-     width: 9%;
+    /* width: 9%;*/
      outline: none;
 }
  .resultactiveprdcts {
@@ -3541,10 +3541,10 @@ img.admnimg {
 /*Responsivness For Result Page:*/
 /*For Samsung & Apple*/
  @media only screen and (max-width: 480px) {
-     .searchlogo {
+   /*  .searchlogo {
          margin-top: 1em;
          margin-left: 0px !important;
-    }
+    }*/
      .resulttopbtn .btn.btn-primary {
          color: black;
          background-color: white;
@@ -3559,7 +3559,7 @@ img.admnimg {
          background: white;
          border: none;
          padding: 11px;
-         width: 17%;
+       /*  width: 17%;*/
     }
      .resultactiveprdcts ul {
          margin-top: 6px;
@@ -3711,6 +3711,23 @@ img.admnimg {
 }
 .edreqrw .row {
     padding: 10px 0px;
+}
+
+.forgot-container {
+    background: none!important;
+    border: none !important;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px solid #fff !important;
+    color: #ffffff;
+}
+.forgot-container input#forgotemail{
+    height: auto!important;
+}
+
+.forgot-container input#forgotemail::placeholder {
+    color: #fffffff !important;
 }
 /*Responsvness For Change Password Page*/
  @media only screen and (max-width: 480px){
@@ -4208,8 +4225,66 @@ display: block;
 
 }
 
+.frmdiv.registration .input-container input::placeholder, .frmdiv.registration .input-container input::-webkit-input-placeholder  {
+color:#ffffff!important;
+}
+.reg-city select, .reg-secter select{
+    color: #ffffff!important;
+}
+.nm_res {
+    color: #000 !important;
+    display: block !important;
+}
+.about-heading p {
+    display: none;
+}
+
+.logreg {
+    background: #fff;
+}
+.logreg ul li {
+    display: inline-flex;
+}
+.col-sm-6.submition-form {
+    padding-left: 0px !important;
+}
+.logreg {
+
+    background: #fff;
+    margin: 0px !important;
+   padding: 30px 20px 60px 20px !important;
+margin-top: 130px !important;
+
+}
+.logreg h2 {
+   font-size: 25px !important;
+line-height: 40px;
+padding-bottom: 30px;
+font-weight: 600;
+}
+.logreg ul li img {
+    width: 28px;
+    margin-right: 20px;
+}
+.logreg .loreg {
+
+    text-align: center !important;
+    background: #3CB54E;
+    padding: 10px 60px;
+    color: #fff;
+    margin: 0 auto;
+    }
+    .logreg .reg-btn {
+    text-align: center;
+}
+
+
 /*Responsivness  media query by mukesh*/
 @media(max-width:767px){
+    html {
+  overflow-x: hidden !important;
+overflow-y: scroll !important;
+}
 	.sidebar_tab {
   height: 100%;
   width: 0;
@@ -4220,7 +4295,7 @@ display: block;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+ /* padding-top: 60px;*/
   position: absolute!important;
   padding-left: 0px!important;
 }
@@ -4252,7 +4327,7 @@ display: block;
 
 .sidebar_tab .closebtn {
   position: absolute;
-  top: 0;
+  top: 10;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
@@ -4399,7 +4474,7 @@ bottom: 0px !important;
 
 .expireon p {
     font-size: 14px;
-    padding: 0px 15px;
+    padding: 0px 0px 0px 10px;
 }
 .extnddurtion p {
     font-size: 14px;
@@ -4505,7 +4580,61 @@ display: none!important;
     padding-left: 0px;
     padding-right: 0px;
 }
+.modal-content {
+        width: 380px !important;
+}
+  .modal-body.otp input {
+          width: 60px;
+  }
+  
+.frmdiv.registration input {
+        line-height: 20px;
+}
+.forgot-container input#forgotemail{
+    height: auto!important;
+    line-height: 20px!important;
+}
+.frmdiv.registration .input-container input::placeholder, .frmdiv.registration .input-container input::-webkit-input-placeholder  {
+color:#ffffff!important;
+}
+.btnsdledblckdiv.get_reqiment_btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+}
+.get_reqiment_btn .mailbtngt {
+    width: auto;
+    top: 0px;
+}
+.get_reqiment_btn .whtappgt {
+    width: auto;
+    top: 0px;
+}
 
+.get_reqiment_btn .callbtngt {
+    width: auto;
+    top: 0px;
+}
+.get_reqiment_btn .deletebutton .dtebtn {
+    margin-left: 0px!important;
+}
+.postedon {
+    margin-left: 0px;
+}
+ul.nav.navbar-nav.side-nav {
+ margin-top: 10px;
+}
+.searchadmnlogo {
+    margin-top: 10px;
+}
+
+.about-heading h2 {
+  line-height: 70px;
+}
+.col-sm-6.submition-form {
+    padding-left: 15px !important;
+}
 
 }
 

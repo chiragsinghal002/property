@@ -1205,7 +1205,7 @@ public function insert($table, $data) {
 
 
 
-    // start user by user id
+	// start user by user id
 
 public function UserbyId($user_id){
 
@@ -1846,14 +1846,31 @@ public function requirementMatchMail($search){
 public function otpVerification($data){
 
     $subject='OTP FOR MOBILE VERIFICATION';
-    $message='<html>
+    echo $message='
+ <!doctype html>
+    <html>
+      <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+     <table align="center" style="background:white;width:52%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;top: 27%;" >
+             <tbody>
+              <tr>
 
-    <div class="divofsocioecnomic">
-                        
-                            <p style="color:white;font-size:22px;">Dear '.$data['fname'].' You Otp is '.$data['otp'].'</p>
-                     </div>
-    </html>';
+                <td style="position: absolute; top: 43px;margin-top:200px;">
 
+                    <h4 style="color: black;letter-spacing: 1px;font-size: 22px;
+">Hello, Taru Malik!</h4>
+                     <p style="    color: black;letter-spacing: 1px;">Someone, hopefully you, has requested to reset the password for your GitLab account on <a href="">https://gitlab.com.</a></p>
+
+                    <span style="color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email. Otherwise, click the link below to complete the process.</span>
+
+                </td>
+
+            </tr>
+           </tbody>
+        </table>
+       </body> 
+    </html>
+    ';
+    /*Dear '.$data['fname'].' Your Otp is '.$data['otp'].*/
     $from=$data['email'];
     $msg='YourOtpIs'.$data['otp'];
        $this->smsApi($msg,$data['phone']);
@@ -2188,12 +2205,3 @@ public function sendWhatsapp(){
  
           } 
           ?>
-
-
-
-
-          <style type="text/css">
-              .divofsocioecnomic{
-                background:cyan;
-              }
-          </style>

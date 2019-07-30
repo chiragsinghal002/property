@@ -22,7 +22,7 @@ if(isset($_GET['msg'])){
 				</div>
 				<div class="drop-html">
 					<div class="dropdown">
-						<input type="radio" name="property_for" id="property_for" value="0" onchange="property_type(this.value)">Residential
+						<input type="radio" name="property_for" id="property_for" value="0" onchange="property_type(this.value)" checked="checked">Residential
 						<input type="radio" name="property_for" id="property_for" value="1" onchange="property_type(this.value)">Commercial
 						<!-- <select id="property_for" class="listprop_select" onchange="property_type(this.value)" name="property_for">
 							<option value="">--select--</option>
@@ -41,7 +41,7 @@ if(isset($_GET['msg'])){
 					</div>
 					<div class="drop-html">
 						<div class="dropdown rent">
-							<input type="radio" name="property_type1" id="property_type_new" onchange="sell_div(this.value)" value="0">Sell
+							<input type="radio" name="property_type1" id="property_type_new" onchange="sell_div(this.value)" value="0" checked="checked">Sell
 							<input type="radio" name="property_type1" id="property_type_new" onchange="sell_div(this.value)" value="1">Rent
 						<!-- <select  class="listprop_select" onchange="sell_div(this.value)" name="property_type1" id="property_type_new">
 							<option value="">--select--</option>
@@ -103,7 +103,7 @@ if(isset($_GET['msg'])){
 					</div>
 					<div class="drop-html1	">
 						<div class="dropdown">
-							<div class="drop-html1 ">
+							<div class="drop-html1 brsc">
 								<?php $location_div=$common->getAreaSector(1);?>
 								<!-- <input type="text" name="sector" placeholder="Area/Sector" class="ginputfield" id="sector"> -->
 
@@ -119,7 +119,7 @@ if(isset($_GET['msg'])){
 						</div>
 					</div>
 				</div>
-				<div class="apprtmnt">
+				<!-- <div class="apprtmnt">
 					<div class="typeheading">
 						<p>Google Location : </p>
 					</div>
@@ -127,7 +127,7 @@ if(isset($_GET['msg'])){
 						<input type="text" name="google_location" placeholder=" Text " class="ginputfield" id="google_location">
 					</div>
 					<span id="google_location_error" style="color:red;display: none;">*Enter Google Location</span>
-				</div>
+				</div> -->
 
 				<!-- <div class="apprtmnt">
 
@@ -312,12 +312,12 @@ if(isset($_GET['msg'])){
 
 
 			<div class="row">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
-					<p>Expected Price:<span style="color: red;">*</span></p>
+					<p>Expected <span id="price_span">Price:</span><span style="color: red;">*</span></p>
 				</div>
 				</div>
-				<div class="col-sm-8">
+				<div class="col-sm-8 col-xs-6">
 				<div class="drop-html1">
 					<input type="number" name="price" placeholder="Exp. Price" class="ginputfield" id="price" value="" onkeyup="price_check(this.value)" name="exp_price" min="1" max="999999999">
 					<span id="price_error" style="color:red;display: none;">Select Price*</span>
@@ -335,12 +335,12 @@ if(isset($_GET['msg'])){
 			
 			<div  id="negotiable_div" class="negoslct" style="display: none;">
 				<div class="row">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Negotiable:</p>
 				</div>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-sm-4 col-xs-6">
 				<div class="drop-html1">
 
 					<select class="selectofplotarea" id="negotiable" name="negotiable">
@@ -350,13 +350,13 @@ if(isset($_GET['msg'])){
 				</div>
 				</div>
 				</div>
-				<div class="row">
-				<div class="col-sm-2">
+				<div class="row" id="loan_approval_div">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Loan Approval:</p>
 				</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 col-xs-6">
 				<div class="drop-html1">
 
 					<select class="selectofplotarea" id="loan_approval" name="loan_approval">
@@ -378,12 +378,12 @@ if(isset($_GET['msg'])){
 
 			<!-- Add Construction Status -->
 			<div class="row" id="construction_status" style="display: none;">
-				<div class="col-sm-2">
+				<div class="col-sm-2 col-xs-6">
 				<div class="typeheading">
 					<p>Construction Status:</p>
 				</div>
 			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 col-xs-6">
 				<div class="drop-html1">
 					<div class="dropdown">
 						<select id="status1" name="construction_status">
@@ -438,7 +438,8 @@ if(isset($_GET['msg'])){
 		// alert(value);
 		if(value==0){
 			$("#sell_type").show();
-			$("#location_div").hide();
+			$("#location_div").show();
+			$("#price_span").text('Price');
 		}
 		if(value==''){
 			// alert('1');
@@ -448,6 +449,7 @@ if(isset($_GET['msg'])){
 		if(value==1){
 			$("#sell_type").hide();
 			$("#location_div").show();
+			$("#price_span").text('Rent');
 		}
 	}
 
@@ -604,13 +606,13 @@ function select_property(value){
 		}
 
 
-		var google_location=$("#google_location").val();
-		if(google_location==''){
-			$("#google_location_error").show();
-			return false;
-		}else{
-			$("#google_location_error").hide();
-		}
+		// var google_location=$("#google_location").val();
+		// if(google_location==''){
+		// 	$("#google_location_error").show();
+		// 	return false;
+		// }else{
+		// 	$("#google_location_error").hide();
+		// }
 
 
 		var cat_id=$("#category_id").val();
@@ -635,12 +637,9 @@ function select_property(value){
 			url:'ajax_new.php',
 			method:'post',
 			data:$('#form').serialize(),
-			beforeSend:function(data){
-				 window.location.href = 'post_property.php?msg=Property Added successfully';
-			},
 			success:function(data){
 				console.log(data);
-				 window.location.href = 'post_property.php?msg=Property Added successfully';
+				window.location.href = 'post_property.php?msg=Property Added successfully';
 				// alert('Property Added successfully');
 				// window.location.reload();
 			}
@@ -652,6 +651,19 @@ function select_property(value){
 function select_size(value){
 	$("#select_type_val").val(value);
 }
+
+$(document).ready(function() {
+	$("input[name='property_for']:checked").val();
+		// alert(property_for);
+		$("#commercial_type").show();
+
+		var property_type=$("input[name='property_type1']:checked").val();
+		if(property_type=='0'){
+			$("#sell_type").show();
+			$("#location_div").show();
+		}
+		
+	})
 
 function property_type(value){
 	// alert(value);
@@ -758,6 +770,14 @@ function show_address(value){
 			$("#construction_status").hide();
 		}else{
 			$("#construction_status").show();
+		}
+
+		var property_type1=$("input[name='property_type1']:checked").val();
+		if(property_type1>0){
+			$("#loan_approval_div").hide();
+
+		}else{
+			$("#loan_approval_div").show();
 		}
 
 		if(value>0){
