@@ -2,7 +2,9 @@
 include_once'Object.php';
 header('Cache-Control: no-cache, must-revalidate, max-age=0');
 session_start();
-     
+     if(empty($_SESSION)){
+  header('location:index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
