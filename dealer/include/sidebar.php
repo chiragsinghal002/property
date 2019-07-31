@@ -169,11 +169,11 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
  <img src="image/toggle.png" /> </button>
 
 -->
-<a href="#" class="myyards360">My Yards360</a>
+
 
 
 <ul class="nav navbar-nav side-nav" id="myDIV">
-
+<a href="#" class="myyards360">My Yards360</a>
   <li>
 
     <!-- <a href="updateprofile.php" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-user"></i>Update Profile</a> -->
@@ -184,24 +184,30 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
   <p>MANAGE LISTING</p>
 
-
-<li> <a href="#.php" >Post Property</a></li>
-<li> <a href="#.php" >All Properties</a></li>
-<li> <a href="#.php" >My Matched Properties</a></li>
+<?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
+<li><a href="post_property.php" >Post Property</a></li>
+<?php endif; ?>
+<li><a href="result.php">All Properties</a></li>
+<?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
+<li><a href="#">My Matched Properties</a></li>
+<?php endif;?>
 <p>MANAGE REQUIREMENT</p>
-
-<li> <a href="#.php" >Post Requirement</a></li>
-<li> <a href="#.php" >All Requirements</a></li>
-<li> <a href="#.php" >MY Matched Requirements</a></li>
+<?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
+<li> <a href="post_requirement.php" >Post Requirement</a></li>
+<?php endif; ?>
+<?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
+<li> <a href="list_requriment.php" >All Requirements</a></li>
+<?php endif;?>
+<li> <a href="match_sell_property.php" >MY Matched Requirements</a></li>
 <li> <a href="search.php">Search Property</a></li>
 <li> <a href="#.php" >My Subscription Status</a></li>
 <li> <a href="#.php" >Manage Subuser</a></li>
-  <li>
+<!--   <li>
     <a href="result.php" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-home"></i>My Property</a>
 
 
 
-<!--  <ul id="submenu-2" class="collapse">
+ <ul id="submenu-2" class="collapse">
 
 
 
@@ -209,13 +215,13 @@ $showdetailDealer = $common->showDealerrDetail($_SESSION['dealer_email']);
 
 
 
-</ul> -->
+</ul>
 
 
 
-</li>
+</li> -->
 
-<?php 
+<!-- <?php 
 
 if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):
 
@@ -231,7 +237,7 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
 
   </li>
 
-<?php endif;?>
+<?php endif;?> -->
 
 
 
@@ -257,7 +263,7 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
 
 
 
-<li>
+<!-- <li>
 
 
 
@@ -265,19 +271,19 @@ if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==
 
 
 
-</li>
+</li> -->
 
-<?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
+<!-- <?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
 
   <li><a href="post_requirement.php"><i class="fa fa-pencil-square-o"></i>Buy Rent</a></li>
 
-<?php endif;?>
+<?php endif;?> -->
 
-<?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
+<!-- <?php if($showdetailDealer['mob_verified']==1 && $showdetailDealer['email_verified']==1):?>
 
   <li><a href="list_requriment.php"><i class="fa fa-pencil-square-o"></i>List Property</a></li>
 
-<?php endif;?>
+<?php endif;?> -->
 
 <!-- <?php 
 

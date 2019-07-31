@@ -2164,27 +2164,40 @@ public function sendWhatsapp(){
 
                           $subject = 'Oops! Expiration of subscribed package with Property App';
 
-                          $message = '<html>
+                          $message = '<!doctype html>
+                           <html>
+                            <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+                            <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+                           
+                            <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+                              <thead style="background:#fafafa">
+                                <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
+                                </tr>
+                            </thead>
+                            <tbody style="position: relative">
+                            <tr>
+                            <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
+                            <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
+                            ">Dear '.$result1['dealer_first_name'].'</h4>
+                              <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">We are sad to inform that your subscribed package has been expired.<a href="http://yards360.com/" style="padding-left:15px;">http://yards360.com/</a></p>
+                              <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;"> We also love hearing from you and helping you with any issues you have. Please reply to this email if you want to ask a question or just say Hi!.</p>
+                            </td>
+                            </tr>
+                            </tbody>
+                            
+                             <tfoot style="float: left;">
+                            <tr>
+                              <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
+                            </tr>
 
-                          <body>
+                            <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
+                            <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
+                          </tfoot>
 
-                          <h3>Dear '.$result1['dealer_first_name'].'</h3>
-
-                          <p>We are sad to inform that your subscribed package has been expired soon</p>
-
-                          <p>Kindly get it renewed timely for uninterrupted service. </p>
-
-                          <p>PS: We also love hearing from you and helping you with any issues you have. Please reply to this email if you want to ask a question or just say Hi!</p>
-
-                          <p>Thanks</p>
-
-                          <p>Property App Team</p>
-
-                          </body>
-
-                          </html>
-
-                          ';    
+                            </table>
+                            </body> 
+                            </html>
+                                ';   
 
                           $this->mail($subject,$message,$from);
                           // echo "UPDATE dealer SET dealer_status='2' where dealer_email='".$result1['dealer_email']."'";
@@ -2232,27 +2245,44 @@ public function sendWhatsapp(){
 
                       $subject = 'Oops! Expiration of Your Property';
 
-                      $message = '<html>
+                      $message = '<!doctype html>
+                           <html>
+                            <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+                            <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+                           
+                            <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+                              <thead style="background:#fafafa">
+                                <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
+                                </tr>
+                            </thead>
+                            <tbody style="position: relative">
+                            <tr>
+                            <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
+                            <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
+                            ">Dear '.$result1['dealer_first_name'].'</h4>
+                              <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">We are sad to inform that your property has been expired.<a href="http://yards360.com/" style="padding-left:15px;">http://yards360.com/</a></p>
+                              <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">
+                                 Property Code '.$result1['property_code'].'
+                              </p>
 
-                      <body>
+                              <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;"> We also love hearing from you and helping you with any issues you have. Please reply to this email if you want to ask a question or just say Hi!.</p>
+                            </td>
+                            </tr>
+                            </tbody>
+                            
+                             <tfoot style="float: left;">
+                            <tr>
+                              <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
+                            </tr>
 
-                      <h3>Dear '.$result1['dealer_first_name'].'</h3>
+                            <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
+                            <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
+                          </tfoot>
 
-                      <p>We are sad to inform that your property has been expired</p>
-
-                      <p>Property Code '.$result1['property_code'].'</p>
-
-                      <p>PS: We also love hearing from you and helping you with any issues you have. Please reply to this email if you want to ask a question or just say Hi!</p>
-
-                      <p>Thanks</p>
-
-                      <p>Property App Team</p>
-
-                      </body>
-
-                      </html>
-
-                      ';    
+                            </table>
+                            </body> 
+                            </html>
+                                ';     
 
                       $this->mail($subject,$message,$from);
                           // echo "UPDATE dealer SET dealer_status='2' where dealer_email='".$result1['dealer_email']."'";

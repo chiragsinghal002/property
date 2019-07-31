@@ -14,6 +14,7 @@ input:-webkit-autofill:active  {
     -webkit-box-shadow: 0 0 0 30px #0f1926 inset !important;  position: relative;
     bottom: 7px;
     color: #fff !important;
+        height: 20px;
 }
 input:-webkit-autofill {
     -webkit-text-fill-color: white !important;
@@ -4267,6 +4268,7 @@ font-weight: 600;
 .logreg ul li img {
     width: 28px;
     margin-right: 20px;
+    height: 28px;
 }
 .logreg .loreg {
 
@@ -4283,8 +4285,7 @@ font-weight: 600;
     color: #3CB54E;
     text-decoration: underline;
     padding: 10px 17px;
-    margin-top: 11px!important;
-    position: absolute;
+
 }
 .side-nav p {
 
@@ -4304,7 +4305,7 @@ font-weight: 600;
   overflow-x: hidden !important;
 overflow-y: scroll !important;
 }
-	.sidebar_tab {
+    .sidebar_tab {
   height: 100%;
   width: 0;
   position: fixed;
@@ -4372,17 +4373,17 @@ overflow-y: scroll !important;
     display: block;
 }
 /*.main1 {
-	margin-top: 70px;
+    margin-top: 70px;
 }*/
 .col-sm-10.fff {
-	position: relative;
+    position: relative;
 }
 .collapse {
     display: block !important;
 }
 button.srchlgoutbtn {
     background: none;
-	
+    
 }
 .min-drop {
     display: block!important;
