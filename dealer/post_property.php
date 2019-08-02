@@ -652,6 +652,16 @@ function residential_cat(id){
 		}		
 
 
+		if(property_for==0){
+			// $("#property_for_error").hide();
+		}else{
+			
+			// $("#property_for_error").show();
+			// property_for.focus();
+			return false;
+		}
+
+
 		var price=$("#price").val();
 		if(price==''){
 			$("#price_error").show();

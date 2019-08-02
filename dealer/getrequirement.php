@@ -19,7 +19,11 @@ if(isset($_GET['property_id'])){
 
 
 
+ <div class="resulttopbtn" style="background: #17e22f;color: white;font: menu;">
 
+      <h3>Matched Properties</h3>
+
+    </div><br><br>
 	<!-- Active & Delete buttons -->
 
 	<div class="resulttopbtn">
@@ -29,7 +33,7 @@ if(isset($_GET['property_id'])){
 		<button id="active" onclick="change_div(this.id);">Active</button>
 
 		<button id="expired" onclick="change_div(this.id);">Expired</button>
-		<button id="favorite" onclick="change_div(this.id);">Favorite</button>
+		<button id="favorite" onclick="change_div(this.id);">Shortlisted</button>
 
 	</div>
 
@@ -289,9 +293,9 @@ if(isset($_GET['property_id'])){
  		<div class="whtappgt">
 
  			<?php if($getResponse['whatsapp']==1){
- 				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" id='.$data['property_id'].' style="background:red;"><i class="fa fa-whatsapp" aria-hidden="true"></i>'.'WHATSAPP'.'</a>';
+ 				echo '<a target="_blank" href="https://wa.me/+91'.$propdealinfo['dealer_phone'].'" id='.$data['property_id'].' style="background:red;"><i class="fa fa-whatsapp" aria-hidden="true"></i>'.'WHATSAPP'.'</a>';
  			}else{
- 				echo '<a target="_blank" href="https://wa.me/'.$propdealinfo['dealer_phone'].'" onclick="whatsapp(this.id)" id='.$data['property_id'].'><i class="fa fa-whatsapp" aria-hidden="true"></i>'.'WHATSAPP'.'</a>';
+ 				echo '<a target="_blank" href="https://wa.me/+91'.$propdealinfo['dealer_phone'].'" onclick="whatsapp(this.id)" id='.$data['property_id'].'><i class="fa fa-whatsapp" aria-hidden="true"></i>'.'WHATSAPP'.'</a>';
  			}    ?>                                              
  		</div><br>
  		<div class="callbtngt">

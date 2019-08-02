@@ -706,16 +706,6 @@ div#plot_area {
 
         console.log(data);
 
-          Swal.fire({
-
-        type: 'success',
-
-        title: 'Thank You For Your Response',
-
-        showConfirmButton: true
-
-      })
-
       }
 
     })
@@ -740,7 +730,7 @@ div#plot_area {
 
         console.log(data);
 
-        show_call();
+        show_call(id);
 
       }
 
@@ -748,7 +738,7 @@ div#plot_area {
 
    }
 
-   function show_call(){
+   function show_call(id){
 
     var ph=$("#phone_no").val();
 
@@ -758,20 +748,8 @@ div#plot_area {
 
     var firm_name=$("#firm_name").val();
 
-    Swal.fire({
-
-      title: 'Dealer' +' '+ fname + ' ' + lname +',<br>'+' '+ 'Firm Name' +' ' + firm_name +'<br>' +'Contact Number is' + ' ' +ph,
-
-      animation: true,
-
-      customClass: {
-
-        popup: 'animated tada'
-
-      }
-
-    })
-
+    $("#call" + id ).html(ph);
+    
   }
 
 

@@ -100,10 +100,10 @@ function price_check(value){
 
 
 function sell_div(value){
-		 // alert(value);
+		  //alert(value);
 		if(value==0){
 			$("#sell_type").show();
-			$("#location_div").hide();
+			$("#location_div").show();
 		}
 		if(value==''){
 			// alert('1');
@@ -321,4 +321,37 @@ function property_type(value){
 		$('#commercial_type').css('display','inline-flex');
 	}
 }
+$(document).ready(function() {
+	$("input[name='property_for']:checked").val();
+		// alert(property_for);
+		$("#commercial_type").show();
 
+		var property_type=$("input[name='property_type_for']:checked").val();
+		if(property_type=='0'){
+			$("#sell_type").show();
+			$("#location_div").show();
+		}
+		
+	})
+function changecity(value){
+		if(value=='faridabad'){
+			var id=1;
+		}else if(value=='noida'){
+			var id=3;
+		}else if(value=='delhi'){
+			var id=2;
+		}
+		else{
+			var id='';
+		}
+
+		$.ajax({
+			url:'ajax.php',
+			type:'post',
+			data:{'changecity':'1',change_city:id},
+			success:function(data){
+				console.log(data);
+				$("#change_sector").html(data);
+			}
+		})
+	}

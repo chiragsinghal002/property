@@ -289,7 +289,7 @@ include_once'Object.php';
                     if(data=='1'){
                    // console.log('chirag1');
                     // window.location.href='user-profile.php';
-                    window.location.href='post_property.php';
+                    window.location.href='dashboard.php';
                 }
             }
         });

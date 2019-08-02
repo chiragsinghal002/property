@@ -8,7 +8,11 @@ include_once'include/sidebar.php';?>
       <?php } ?>
 
 
+ <div class="resulttopbtn" style="background: #17e22f;color: white;font: menu;">
 
+  <h3>All Properties</h3>
+
+ </div><br><br>
 
   <!-- Active & Delete buttons -->
 
@@ -61,7 +65,7 @@ include_once'include/sidebar.php';?>
          <div class="contentoflandfor">
            <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
            <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
-           <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{}?></span></p>
+          <p><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo 'Plot Area'.' '.$data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo 'Carpet Area'.' '.$data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo 'Super Built Area'.' '.$data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></p>
            <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
            
          </div>
@@ -81,7 +85,7 @@ include_once'include/sidebar.php';?>
           
          ?>
          <div class="extnddurtion">
-          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <span><?php echo $countViews.' '.'Views';?></span>
+          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by'])).', ';?> <span><?php echo $countViews.' '.'Views'.', ';?></span>
              <?php if(!empty($propertyMatched)):?>
               <a href="buy_matched.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
             <?php endif;?>
@@ -134,7 +138,9 @@ include_once'include/sidebar.php';?>
        <div class="contentoflandfor">
          <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
          <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['Expected_Price']).'/-';?></span></p>    
-         <p>Plot area:<span><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}?></span></p>
+         
+
+          <p><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo 'Super Area Unit'.' '.$data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo 'Carpet Area'.' '.$data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else if(!empty($data['Built_Up_Area'] && $data['Built_Up_Area_Unit'])){echo 'Built Area'.' '.$data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}else{}?></p>
          <?php if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}?>   
 
        </div>
@@ -223,9 +229,9 @@ include_once'include/sidebar.php';?>
         <div class="col-sm-8">
          <!-- Land for Sale: -->   
          <div class="contentoflandfor">
-           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.ucfirst($data['city']);?></h4>
            <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
-           <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{}?></span></p>
+          <p><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo 'Plot Area'.' '.$data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo 'Carpet Area'.' '.$data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo 'Super Built Area'.' '.$data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></p>
            <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
            
          </div>
@@ -251,7 +257,7 @@ include_once'include/sidebar.php';?>
           $propertyMatched=$common->getRequirementFromProperty($data,$property_for,$property_option);
          // var_dump($propertyMatched);
           ?>
-          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?>,&nbsp;&nbsp; <span><?php echo $countViews.' '.'Views'?>,&nbsp;&nbsp;</span>
+          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by'])).', ';?> <span><?php echo $countViews.' '.'Views'.', '?></span>
             
                 <?php if(!empty($propertyMatched)):?>
               <a href="buy_matched.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
@@ -304,9 +310,9 @@ include_once'include/sidebar.php';?>
       <div class="col-sm-8">
        <!-- Land for Sale: -->   
        <div class="contentoflandfor">
-         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.ucfirst($data['city']);?></h4>
          <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['Expected_Price']).'/-';?></span></p>    
-         <p>Plot area:<span><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}?></span></p>
+          <p><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo 'Super Area Unit'.' '.$data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo 'Carpet Area'.' '.$data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else if(!empty($data['Built_Up_Area'] && $data['Built_Up_Area_Unit'])){echo 'Built Area'.' '.$data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}else{}?></p>
          <?php if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}?>   
 
        </div>
@@ -328,16 +334,9 @@ include_once'include/sidebar.php';?>
           $property_for=$data['property_for'];
           $property_option='1';
           $propertyMatched=$common->getRequirementFromProperty($data,$property_for,$property_option);
-          // var_dump($propertyMatched);
+         // var_dump($propertyMatched);
           ?>
-        <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?>,&nbsp;&nbsp;<span><?php echo $countViews.' '.'Views'?>,&nbsp;&nbsp;</span>
-         <?php if(!empty($propertyMatched)):?>
-              <a href="buy_matched.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
-            <?php endif;?>
-             <?php if(empty($propertyMatched)):?>
-              <a href="#"><?php echo '0'.' '.'Property Matched';?></a>
-            <?php endif;?>
-            </p> 
+        <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by'])).', ';?> <span><?php echo $countViews.' '.'Views'.', '?></span></p> 
         <p>Category:<span><?php echo $data['cat_name'];?></span></p>
 
       </div>
@@ -423,9 +422,9 @@ include_once'include/sidebar.php';?>
         <div class="col-sm-8">
          <!-- Land for Sale: -->   
          <div class="contentoflandfor">
-           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.ucfirst($data['city']);?></h4>
            <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
-           <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{}?></span></p>
+          <p><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo 'Plot Area'.' '.$data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo 'Carpet Area'.' '.$data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo 'Super Built Area'.' '.$data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></p>
            <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
            
          </div>
@@ -445,7 +444,7 @@ include_once'include/sidebar.php';?>
           
          ?>
          <div class="extnddurtion">
-          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?> <span><?php echo $countViews.' '.'Views';?></span></p> 
+          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by'])).', ';?> <span><?php echo $countViews.' '.'Views'.', ';?></span></p> 
           <p>Category:<span><?php echo $data['cat_name'];?></span></p>        
         </div>
 
@@ -489,9 +488,9 @@ include_once'include/sidebar.php';?>
       <div class="col-sm-8">
        <!-- Land for Sale: -->   
        <div class="contentoflandfor">
-         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+         <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<span style="color: blue;"><?php if(!empty($data['subcat_name'])){echo $data['subcat_name'];}else{echo $data['cat_name'];}?></span>&nbsp;In&nbsp;<?php echo $data['sector'].' '.ucfirst($data['city']);?></h4>
          <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['Expected_Price']).'/-';?></span></p>    
-         <p>Plot area:<span><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo $data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo $data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else{echo $data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}?></span></p>
+         <p><?php if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo 'Super Area Unit'.' '.$data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo 'Carpet Area'.' '.$data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else if(!empty($data['Built_Up_Area'] && $data['Built_Up_Area_Unit'])){echo 'Built Area'.' '.$data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}else{}?></p>
          <?php if($data['Wash_Room']>0){echo '<p>'.'Washroom:'.'<span>'.$data['Wash_Room'].'</span>'.'</p>';}?>   
 
        </div>

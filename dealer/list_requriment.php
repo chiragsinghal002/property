@@ -8,9 +8,9 @@ $properties=$common->getdealerpropertyrequriment($_SESSION['dealer_id']);
    // var_dump($properties);
 ?>
 <div class="buyrentdiv">  
-<?php if($showdetailDealer['email_verified']!=='1'){ ?>
-      <?php include("include/verified.php"); ?>
-      <?php } ?>
+  <?php if($showdetailDealer['email_verified']!=='1'){ ?>
+    <?php include("include/verified.php"); ?>
+  <?php } ?>
 
 
 
@@ -74,7 +74,11 @@ $properties=$common->getdealerpropertyrequriment($_SESSION['dealer_id']);
 
 
     <!-- 3 Active Products: Lxtend Duration  -->
+    <div class="resulttopbtn" style="background: #17e22f;color: white;font: menu;">
 
+      <h3>All Requirements</h3>
+
+    </div><br><br>
 
 
     <div class="resultactiveprdcts">
@@ -105,56 +109,56 @@ $properties=$common->getdealerpropertyrequriment($_SESSION['dealer_id']);
 
    <!--  Land For Sale: -->
    <?php if(!empty($properties)){?>
-   <?php foreach($properties as $data){
+     <?php foreach($properties as $data){
       // var_dump($data);
-    ?>
+      ?>
 
-    <div class="landforsale">
-      <div class="row">
-        <div class="col-sm-8">
-         <!-- Land for Sale: -->   
-         <div class="contentoflandfor">
-           <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<?php echo $data['cat_name'];?>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
-           <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
-           <p>Plot area:<span><?php if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo $data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo $data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else{}?></span></p>
-           <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
-         </div>
-         <!-- Active and Posted On -->         
-         <div class="expireon">
-           <p><?php echo $data['property_code'];?><span>Active</span></p>
-           <p class="postedon">Posted On: <span style="border: none;"><?php echo date('d M Y',strtotime($data['posted_by']));?></span></p>
-         
-           
-
-         </div>
+      <div class="landforsale">
+        <div class="row">
+          <div class="col-sm-8">
+           <!-- Land for Sale: -->   
+           <div class="contentoflandfor">
+             <h4><?php if($data['property_for']==0){echo 'Residential';}else{echo 'Commercial';}?>&nbsp;<?php echo $data['cat_name'];?>&nbsp;In&nbsp;<?php echo $data['sector'].' '.$data['city'];?></h4>
+             <p>Price:<span><i class="fa fa-inr"></i><?php echo number_format($data['price']).'/-';?></span></p>    
+             <p><?php  if(!empty($data['Plot_Area'] && $data['Plot_Area_Unit'])){echo 'Plot Area'.' '.$data['Plot_Area'].' '.$data['Plot_Area_Unit'];}else if(!empty($data['Carpet_Area'] && $data['Carpet_Area_Unit'])){echo 'Carpet Area'.' '.$data['Carpet_Area'].' '.$data['Carpet_Area_Unit'];}else if(!empty($data['Super_Built_Up_Area'] && $data['Super_Built_Up_Area_Unit'])){echo 'Super Built Area'.' '.$data['Super_Built_Up_Area'].' '.$data['Super_Built_Up_Area_Unit'];}else if(!empty($data['Super_Area'] && $data['Super_Area_Unit'])){echo 'Super Area Unit'.' '.$data['Super_Area'].' '.$data['Super_Area_Unit'];}else if(!empty($data['Built_Up_Area'] && $data['Built_Up_Area_Unit'])){echo 'Built Area'.' '.$data['Built_Up_Area'].' '.$data['Built_Up_Area_Unit'];}else{}?></p>
+             <?php if($data['Bedroom']>0){echo '<p>'.'Bedroom:'.'<span>'.$data['Bedroom'].'BHK'.'</span>'.'</p>';}?>   
+           </div>
+           <!-- Active and Posted On -->         
+           <div class="expireon">
+             <p><?php echo $data['property_code'];?><span>Active</span></p>
+             <p class="postedon">Posted On: <span style="border: none;"><?php echo date('d M Y',strtotime($data['posted_by']));?></span></p>
 
 
 
-         <!-- Expire On -->  
+           </div>
 
 
 
-         <div class="extnddurtion">
-          <?php 
-          $property_for=$data['property_for'];
-          $property_option='0';
-          $propertyMatched=$common->getRequirementFromProperty($data,$property_for,$property_option);
+           <!-- Expire On -->  
+
+
+
+           <div class="extnddurtion">
+            <?php 
+            $property_for=$data['property_for'];
+            $property_option='0';
+            $propertyMatched=$common->getRequirementFromProperty($data,$property_for,$property_option);
         // var_dump($propertyMatched);
-          ?>
-          <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by']));?>
-          <?php if(!empty($propertyMatched)):?>
-           <a href="getrequirement.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
-         <?php endif;if(empty($propertyMatched)):?>
-         <span style="color: blue;"><?php echo '0'.' '.'Property Matched';?></span>
+            ?>
+            <p>Expiry On: <?php echo date('d M Y',strtotime($data['expired_by'])).', ';?>
+            <?php if(!empty($propertyMatched)):?>
+             <a href="getrequirement.php?property_id=<?php echo base64_encode($data['property_id']);?>&&property_for=<?php echo base64_encode($data['property_for']);?>"><?php echo count($propertyMatched).' '.'Property Matched';?></a>
+           <?php endif;if(empty($propertyMatched)):?>
+           <span style="color: blue;"><?php echo '0'.' '.'Property Matched';?></span>
          <?php endif;?>
-         </p> 
-            <p>Category:<span><?php echo $data['cat_name'];?></span></p>
-           <?php if(!empty($data['subcat_name'])){echo  '<p>'.'SubCat:'.'<span>'.$data['subcat_name'].'</span>'.'</p>';}?>
-        </div>
+       </p> 
+       <p>Category:<span><?php echo $data['cat_name'];?></span></p>
+       <?php if(!empty($data['subcat_name'])){echo  '<p>'.'SubCat:'.'<span>'.$data['subcat_name'].'</span>'.'</p>';}?>
+     </div>
 
 
 
-        <!-- Summary Views: -->
+     <!-- Summary Views: -->
 
 
 
@@ -321,18 +325,18 @@ $properties=$common->getdealerpropertyrequriment($_SESSION['dealer_id']);
   function del(value){
     if (confirm("Are you sure want to delete?")) {
         // your deletion code
-      $.ajax({
-        url:'ajax.php',
-        type:'post',
-        data:{property_id:value},
-        success:function(data){
-          document.location.reload(true);
-        }
-      })
+        $.ajax({
+          url:'ajax.php',
+          type:'post',
+          data:{property_id:value},
+          success:function(data){
+            document.location.reload(true);
+          }
+        })
+      }
+      return false;
     }
-    return false;
-  }
-</script>
+  </script>
 
 
 

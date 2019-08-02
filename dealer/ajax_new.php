@@ -29,67 +29,68 @@ if(isset($_POST['property_for'])){
 		$subject = "".count($search)." Property Matched";
 		foreach($search as $data){
 			$cat_name=$common->getCategoryName($data['cat_id']);
-			//  $message = 'Property Code:-';
-			//  $message .=$data['property_code'].'<br>';
-			//  $message .='Property Category:-'.$cat_name['cat_name'].'<br>';
-			//  $message .='City:-'.$data['city'].'<br>';
-			//  $message .='Sector:-'.$data['sector'].'<br>';
+			// $message = 'Property Code:-';
+			// $message .=$data['property_code'].'<br>';
+			// $message .='Property Category:-'.$cat_name['cat_name'].'<br>';
+			// $message .='City:-'.$data['city'].'<br>';
+			// $message .='Sector:-'.$data['sector'].'<br>';
 			// $message .='<a href="yards360.com/list_requriment.php">Yards360.com</a>';
-			$message='
-			<!doctype html>
-   <html>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900&display=swap" rel="stylesheet">
+			$message='<!doctype html>
+			<html>
+			<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">  
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
-   
-    <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
-      <thead style="background:#fafafa">
-        <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
-        </tr>
-    </thead>
-    <tbody style="position: relative">
-     
-     <tr>
-       <td><h4 style="margin-top: 0px;font-family: "Source Sans Pro"; color: #3cb54a;padding-left: 27px;padding-top: 13px;font-size: 28px;margin-bottom: 15px;">Residential <span style="color: blue;padding-right: 8px;">Studio Apartment</span>In Sector 12 faridabad</h4></td>
-     </tr>
+			<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+			<body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
 
-     <tr>
-       <td style="float: left;"><p style="font-family: "Source Sans Pro", sans-serif;;padding-left: 27px;margin-top: 0px;color: #3cb54a;font-size: 18px;letter-spacing: 1px;margin-bottom: 0px;">Price:<span style="color: black;padding-left: 10px;    margin-bottom: 0px;"><i class="fa fa-inr"></i>23/-</span></p></td>
+			<table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+			<thead style="background:#fafafa">
+			<tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
+			</tr>
+			</thead>
+			<tbody style="position: relative">
 
-       <td style="float: left;"><p style="font-family: "Source Sans Pro", sans-serif;margin-top: 2px;
-    letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Plot area: <span style="padding-left: 20px;">Bedroom:</span> <span style="color: black">3BHK</span></p> </td>
-     </tr>
+			<tr>
+			<td><h4 style="margin-top: 0px; color: #3cb54a;padding-left: 27px;padding-top: 13px;font-size: 25px;margin-bottom: 15px;">Residential <span style="color: blue;padding-right: 8px;">'.$cat_name['cat_name'].'</span>In '.$data['sector'].' '.$data['city'].'</h4></td>
+			</tr>
 
-     <tr>
-       <td style="float: left;"><p style="padding-left: 27px;font-size:18px;">Category:<span>Appartment/  Flat / Builder Floor</span></p></td>
-     </tr>
-    
-    </tbody>
-    
-     <tfoot style="float: left;padding-top: 55px;">
-    <tr>
-      <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
-    </tr>
+			<tr>
+			<td style="float: left;"><p style="padding-left: 27px;margin-top: 0px;color: #3cb54a;font-size: 18px;letter-spacing: 1px;margin-bottom: 0px;">Price:<span style="color: black;font-size: 18px;padding-left: 10px;margin-bottom: 0px;"><i class="fa fa-inr"></i>23/-</span></p>
+			</td>
 
-    <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
-    <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr>
-  </tfoot>
+			<td style="float: left;"><p style="margin-top: 0px;
+			letter-spacing: 1px;padding-left: 32px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Plot area: <span style="padding-left: 20px;">Bedroom:</span> <span style="color: black">3BHK</span></p> 
+			</td>
+			</tr>
 
-    </table>
-    </body> 
-    </html>'
+			<tr>
+			<td style="float: left;"><p style="padding-left: 27px;font-size:18px;color:black;">Category:<span>'.$cat_name['cat_name'].'</span></p></td>
+			</tr>
+
+			</tbody>
+
+			<tfoot style="float: left;padding-top: 55px;">
+			<tr>
+			<td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
+			</tr>
+
+			<tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
+			<tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr>
+			</tfoot>
+
+			</table>
+			</body> 
+			</html>';
 			$requirementDealer=$common->getDealerInfobyId($data['dealer_id']);
 			$torequirementDealer=$requirementDealer['dealer_email'];
-			$subject1="".count($search)." Property Matched From Your Requirement";
+			$subject1=count($search)." Property Matched From Your Requirement";
 			$common->mail($subject1,$message,$torequirementDealer);
-			$msg=count($search).'PropertyMatchedFromYourRequirement';
+			$msg=urlencode(count($search).' '."Property Matched From Your Requirement");
 			$common->smsApi($msg,$requirementDealer['dealer_phone']);
 		}
 		// $common->smsApi($msg,$data['phone']);
 		$common->mail($subject,$message,$from);
-		$msg1=count($search).'PropertyMatched';
+
+		$msg1=urlencode(count($search).' '."Property Matched");
 		$common->smsApi($msg1,$_SESSION['dealer_phone']);
 		//$common->sendWhatsapp();
 		// $subject,$message,$from
@@ -103,7 +104,8 @@ if(isset($_POST['submit_otp'])){
 	$data['fname']=$_POST['fname'];
 	$data['email']=$_POST['email1'];
 	$data['phone']=$_POST['phone'];
-	$data['otp']=rand(0000,9999);
+	$digits = 4;
+	$data['otp']=rand(pow(10, $digits-1), pow(10, $digits)-1);
 	$result=$common->otpVerification($data);
 	$msg=array('status'=>1,'otp'=>$data['otp']);
 	// return $msg;

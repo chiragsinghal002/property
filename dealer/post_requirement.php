@@ -22,7 +22,7 @@ if(isset($_GET['msg'])){
 				</div>
 				<div class="drop-html">
 					<div class="dropdown">
-						<input type="radio" name="property_for" id="property_for" value="0" onchange="property_type(this.value)">Residential
+						<input type="radio" name="property_for" id="property_for" value="0" onchange="property_type(this.value)" checked="checked">Residential
 						<input type="radio" name="property_for" id="property_for" value="1" onchange="property_type(this.value)">Commercial
 						<span id="property_for_error" style="color: red;display: none;">*This Field is Required</span>
 					</div>
@@ -40,7 +40,7 @@ if(isset($_GET['msg'])){
 							<option value="0">Buy</option>
 							<option value="1">Rent</option>
 						</select> -->
-						<input type="radio" name="property_type_for" id="property_type_for" onchange="sell_div(this.value)" value="0">Sell
+						<input type="radio" name="property_type_for" id="property_type_for" onchange="sell_div(this.value)" value="0" checked="checked">Buy
 							<input type="radio" name="property_type_for" id="property_type_for" onchange="sell_div(this.value)" value="1">Rent
 						<span id="property_type_for_error" style="color: red;display: none;">*This Field is Required</span>
 					</div>
@@ -59,7 +59,7 @@ if(isset($_GET['msg'])){
 							<option value="0">Resale</option>
 							<option value="1">New Booking</option>
 						</select> -->
-						<input type="radio" name="property_sell_type" id="sell_type_new" onchange="show_address(this.value)" value="0">Resale
+						<input type="radio" name="property_sell_type" id="sell_type_new" onchange="show_address(this.value)" value="0" checked="checked">Resale
 					<input type="radio" name="property_sell_type" id="sell_type_new" onchange="show_address(this.value)" value="1">New Booking
 						<span id="sell_type_new_error" style="color: red;display: none;">*This Field is Required</span>
 					</div>
@@ -74,8 +74,11 @@ if(isset($_GET['msg'])){
 					</div>
 					<div class="drop-html1	">
 						<div class="dropdown">
-							<select id="city" name="city">
+							<select id="city" name="city" onchange="changecity(this.value)">
+								<option value="" style="color: #ccc;">--Select City--</option>
 								<option value="faridabad">Faridabad</option>
+								<option value="noida">Noida</option>
+								<option value="delhi">Delhi</option>
 							</select>
 						</div>
 					</div>
@@ -87,30 +90,23 @@ if(isset($_GET['msg'])){
 					<div class="drop-html1	">
 						<div class="dropdown">
 							<div class="drop-html1 brsc">
-								<?php $location=$common->getAreaSector(1);?>
-								<!-- <input type="text" name="sector" placeholder="Area/Sector" class="ginputfield" id="sector"> -->
+								<div id="change_sector">
 
-								<select id="sector" name="sector" class="js-example-basic-single">
-									<option value=""></option>
-									<?php foreach($location as $data){
-										echo '<option value="'.$data['sector_area'].'">'.$data['sector_area'].'</option>';
-									}?>
-
-								</select>
+								</div>
 								<span id="sector_error" style="color:red;display: none;">*This Sector Field is Required</span>
 							</div>
 						</div>
 					</div>
 				</div>
 				<?php //var_dump($location);?>
-				<div class="apprtmnt">
+				<!-- <div class="apprtmnt">
 					<div class="typeheading">
 						<p>Google Location*:</p>
 					</div>
 					<div class="drop-html1">
 						<input type="text" name="google_location" placeholder="Text " class="ginputfield">
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<div class="proptype">
 				<p>Property Type:</p><span id="category_id_error" style="color:red;display: none;">*Select Any Category</span>

@@ -165,9 +165,9 @@ ul.nav.navbar-nav.side-nav {
     margin-top: 40px;
 }
 
-ul.nav.navbar-nav.side-nav li a:hover {
+/*ul.nav.navbar-nav.side-nav li a:hover {
     background: #3e4f66 !important;
-}
+}*/
 
 .collapse.navbar-collapse.navbar-ex1-collapse {
     padding-left: 0px;
@@ -232,6 +232,8 @@ i.glyphicon.glyphicon-briefcase {
 
 .sidebar .col-sm-2 {
     padding-right: 0px;
+    background: #0F1926;
+    padding-left: 0px;
 }
 .col-sm-10.fff {
     padding-left: 0px;
@@ -253,7 +255,7 @@ ul.nav.navbar-nav.side-nav li {
     width: 590px !important;
 }
 .container.extrapaddng .dropdown {
-    color: #ffffff;
+    color: #000000;
 }
 
 .container.extrapaddng .dropdown input {
@@ -554,7 +556,7 @@ color: #fff;
      /*color: #3cb54e;*/
 }
  .select2-container--default .select2-selection--single .select2-selection__rendered {
-     color: #f7f3f3 !important;
+     color: #000000 !important;
      line-height: 58px !important;
      font-size: 12px;
 }
@@ -1614,11 +1616,12 @@ p.price-heading:after {
 }
  .main1 {
         padding-bottom: 80px!important;
-     background: url(../image/post-property.jpg);
- /*    background:#ffffff;*/
+     /*background: url(../image/post-property.jpg);*/
+     background:#ffffff;
     background-size: cover;
     height: 100%;
     padding: 25px;
+    
 }
  .btn.btn-primary span{
      color: black;
@@ -1694,8 +1697,9 @@ p.price-heading:after {
  .typeheading p {
      font-size: 18px;
      font-family: 'Open Sans', sans-serif;
-     color: #ffffff;
+     color: #000000;
      margin: 0px;
+    background: #ffffff;
 }
  .glocationdiv p {
      font-size: 18px;
@@ -1796,8 +1800,8 @@ select#sector {
     outline: unset;
     margin-left: 21px;
     background: none;
-    border-bottom: 1px solid #ffffff;
-    color: #ffffff;
+    border-bottom: 1px solid #000000;
+    color: #000000;
     font-size: 15px;
 }
 
@@ -1812,7 +1816,7 @@ select#sector {
      margin-top:22px;
      font-family: 'Lato', sans-serif;
      font-size: 18px;
-    color: #ffffff;
+    color: #000000;
 }
 
 .drop-html .dropdown {
@@ -1836,9 +1840,9 @@ input.ginputfield {
     padding-left: 5px;
     background: none;
     outline: unset;
-    border-bottom: 1px solid #ffffff;
+    border-bottom: 1px solid #000000;
     font-size: 15px;
-    color: #ffffff;
+    color: #000000;
 }
  .tab-content {
      width: 90%;
@@ -2181,7 +2185,7 @@ input.ginputfield {
 /*Css for Search Page:*/
 /*Sidebar of Search Page*/
  .sidebar{
-     background: #0f1926;
+     background: #E4E7EC;
 }
 .srchimg {
     width: 100%;
@@ -2294,10 +2298,19 @@ input.ginputfield {
      height: 30px;
 }*/
  .buyrentdiv{
-     background: url(../image/inner-bg.jpg);
+     /*background: url(../image/inner-bg.jpg);*/
      background-size: cover;
+     background: #ffffff;
      height: 100%;
      padding: 25px;
+    height: 700px;
+    overflow-y: scroll;
+
+}
+.buyrentdiv::-webkit-scrollbar {
+    background-color: #3CB54E!important;
+    width: 6px;
+    height: 100px;
 }
  .allresidntl select {
      color: black;
@@ -2723,7 +2736,7 @@ input.ginputfield {
      width: 100%;
 }
  .searchadmnlogo {
-     margin-top: 1em;
+     /*margin-top: 1em;*/
      /*margin-left: 4em;*/
 }
  .searchlogo {
@@ -2794,6 +2807,7 @@ p.new.yards {
      color: white;
      font-size: 15px;
      font-family: 'Lato', sans-serif;
+    line-height: 10px;
 }
  .nav.navbar-nav.side-nav li a:hover {
      background: none;
@@ -3314,11 +3328,13 @@ img.admnimg {
 }
 /*Css For Result Page:*/
  .landforsale {
-     background: white;
+      border: 1px solid gray;
+    background: rgba(244,245,249,.6);
      margin-top: 37px;
 }
  .resulttopbtn {
-     background: white;
+        border: 1px solid gray;
+    background: rgba(244,245,249,.6);
      display: inline-flex;
      width: 100%;
 }
@@ -3341,7 +3357,7 @@ img.admnimg {
      outline: none !important;
 }
  .resulttopbtn button {
-     background: white;
+     background: rgba(244,245,249,.6);
      border: none;
      padding: 11px;
     /* width: 9%;*/
@@ -3349,7 +3365,8 @@ img.admnimg {
 }
  .resultactiveprdcts {
      display: inline-flex;
-     background: white;
+         border: 1px solid gray;
+    background: rgba(244,245,249,.6);
      margin-top: 37px;
      width: 100%;
 }
@@ -4053,7 +4070,7 @@ p.succmsg {
     color: #000000!importanty;
 }
 .main1 label {
-    color: #ffffff!important;
+    color: #000000!important;
 }
 .src-btn label {
     color: #000000!important;
@@ -4071,8 +4088,8 @@ i.fa.fa-lock {
     border: none;
     outline: unset;
     background: none;
-    border-bottom: 1px solid #ffffff!important;
-    color: #ffffff;
+    border-bottom: 1px solid #000000!important;
+    color: #000000;
     font-size: 15px;
     border-radius: 0px!important;
         text-transform: capitalize;
@@ -4221,6 +4238,7 @@ bottom: 0px;
 background: #000;
 margin: 0px;
 padding: 0px 5px;
+    text-transform: capitalize;
 }
 .uppro-container .fa.fa-whatsapp {
 
@@ -4288,11 +4306,21 @@ font-weight: 600;
 
 }
 .side-nav p {
-
-    color: #939598;
-    font-size: 16px;
+   color: #939598;
+    font-size: 15px;
     padding-top: 20px;
-
+    line-height: 18px;
+}
+ul.nav.navbar-nav.side-nav li a.active {
+    color: ##3CB54E!important;
+    /*background: #3e4f66 !important;*/
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #ffffff!important;
+    opacity: 1!important;
+}
+.bgclr{
+    background: #ffffff;
 }
 
 

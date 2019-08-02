@@ -164,25 +164,25 @@ public  function searchresultbuy($data,$dealer_id) {
 
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'])){
 
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
 
             // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'";die;
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else if($data['cat_id']==27){
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else{
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
-           $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+           $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
        }else{
-        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type!='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ") or die(mysqli_query($this->db)); 
     }
 
 }
@@ -210,25 +210,25 @@ public  function searchresultrent($data,$dealer_id) {
 
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'])){
             // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND property_option='0' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."'";
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
              // echo "SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."";die;
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Plot_Area_Unit='".$data['plot_size_area_value']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else if($data['cat_id']==27){
 
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
         }else{
-            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+            $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND Super_Built_Up_Area_Unit='".$data['plot_size_area_value']."' AND construction_status='".$data['cons_status']."' AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND Super_Built_Up_Area='".$data['plot_area']."' AND Bedroom='".$data['show_bkh']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
         }
 
     }else{
         if(empty($data['price_range_min'] && $data['plot_area'] && $data['plot_size_area_value'] && $data['cons_status'] && $data['show_bkh'])){
-           $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+           $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1'  AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND cat_id='".$data['cat_id']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."'") or die(mysqli_query($this->db)); 
        }else{
-        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']." ORDER BY property_id DESC") or die(mysqli_query($this->db)); 
+        $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['choose_type']."' AND status='1' AND construction_status=".$data['cons_status']." AND city LIKE '".$data['searching']."%' OR sector LIKE '".$data['searching']."%' AND Plot_Area_Unit='".$data['plot_size_area_value']."'  AND cat_id='".$data['cat_id']."' AND Bedroom='".$data['show_bkh']."' AND Plot_Area='".$data['plot_area']."' AND property_type='".$property_type."' AND property_option='0' AND dealer_id!='".$dealer_id."' AND price BETWEEN ".$data['price_range_min']." AND ".$data['price_range_max']."") or die(mysqli_query($this->db)); 
     }
 
 
@@ -278,7 +278,7 @@ public  function getRequirementFromProperty($data,$property_for,$property_option
         $max_price=$price+$amt_price;
         if($property_option=='0'){
          if($data['cat_id']==26){
-             // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
+            // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."";die;
             $result=$this->db->query("SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND status='1' AND property_option='".$property_option."' AND city='".$data['city']."' AND sector='".$data['sector']."' AND cat_id='".$data['cat_id']."' AND dealer_id!='".$data['dealer_id']."' AND price BETWEEN ".$min_price." AND ".$max_price."") or die(mysqli_query($this->db)); 
         }else if($data['cat_id']==27){
         // echo "SELECT * FROM residential_properties where property_for='".$data['property_for']."' AND Bedroom='".$data['show_bkh']."' AND price BETWEEN ".$min_price." AND ".$max_price." AND status='1' AND property_option=".$property_option." AND city='".$data['city']."%' AND sector='".$data['sector']."%' AND cat_id='".$data['cat_id']."'";die;
@@ -1016,16 +1016,15 @@ public function getdealerproperty($dealer_id,$type){
 
     switch ($type) {
         case 'Active':
-        //echo "SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."' AND expired_by>='".$today."' ORDER BY residential_properties.property_id DESC";die;
-        $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."' AND expired_by>='".$today."' ORDER BY residential_properties.property_id DESC") or die(mysqli_error($this->db)); 
+        $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."' AND expired_by>='".$today."'") or die(mysqli_error($this->db)); 
         break;
 
         case 'Expired':
-        $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."' AND expired_by<'".$today."' ORDER BY residential_properties.property_id DESC") or die(mysqli_error($this->db)); 
+        $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."' AND expired_by<'".$today."'") or die(mysqli_error($this->db)); 
         break;
         
         default:
-        $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."' ORDER BY residential_properties.property_id DESC") or die(mysqli_error($this->db)); 
+        $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."'") or die(mysqli_error($this->db)); 
         break;
     }
     
@@ -1047,16 +1046,15 @@ public function getDealerCommProperty($dealer_id,$type){
     $today=date('Y-m-d h:i:s');
     switch ($type) {
         case 'Active':
-        // echo "SELECT commercial_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM commercial_properties INNER JOIN property_category ON commercial_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON commercial_properties.subcat_id=property_subcategory.subcat_id where commercial_properties.dealer_id='".$dealer_id."' AND commercial_properties.property_option='".$property_option."' AND expired_by>='".$today."' ORDER BY commercial_properties.property_id DESC";die;
-        $selectproperties = $this->db->query("SELECT commercial_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM commercial_properties INNER JOIN property_category ON commercial_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON commercial_properties.subcat_id=property_subcategory.subcat_id where commercial_properties.dealer_id='".$dealer_id."' AND commercial_properties.property_option='".$property_option."' AND expired_by>='".$today."' ORDER BY commercial_properties.property_id DESC") or die(mysqli_error($this->db));  
+        $selectproperties = $this->db->query("SELECT commercial_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM commercial_properties INNER JOIN property_category ON commercial_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON commercial_properties.subcat_id=property_subcategory.subcat_id where commercial_properties.dealer_id='".$dealer_id."' AND commercial_properties.property_option='".$property_option."' AND expired_by>='".$today."'") or die(mysqli_error($this->db));  
         break;
 
         case 'Expired':
-        $selectproperties = $this->db->query("SELECT commercial_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM commercial_properties INNER JOIN property_category ON commercial_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON commercial_properties.subcat_id=property_subcategory.subcat_id where commercial_properties.dealer_id='".$dealer_id."' AND commercial_properties.property_option='".$property_option."' AND expired_by<'".$today."' ORDER BY commercial_properties.property_id DESC") or die(mysqli_error($this->db));  
+        $selectproperties = $this->db->query("SELECT commercial_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM commercial_properties INNER JOIN property_category ON commercial_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON commercial_properties.subcat_id=property_subcategory.subcat_id where commercial_properties.dealer_id='".$dealer_id."' AND commercial_properties.property_option='".$property_option."' AND expired_by<'".$today."'") or die(mysqli_error($this->db));  
         break;
         
         default:
-        $selectproperties = $this->db->query("SELECT commercial_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM commercial_properties INNER JOIN property_category ON commercial_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON commercial_properties.subcat_id=property_subcategory.subcat_id where commercial_properties.dealer_id='".$dealer_id."' AND commercial_properties.property_option='".$property_option."' ORDER BY commercial_properties.property_id DESC") or die(mysqli_error($this->db));  
+        $selectproperties = $this->db->query("SELECT commercial_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM commercial_properties INNER JOIN property_category ON commercial_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON commercial_properties.subcat_id=property_subcategory.subcat_id where commercial_properties.dealer_id='".$dealer_id."' AND commercial_properties.property_option='".$property_option."'") or die(mysqli_error($this->db));  
         break;
     }
 
@@ -1079,7 +1077,7 @@ public function getdealerpropertyrequriment($dealer_id){
 
      $property_option=1;//for only purchase
 
-     $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."' ORDER BY residential_properties.property_id DESC") or die(mysqli_error($this->db));  
+     $selectproperties = $this->db->query("SELECT residential_properties.*,property_category.cat_name,property_subcategory.subcat_name FROM residential_properties INNER JOIN property_category ON residential_properties.cat_id=property_category.cat_id LEFT JOIN property_subcategory ON residential_properties.subcat_id=property_subcategory.subcat_id where residential_properties.dealer_id='".$dealer_id."' AND residential_properties.property_option='".$property_option."'") or die(mysqli_error($this->db));  
      $fetch_num=mysqli_num_rows($selectproperties);
      if($fetch_num>0){
          while($fetch=mysqli_fetch_array($selectproperties)){
@@ -1200,21 +1198,6 @@ public function insert($table, $data) {
     }else{
         return '0';
     }
-}
-
-    public function insert_id($table, $data) {
-    $key = array_keys($data);
-    $val = array_values($data);
-    // echo "INSERT INTO $table (" . implode(', ', $key) . ") "
-    //    . "VALUES ('" . implode("', '", $val) . "')";die;
-    $sql = $this->db->query("INSERT INTO $table (" . implode(', ', $key) . ") "
-     . "VALUES ('" . implode("', '", $val) . "')") or die(mysqli_error($this->db));
-
-    if($sql){
-        return $this->db->insert_id;
-    }else{
-        return '0';
-    }
 
 }
 
@@ -1317,7 +1300,6 @@ public  function register($data)
             // session_start();
             // $_SESSION['email']=$data['email'];
             $this->verifyEmail($data['email']);
-            $this->userDetails($data['fname'],$data['email'],$data['password']);
             echo "1";
         }
         else
@@ -1345,31 +1327,29 @@ public function register_mail($data){
     <p>Greetings! Hope you are having a good day.</p>
     <p>Thank you for registering with us. We have received your registration request. Your request will be approved soon. </p>
     <p>Thanks</p>
-    <p>Yards360</p>
+    <p>Property App Team</p>
     </body>
     </html>
 
     ';    
-
-    /*Admin Email*/
     $this->mail($subject,$message,$from);
 
-    $to = 'info@yards360.com';//admin email
-    $subject1 = 'New Registration Request From Yards360';
+    $from1 = 'admin@gmail.com';
+    $subject1 = 'New Registration Request';
     $message1 = '<html>
 
     <body>
     <h3>Dear Admin</h3>
-    <p>New registration request has been received. Please check admin for the approval. </p>
+    <p>New registration request has been received. Please check your dashboard for the approval. </p>
 
     <p>Thanks</p>
-    <p>Yards360</p>
+    <p>Property App Team</p>
     </body>
     </html>
 
     ';
 
-    $this->adminmail($subject1,$message1,$to);
+    $this->adminmail($subject1,$message1,$from1);
 }
 
     // dealer expire
@@ -1543,41 +1523,15 @@ public function UserForgotPassword($email){
         // $from = 'chirag.netmaxims@gmail.com';
         $to=$fetch['dealer_email'];
         // $subject = 'Forgot your Password for Property App?';
-        $message = '<!doctype html>
-        <html>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
-        <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
-
-        <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
-        <thead style="background:#fafafa">
-        <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
-        </tr>
-        </thead>
-        <tbody style="position: relative">
-        <tr>
-        <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
-        <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
-        ">Dear '.$fetch['dealer_first_name'].'</h4>
-        <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Someone, hopefully you, has requested to reset the password for your yards360 account on<a href="http://yards360.com/" style="padding-left:15px;">http://yards360.com/</a></p>
-        <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email.</p>
-        <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Otherwise, click the link below to complete the process.</p>
-        <p style="font-size: 15px;font-weight: 600;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;"><br><br><a href="'.BASEURL.'reset_password.php?key='.$pass.'" style="color: #1155cc;
-        letter-spacing: 1px;">Reset Password Link.</a></p>
-        </td>
-        </tr>
-        </tbody>
-
-        <tfoot style="float: left;">
-        <tr>
-        <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
-        </tr>
-
-        <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
-        <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
-        </tfoot>
-
-        </table>
-        </body> 
+        $message = '<html>
+        <body>
+        <h3>Dear '.$fetch['dealer_first_name'].'</h3>
+        <p>Greetings! Hope you are having a good day.</p>
+        <p>Seems like you forgot your password for Property App. If this is true, click below to reset your password.</p>
+        <a href="'.BASEURL.'reset_password.php?key='.$pass.'">Reset Password Link</a>
+        <p>Thanks</p>
+        <p>Property App Team</p>
+        </body>
         </html>
         ';    
         $subject='RESET PASSWORD LINK';
@@ -1633,40 +1587,15 @@ public function verifyEmail($email){
         // $from = 'chirag.netmaxims@gmail.com';
         $to=$fetch['dealer_email'];
         // $subject = 'Forgot your Password for Property App?';
-        $message = '<!doctype html>
-        <html>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
-        <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
-
-        <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
-        <thead style="background:#fafafa">
-        <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
-        </tr>
-        </thead>
-        <tbody style="position: relative">
-        <tr>
-        <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
-        <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
-        ">Dear '.$fetch['dealer_first_name'].'</h4>
-        <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Thanks for signing up to Yards360!<a href="http://yards360.com/" style="padding-left:15px;">http://yards360.com/</a></p>
-        <p style="font-size: 15px;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">To get started, click the link below to confirm your account.</p>
-        <p style="font-size: 15px;font-weight: 600;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;"><br><br><a href="'.BASEURL.'verify_email.php?key='.$pass.'" style="color: #1155cc;
-        letter-spacing: 1px;">Verify Email Link.</a></p>
-        </td>
-        </tr>
-        </tbody>
-
-        <tfoot style="float: left;">
-        <tr>
-        <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
-        </tr>
-
-        <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
-        <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
-        </tfoot>
-
-        </table>
-        </body> 
+        $message = '<html>
+        <body>
+        <h3>Dear '.$fetch['dealer_first_name'].'</h3>
+        <p>Greetings! Hope you are having a good day.</p>
+        <p>Seems like you forgot your password for Property App. If this is true, click below to reset your password.</p>
+        <a href="'.BASEURL.'verify_email.php?key='.$pass.'">Verify Email Link</a>
+        <p>Thanks</p>
+        <p>Property App Team</p>
+        </body>
         </html>
         ';    
         $subject='EMAIL VERIFY LINK';
@@ -1707,101 +1636,7 @@ public function verifyEmail($email){
 
 
 /*Close Verify Email Function*/
-/*Open User Details Send via Email*/
-public function userDetails($fname,$email,$password){
-    $to=$email;
-    $message = '<html>
-     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">  
 
-     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-     <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 620px;border-top: 4px solid #6b4fbb;">
-   
-     <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;text-align: center;margin: 0 auto;display: table; position: relative;margin-top: 140px;" >
-       <thead style="background:#fafafa">
-         <tr style="background:#ffffff"><td background:white;> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block"></td>
-         </tr>
-     </thead>
-     <tbody style="position: relative">
-     
-      <tr>
-        <td><h4 style="float: left;margin-top: 0px; color: #000000;padding-left: 27px;padding-top: 20px;font-size: 25px;margin-bottom: 15px;letter-spacing: 1px;">Dear '.ucfirst($fname).'</h4>
-        </td>
-      </tr>
-
-      <tr>
-       <td style="float: left;"><p style="padding-left: 27px;margin-top: 0px;color: #000000;font-size: 18px;letter-spacing: 1px;margin-bottom: 0px;">Thanks for registering on yards360.</p>
-        </td>
-
-        <tr>
-         <td><span  style=" float: left;margin-left: 27px;border: 2px #d8232a;border-bottom-style: solid;width: 30px;display: inline-block;position: absolute;left: 41px;right: 0px;"></span></td>
-      </tr>
-
-
-        <td style="float: left;"><p style="margin-top: 0px;
-     letter-spacing: 1px;padding-left: 27px;color: #000000;font-size: 18px;margin-bottom: 0px;">Your Login Credentials:</p> 
-     </td>
-      </tr>
-
-      <tr>
-       <td style="float: left;"><p style="margin-bottom: 0px;padding-left: 27px;font-size:18px;color:black;">Username:<a href="#" style="font-size: 16px;">'.$email.'</a></p></td>
-      </tr>
-
-       <tr>
-       <td style="float: left;"><p style="padding-left: 27px;font-size:18px;color:black;">Password:<a href="#" style="padding-left: 15px; font-size: 16px;">'.$password.'</a></p></td>
-      </tr>    
-    </tbody>
-    
-      <tfoot style="float: left;">
-     <tr>
-       <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;color:#1155cc">yards360.com</a></p></td>
-     </tr>
-
-     <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would like to hear from you,</h3></td></tr>
-     <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr>
-   </tfoot>
-
-     </table>
-     </body> 
-     </html>';    
-     $subject='Thanks for Registration With Yards360.com';
-    // $message='Dear '.$data['name'].' Your Otp is '.$data['otp'].'';
-    $from='info@yards360.com';
-    //Load Composer's autoloader
-    require 'mail/autoload.php';
-    $mail = new PHPMailer(true); 
-    try {
-    //Server settings
-
-    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'yards360.com';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'info@yards360.com';                 // SMTP username
-    $mail->Password = 'info@123';                           // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 25;                                    // TCP port to connect to
-    //Recipients
-    $mail->setFrom('info@yards360.com', 'yards360');
-    $mail->addAddress($to, 'yards360');     // Add a recipient
-     // $mail->addCC('chirag.netmaxims@gmail.com');
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = $subject;
-    $mail->Body    = $message;
-    $mail->AltBody = '';
-    $mail= $mail->send();
-        // $this->mail($to,$subject,$message,$from);
-    return 1;
-}catch (Exception $e) {
-    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
-}
-
-
-}
-
-
-
-/*Close User Details Send via Email*/
 
 
 
@@ -1818,52 +1653,54 @@ public function resetPassword($data){
         // var_dump($condition);die;
         $updateuser=$this->update($tablename,$data1,$condition);
         // $from = 'chirag.netmaxims@gmail.com';
-    //     $to=$fetch['dealer_email'];
-    //     // $subject = 'Forgot your Password for Property App?';
-    //     $message = '<html>
-    //     <body>
-    //     <h3>Dear '.$fetch['dealer_first_name'].'</h3>
-    //     <p>Greetings! Hope you are having a good day.</p>
-    //     <p>Your Password Has been Changed Successfully..</p>
-    //     <p>Thanks</p>
-    //     <p>Property App Team</p>
-    //     </body>
-    //     </html>
-    //     ';    
-    //     $subject='Password Changed';
-    // // $message='Dear '.$data['name'].' Your Otp is '.$data['otp'].'';
-    //     $from='info@yards360.com';
-    // //Load Composer's autoloader
-    //     require 'mail/autoload.php';
-    //     $mail = new PHPMailer(true); 
+        $to=$fetch['dealer_email'];
+        // $subject = 'Forgot your Password for Property App?';
+        $message = '<html>
+        <body>
+        <h3>Dear '.$fetch['dealer_first_name'].'</h3>
+        <p>Greetings! Hope you are having a good day.</p>
+        <p>Your Password Has been Changed Successfully..</p>
+        <p>Thanks</p>
+        <p>Property App Team</p>
+        </body>
+        </html>
+        ';    
+        $subject='Password Changed';
+    // $message='Dear '.$data['name'].' Your Otp is '.$data['otp'].'';
+        $from='info@yards360.com';
+    //Load Composer's autoloader
+        require 'mail/autoload.php';
+        $mail = new PHPMailer(true); 
 
-    //     try {
-    // //Server settings
-    // $mail->SMTPDebug = 0;                                 // Enable verbose debug output
-    // $mail->isSMTP();                                      // Set mailer to use SMTP
-    // $mail->Host = 'yards360.com';  // Specify main and backup SMTP servers
-    // $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    // $mail->Username = 'info@yards360.com';                 // SMTP username
-    // $mail->Password = 'info@123';                           // SMTP password
-    // $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    // $mail->Port = 25;                                    // TCP port to connect to
+        try {
+    //Server settings
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'yards360.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'info@yards360.com';                 // SMTP username
+    $mail->Password = 'info@123';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 25;                                    // TCP port to connect to
 
-    // //Recipients
-    // $mail->setFrom('info@yards360.com', 'yards360');
-    // $mail->addAddress($to, 'yards360');     // Add a recipient
-    //  // $mail->addCC('chirag.netmaxims@gmail.com');
-    // //Content
-    // $mail->isHTML(true);                                  // Set email format to HTML
-    // $mail->Subject = $subject;
-    // $mail->Body    = $message;
-    // $mail->AltBody = '';
-    // $mail= $mail->send();
+    //Recipients
+    $mail->setFrom('info@yards360.com', 'yards360');
+    $mail->addAddress($to, 'yards360');     // Add a recipient
+     // $mail->addCC('chirag.netmaxims@gmail.com');
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+    $mail->AltBody = '';
+    $mail= $mail->send();
         // $this->mail($to,$subject,$message,$from);
     return 1;
+}catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
 
 }
- 
+}  
 
 
 
@@ -1881,7 +1718,53 @@ public function verifyEmailMatch($data){
         $condition=array('dealer_hashkey'=>$data['key']);
         // var_dump($condition);die;
         $updateuser=$this->update($tablename,$data1,$condition);
-     return 1;
+        // $from = 'chirag.netmaxims@gmail.com';
+        $to=$fetch['dealer_email'];
+        // $subject = 'Forgot your Password for Property App?';
+        $message = '<html>
+        <body>
+        <h3>Dear '.$fetch['dealer_first_name'].'</h3>
+        <p>Greetings! Hope you are having a good day.</p>
+        <p>Your Email Has been Verified..</p>
+        <p>Thanks</p>
+        <p>Property App Team</p>
+        </body>
+        </html>
+        ';    
+        $subject='Email Verified';
+    // $message='Dear '.$data['name'].' Your Otp is '.$data['otp'].'';
+        $from='info@yards360.com';
+    //Load Composer's autoloader
+        require 'mail/autoload.php';
+        $mail = new PHPMailer(true); 
+
+        try {
+    //Server settings
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'yards360.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'info@yards360.com';                 // SMTP username
+    $mail->Password = 'info@123';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 25;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('info@yards360.com', 'yards360');
+    $mail->addAddress($to, 'yards360');     // Add a recipient
+     // $mail->addCC('chirag.netmaxims@gmail.com');
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+    $mail->AltBody = '';
+    $mail= $mail->send();
+        // $this->mail($to,$subject,$message,$from);
+    return 1;
+}catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+}
+
 }
 }
 
@@ -1961,19 +1844,87 @@ public function requirementMatchMail($search){
 
 // OTP Verification Mail
 public function otpVerification($data){
-    $msg=urlencode("Your Otp is ".$data['otp']);
+
+    $subject='OTP FOR MOBILE VERIFICATION';
+    $message='
+ <!doctype html>
+   <html>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
+    <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+   
+    <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;height:300px; text-align: center;margin: 0 auto;display: block; position: relative;margin-top: 140px;" >
+      <thead style="background:#fafafa">
+        <tr style="background:#fafafa"> <img alt="GitLab" src="http://yards360.com/image/yards360logoemail.png" style="padding-bottom: 30px;text-align:center;margin: 0 auto;display:block">
+        </tr>
+    </thead>
+    <tbody style="position: relative">
+    <tr>
+    <td style="position: absolute; top: 43px;border: 1px solid #ededed;padding-bottom:35px">
+    <h4 style="padding-top:30px;text-align:center;margin:0 auto;display:block;color: black;letter-spacing: 1px;font-size: 22px;
+    ">Dear '.$data['fname'].'</h4>
+    <p style="font-size: 15px;font-weight: 600;;text-align:center;margin:0 auto;display:block;padding: 10px;color: black;letter-spacing: 1px;">Your Otp is '.$data['otp'].'<br><br><a href="http://yards360.com" style="color: blue;
+    letter-spacing: 1px;">http://yards360.com.</a></p>
+    <span style="padding: 10px;color: black;letter-spacing: 1px;">If you did not perform this request, you can safely ignore this email. Otherwise, click the link below to complete the process.</span>
+    </td>
+    </tr>
+    </tbody>
+    
+     <tfoot style="float: left;">
+    <tr>
+      <td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;">Your Trusted Partner,<a href="http://yards360.com" style="padding-left: 15px;">yards360.com</a></p></td>
+    </tr>
+
+    <tr style="display: block;"><td><h3 style="margin-top: 0px;margin-bottom: 0px;">We would love to hear from you,</h3></td></tr>
+    <tr style="display: block;"><td><p style="color: black;letter-spacing: 1px;font-size: 15px;padding-left: 0px;margin-top: 6px;">Call at 9999077365</p></tr></tr>
+  </tfoot>
+
+    </table>
+    </body> 
+    </html> 
+    ';
+    // $message='Dear '.$data['fname'].' Your Otp is '.$data['otp'].'';
+    $from=$data['email'];
+    $msg="Your Otp is".$data['otp'];
     $this->smsApi($msg,$data['phone']);
     //Load Composer's autoloader
+    require 'mail/autoload.php';
+    $mail = new PHPMailer(true); 
+    
+    try {
+    //Server settings
+    $mail->SMTPDebug = 0;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'yards360.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'info@yards360.com';                 // SMTP username
+    $mail->Password = 'info@123';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 25;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('info@yards360.com', 'yards360');
+    $mail->addAddress($from, 'yards360');     // Add a recipient
+    $mail->addCC('chirag.netmaxims@gmail.com');
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = $subject;
+    $mail->Body    = $message;
+    $mail->AltBody = '';
+
+
+    $mail= $mail->send();
+} catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+}
 }
 
 /*Send text on mobile*/
 public function smsApi($msg,$mobile){
-   // $fp=fopen('http://198.24.149.4/API/pushsms.aspx?loginID=taru123&password=taru@123&mobile="'.$mobile.'"&text="'.$msg.'"&senderid=CHPSMS&route_id=2&Unicode=0','r');
-     // $ch = curl_init(); 
-    $url="http://198.24.149.4/API/pushsms.aspx?loginID=taru123&password=taru@123&mobile=".$mobile."&text=".$msg."&senderid=YARDSS&route_id=2&Unicode=0";
-    file_get_contents($url);
-    // // set url 
+    // echo $msg;
+    // echo $msg;
+    // echo $mobile;
 
+    file('http://198.24.149.4/API/pushsms.aspx?loginID=taru123&password=taru@123&mobile='.$mobile.'&text='.$msg.'&senderid=CHPSMS&route_id=2&Unicode=0');
 }
 
 
@@ -2141,7 +2092,7 @@ public function sendWhatsapp(){
                        $created_date = $result1['dealer_createdat'];
 
                        $now=date('Y-m-d H:i:s');
-                       $expired_by=date('Y-m-d H:i:s', strtotime($created_date. ' + 5 day'));
+                       $expired_by=date('Y-m-d H:i:s', strtotime($created_date. ' + 90 day'));
 
                        // $your_date = strtotime($created_date);
 
