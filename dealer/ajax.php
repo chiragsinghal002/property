@@ -172,7 +172,12 @@ if(isset($_POST['resi_cat_id'])){
 
 					echo '<div class="col-sm-3 col-xs-6">';
 
-					echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
+					echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="'.$data1['subchild_name'].'" class="ginputfield"  id="'.(($data1['subchild_name']=='Plot Area')?'plot_area':'').'" value="">';
+
+					// id="'.($data1['subchild_name']=='Plot Area')?'plot_area':'sfsd'.'"
+					echo '<span id="'.(($data1['subchild_name']=='Plot Area')?'plot_area_error':'').'" style="color:red;">';
+
+					echo '</span>';
 
 					echo '</div>';
 
@@ -444,6 +449,7 @@ if(isset($_POST['subcat_id'])){
 
 			if($data1['selection_type']==1){
 
+
 				echo '<div class="row">';
 
 				echo '<div class="col-sm-2 col-xs-6">';
@@ -540,9 +546,17 @@ if(isset($_POST['subcat_id'])){
 
 				echo '<div class="col-sm-3 col-xs-6">';
 
-				echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="Plot Area" class="ginputfield" id="plot_area" value="">';
+				// echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="'.$data1['subchild_name'].'" class="ginputfield" id="'.(($data1['subchild_name']=='Super Built Up Area')?'super_built_up_area':'super_area').'" value="">';
+				 echo '<input type="text" name="'.$data1['subchild_name'].'" placeholder="'.$data1['subchild_name'].'" class="ginputfield" id="';
+				 if($data1['subchild_name']=='Super Built Up Area'){echo 'super_built_up_area';}else if($data1['subchild_name']=='Plot Area'){echo 'plot_area';}else if($data1['subchild_name']=='Super Area'){echo 'super_area';}else{}
+				 echo '" value="">';
 
 				echo '</div>';
+				// echo '<span id="'.(($data1['subchild_name']=='Super Built Up Area')?'super_built_up_area_error':'super_area_error').'" style="color:red;">';
+				echo '<span id="';
+				if($data1['subchild_name']=='Super Built Up Area'){echo 'super_built_up_area_error';}else if($data1['subchild_name']=='Plot Area'){echo 'plot_area_error';}else if($data1['subchild_name']=='Super Area'){echo 'super_area_error';}else{}
+					echo '" style="color:red;">';
+				echo '</span>';
 
 				echo '<div class="col-sm-4 col-xs-offset-6  col-xs-6">';
 

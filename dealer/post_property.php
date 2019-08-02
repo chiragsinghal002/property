@@ -98,6 +98,7 @@ if(isset($_GET['msg'])){
 								<option value="delhi">Delhi</option>
 							</select>
 						</div>
+						<span id="city_error" style="color:red;display: none;">*Select City</span>
 					</div>
 				</div>
 				<div class="apprtmnt">
@@ -431,7 +432,8 @@ if(isset($_GET['msg'])){
 </div>
 </div>
 </div>
-
+</div>
+</div>
 <script type="text/javascript" src="js/jquery.placeholder.label.js"></script>
 <?php include_once'include/footer.php';?>
 
@@ -489,6 +491,7 @@ function commercial(){
 function residential_cat(id){
 	  // alert(id);
 	  $("#category_id").val(id);
+
 	  // $("#" + id).addClass('Color');
 	  $.ajax({
 	  	url:'ajax.php',
@@ -624,6 +627,14 @@ function residential_cat(id){
 			}
 		}
 
+		var city =$("#city").val();
+		if(city==''){
+			$("#city_error").show();
+			return false;
+		}else{
+			$("#city_error").hide();
+		}
+
 		var sector =$("#sector").val();
 		if(sector==''){
 			$("#sector_error").show();
@@ -654,11 +665,121 @@ function residential_cat(id){
 
 		if(property_for==0){
 			// $("#property_for_error").hide();
+			if(cat_id==26){
+				var plot_area=$("#plot_area").val();
+				
+				if(plot_area==''){
+					$("#plot_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#plot_area_error").html('');
+				}
+			}
+
+			if(cat_id==28){
+				var plot_area=$("#plot_area").val();
+				
+				if(plot_area==''){
+					$("#plot_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#plot_area_error").html('');
+				}
+			}
+			if(cat_id==29){
+				var plot_area=$("#plot_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(plot_area==''){
+					$("#plot_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#plot_area_error").html('');
+				}
+			}
+
+			if(cat_id==27){
+				var super_built_up_area=$("#super_built_up_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(super_built_up_area==''){
+					$("#super_built_up_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#super_built_up_area_error").html('');
+				}
+			}
+			// if(super_built_up_area==''){
+			// 	$("#super_built_up_area_error").html('This Field is Required');
+			// 	return false;
+			// }else{
+			// 	$("#super_built_up_area_error").html('');
+			// }
 		}else{
+			if(cat_id==30){
+				var super_area=$("#super_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(super_area==''){
+					$("#super_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#super_area_error").html('');
+				}
+			}
+			if(cat_id==32){
+				var super_area=$("#super_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(super_area==''){
+					$("#super_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#super_area_error").html('');
+				}
+			}
+			if(cat_id==33){
+				var plot_area=$("#plot_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(plot_area==''){
+					$("#plot_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#plot_area_error").html('');
+				}
+			}
+			if(cat_id==34){
+				var plot_area=$("#plot_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(plot_area==''){
+					$("#plot_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#plot_area_error").html('');
+				}
+			}
+			if(cat_id==35){
+				var plot_area=$("#plot_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(plot_area==''){
+					$("#plot_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#plot_area_error").html('');
+				}
+			}
+			if(cat_id==36){
+				var super_area=$("#super_area").val();
+				// var super_built_up_area=$("#super_built_up_area").val();
+				if(super_area==''){
+					$("#super_area_error").html('This Field is Required');
+					return false;
+				}else{
+					$("#super_area_error").html('');
+				}
+			}
+
+				
 			
 			// $("#property_for_error").show();
 			// property_for.focus();
-			return false;
+			//return false;
 		}
 
 

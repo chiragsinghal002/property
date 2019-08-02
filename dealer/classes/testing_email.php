@@ -59,7 +59,7 @@ $message='
       <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900&display=swap" rel="stylesheet">
 
       <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-      <body style="background:#fafafa; width:100%;height:600px;text-align: center;margin: 0 auto;height: 600px;border-top: 4px solid #6b4fbb;">
+      <body style="background:#fafafa; width:100%;text-align: center;margin: 0 auto;border-top: 4px solid #6b4fbb;">
 
       <table style="box-shadow: 1px 1px 6px #ccc;background:white;width:55%;text-align: center;margin: 0 auto; position: relative;margin-top: 140px;" >
       <thead style="background:#fafafa">
@@ -68,39 +68,39 @@ $message='
       </thead>
       <tbody style="position: relative">
       <tr>
-      <td><h4 style="margin-top: 0px; color: #3cb54a;padding-left: 27px;padding-top: 13px;font-size: 28px;margin-bottom: 15px;">Dear '.'dealer_first_name'.'
+      <td><h4 style="    letter-spacing: 1px;margin-top: 0px; color: #3cb54a;padding-left: 27px;padding-top: 13px;font-size: 28px;margin-bottom: 15px;">Dear '.'dealer_first_name'.'
       </td>
       </tr>
       <tr>
-      <td style="float: left;"><p style="padding-left: 27px;margin-top: 0px;color: #000000;font-size: 18px;letter-spacing: 1px;margin-bottom: 0px;padding-bottom: 10px;">Greetings! Hope you are having a good day.</p>
+      <td style="float: left;"><p style="padding-left: 27px;margin-top: 0px;color: #000000;font-size: 18px;letter-spacing: 1px;margin-bottom: 0px;padding-bottom: 10px;    padding-right: 10px;">Get in touch with the dealer for the following property.</p>
       </td>
       <td style="float: left;"><p style="margin-top: 2px;
       letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Property Details:<span style="padding-left: 20px;color:#000000">Property</span></p>
       </td>
 
       <td style="float: left;"><p style="margin-top: 2px;
-      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Properyty Code:-<span style="padding-left: 20px;color:#000000;">City</span></p>
+      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Property Code:-<span style="padding-left: 20px;color:#000000;">City</span></p>
       </td>
 
-      <td style="float: left;"><p style="margin-top: 2px;
-      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Area<span style="padding-left: 52px;">Price:-</span></p>
+      <td style="float: left;"><p style="margin-top: 2px;    margin-bottom: 10px;
+      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Area:-<span style="color:#000000;padding-left: 15px;">151 sq yard</span><span style="padding-left: 52px;">Price:-<span style="color:#000000;padding-left: 15px;">&#x20B9; 155</span></span></p>
       </td>
       </tr>
       <tr>
       </tr>
 
       <tr>
-      <td><h4 style="margin-top: 0px; color: #3cb54a;padding-left: 27px;font-size: 28px;margin-bottom: 15px;">Contact Details
+      <td><h4 style="margin-top: 0px; color: #3cb54a;padding-left: 27px;font-size: 28px;margin-bottom: 15px;letter-spacing: 2px;">Contact Details
       </td>
       </tr>
            
            <tr>  
              <td style="float: left;"><p style="margin-top: 2px;
-      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Person Name:-<span style="padding-left: 20px;">Email:-</span></p>
+      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Person Name:-<span style="color:#000000;padding-left: 20px;">Gyan Ranjan</span><span style="padding-left: 20px;">Email:-<span style="color:#000000;padding-left: 20px;">gyan@gmail.com</span> </span></p>
       </td>
 
-      <td style="float: left;"><p style="margin-top: 2px;
-      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Contact No:-<span style="padding-left: 20px;">Firm Name:-</span></p>
+      <td style="float: left;    padding-top: 10px;;padding-bottom: 20px;"><p style="margin-top: 2px;
+      letter-spacing: 1px;padding-left: 32px;margin-top: 0px;color: #3cb54a;font-size: 18px;margin-bottom: 0px;">Contact No:-<span style="color:#000000;padding-left: 15px;">9696969696</span><span style="padding-left: 20px;">Firm Name:-<span style="color:#000000;padding-left: 15px;">abc</span></span></p>
       </td>
 
       </tr>

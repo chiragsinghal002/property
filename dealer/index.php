@@ -96,7 +96,7 @@ include_once'Object.php';
 
         <div class="registarion-home-area">
             <div class="container">
-                <div class="row">
+                <div class="row login-content">
 
                     <div class="col-sm-2"></div>
 

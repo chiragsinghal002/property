@@ -112,6 +112,9 @@ i.glyphicon span {
     position: relative;
     top: 3em;
 }
+img {
+        margin: 0px!important;
+}
 
  ul{
     list-style: none;
@@ -230,10 +233,11 @@ i.glyphicon.glyphicon-briefcase {
     padding: 10px;
 }
 
-.sidebar .col-sm-2 {
+div#mySidebar {
     padding-right: 0px;
     background: #0F1926;
     padding-left: 0px;
+    height: 700px;
 }
 .col-sm-10.fff {
     padding-left: 0px;
@@ -1152,7 +1156,7 @@ ul#select2-sector-results .select2-results__option {
     }
 
      .imglogo {
-         height: 46px;
+        /* height: 46px;*/
          width: 82%;
     }
      .sigbtn {
@@ -1245,7 +1249,7 @@ h4.modal-title {
 }
 
 .col-sm-6.submition-form:before{
-    top:0.4em;
+ /*   top:0.4em;*/
 }
 
 
@@ -2805,9 +2809,9 @@ p.new.yards {
 }
  .nav.navbar-nav.side-nav li a{
      color: white;
-     font-size: 15px;
+     font-size: 13px;
      font-family: 'Lato', sans-serif;
-    line-height: 10px;
+    line-height: 0px;
 }
  .nav.navbar-nav.side-nav li a:hover {
      background: none;
@@ -4302,14 +4306,15 @@ font-weight: 600;
 .myyards360 {
     color: #3CB54E;
     text-decoration: underline;
-    padding: 10px 17px;
+    padding: 10px 10px;
 
 }
 .side-nav p {
    color: #939598;
-    font-size: 15px;
+    font-size: 12px;
     padding-top: 20px;
     line-height: 18px;
+    margin-left: 10px;
 }
 ul.nav.navbar-nav.side-nav li a.active {
     color: ##3CB54E!important;
@@ -4683,6 +4688,17 @@ ul.nav.navbar-nav.side-nav {
 .col-sm-6.submition-form {
     padding-left: 15px !important;
 }
+.imglogo {
+    height: auto;
+}
+.row.login-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
 
+.row.registration-content {
+    display: flex;
+    flex-direction: column-reverse;
+}
 }
 
